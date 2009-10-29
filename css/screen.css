@@ -1,0 +1,180 @@
+html, body {
+  font-family: sans-serif; 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+
+.homepage {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+#header h1 {
+  width: 202px;
+  height: 50px;
+  text-indent: -100000em;
+  margin: 0;
+  top: 9px;
+  position: relative;
+  left: 10px;
+  float: left;
+}
+#homepage-ironruby #header h1 {
+  background-image: url(../images/ironruby-logo1.png);
+}
+#homepage-ironpython #header h1 {
+  background-image: url(../images/ironpython-logo1.png);
+}
+#latest_release {
+  border: 1px solid lightGray;
+  float: right;
+  font-size: 12px;
+  text-align: left;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+
+#tagline {
+  background-color: #EEE;
+  border-bottom: 2px solid #DDD;
+  border-top: 2px solid #DDD;
+  color: #666;
+  text-align: left;
+  z-index: -1;
+  clear: both;
+}
+#tagline h2 {
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  margin: 5px 10px;
+}
+#homepage-ironruby #tagline h2 {
+  margin: 10px;
+}
+#tagline h2 span.lang-color,
+#tagline h2 span.dotnet-color {
+  font-weight: bold;
+}
+#homepage-ironruby #tagline h2 span.lang-color { 
+  color: #A41E20;
+}
+#homepage-ironpython #tagline h2 span.lang-color {
+  color: green;
+}
+#tagline h2 span.dotnet-color {
+  color: #1A61E5;
+}
+
+
+ul#navigation {
+  margin: 7px 0;
+  padding: 0;
+  text-align: left;
+}
+#homepage-ironruby ul#navigation {
+  /*background: #A41E20;*/
+}
+#homepage-ironpython ul#navigation {
+  /* background: green; */
+}
+ul#navigation li {
+  display: inline;
+  text-align: center;
+  list-style: none;
+  font-size: 18px;
+}
+ul#navigation li a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: -0.03em;
+  padding: 3px 10px 3px 10px;
+  border: 1px solid #CCC;
+}
+ul#navigation li a:link, ul#navigation li a:visited {
+}
+ul#navigation li a:hover {
+  /* color: #a41e20; */
+  border: 1px solid #aaa;
+  background-color: #eee;
+  text-decoration: none;
+}
+
+
+#download {
+  text-align: left;
+  margin: 0 auto;
+  position: relative;
+  width: 500px;
+  margin-top: 30px;
+}
+#download h2 {
+  margin: 0;
+}
+#download h2 a {
+  margin: 0 auto;
+  display: block;
+  width: 260px;
+  
+  padding: 10px 65px 10px 10px;
+  
+  text-decoration: none;
+  
+  background-image: url(../images/arrow-dark.png);
+  background-repeat: no-repeat;
+  background-position: 280px center;
+  color: black;
+}
+#download h2 a:link,
+#download h2 a:visited {
+  background-color: #eee;
+  border: 1px solid #777;
+}
+#download h2 a:hover {
+  background-color: #ddd;
+  border: 1px solid #555;
+}
+#download p {
+  margin: 0 auto;
+  text-align:center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+
+ul#content {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+ul#content li {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+ul#content li h3 {
+  font-size: 22px;
+  margin: 0;
+}
+ul#content li .heading-section {
+  width: 200px;
+  position: absolute;
+}
+ul#content li .heading-section p {
+  margin: 10px 0;
+}
+ul#content li .body-section {
+  margin: 0 0 0 250px;
+}
+ul#content li p {
+  font-size: 12px;
+  margin: 0;
+}
