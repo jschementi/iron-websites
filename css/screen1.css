@@ -1,0 +1,289 @@
+body {
+  font-family: verdana, "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+#ironruby-homepage .lang-color { 
+  color: #A41E20;
+}
+#ironpython-homepage .lang-color {
+  color: green;
+}
+.dotnet-color {
+  color: #1A61E5;
+}
+
+#ironruby-homepage #nav {
+  text-align: center;
+  color: gray;
+}
+#ironruby-homepage #nav a:link,
+#ironruby-homepage #nav a:visited {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 0 2px;
+  margin: 0 2px;
+}
+#ironruby-homepage #nav a:hover {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+
+#ironruby-homepage #header {
+  margin: 30px auto;
+  width: 780px;
+  position: relative;
+}
+
+#ironruby-homepage #header h1 {
+  position: absolute;
+  width: 383px;
+  height: 95px;
+  top: 0;
+  margin: 0;
+}
+#ironruby-homepage #header h1 a {
+  width: 383px;
+  height: 95px;
+  background-image: url(../images/ironruby-logo.png);
+  background-repeat: no-repeat;
+  display: block;
+  text-indent: -100000px;
+}
+
+#ironruby-homepage #header h2,
+#ironruby-homepage #what-is {
+  font-size: 29px;
+  font-family: "Gill Sans", "Lucida Grande", arial, helvetica, sans-serif;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #666;
+}
+#ironruby-homepage #header h2 {
+  margin: 0;
+  margin-left: 403px;
+  padding: 20px 0 7px;
+}
+#ironruby-homepage #what-is {
+  font-size: 24px;
+  width: 780px;
+  margin: 0 auto;
+}
+#ironruby-homepage #what-is p {
+  margin-right: 240px;
+}
+
+#ironruby-homepage #get {
+  background-color: #A41E20;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin: 30px 0;
+  padding: 15px 0;
+}
+
+#ironruby-homepage #get a:link,
+#ironruby-homepage #get a:visited {
+  color: white;
+  text-decoration: underline;
+}
+#ironruby-homepage #get a:hover {
+  color: #A41E20;
+  background-color: white;
+  text-decoration: none;
+}
+
+#ironruby-homepage #get ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 780px;
+}
+
+#ironruby-homepage #get li#download {
+  list-style: none;
+  width: 220px;
+  margin-right: 10px;
+  float: left;
+}
+#ironruby-homepage #get #download h3 {
+  margin: 0;
+}
+#ironruby-homepage #get #download h3 a {
+  position: relative;
+  left: 26px;
+  display: block;
+  text-indent: -100000px;
+  background-image: url(../images/download-ironruby.png);
+  background-color: transparent;
+  width: 163px;
+  height: 162px;
+}
+#ironruby-homepage #get #download p {
+  text-align: center;
+  margin: 0;
+}
+
+#ironruby-homepage #get #tryruby {
+  float: left;
+  width: 300px;
+  list-style: none;
+  margin: 0 10px;
+}
+#ironruby-homepage #get #tryruby h3 {
+  font-size: 36px;
+  font-family: "Gill Sans", "Lucida Grande", arial, helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+#ironruby-homepage #get #tryruby h3 a {
+  text-decoration: none;
+}
+#ironruby-homepage #get #tryruby h3 a:hover {
+  background-color: transparent;
+  color: white;
+}
+#ironruby-homepage #get #tryruby h3 a span {
+  font-size: 24px;
+}
+#ironruby-homepage #get #tryruby p {
+  margin: 10px;
+}
+#ironruby-homepage #get #tryruby #ironruby-console {
+  background-color: #333;
+  font-family: consolas, 'courier new', monospace;
+  padding: 39px 0;
+  font-size: 18px;
+  text-align: center;
+  border: 5px solid gray;
+}
+
+#ironruby-homepage #get #tutorial {
+  float: left;
+  width: 220px;
+  list-style: none;
+  margin-left: 10px;
+}
+#ironruby-homepage #get #tutorial #code-snippet code {
+  width: 200px;
+  height: 250px;
+  background-image: url(../images/code-snippet-bg.png);
+  padding: 10px;
+  position: absolute;
+  top: -190px;
+  font-family: consolas, "courier new", monospace;
+  font-size: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  line-height: 14px;
+  letter-spacing: -0.3px;
+}
+#ironruby-homepage #get #tutorial #code-snippet code .constant {
+  color: #ff0;
+}
+#ironruby-homepage #get #tutorial #code-snippet code .keyword {
+  color: #fc6;
+}
+#ironruby-homepage #get #tutorial #code-snippet code .string {
+  color: #0f0;
+}
+#ironruby-homepage #get #tutorial #code-snippet code .number {
+  color: #0af;
+}
+#ironruby-homepage #get #tutorial #code-snippet code .comment {
+  color: #f0f;
+}
+
+#ironruby-homepage #get #tutorial p {
+  margin: 75px 0px 5px;
+}
+
+#ironruby-homepage #get #tutorial a#tutorial-image,
+#ironruby-homepage #get #tutorial a#tutorial-image img {
+  padding: 0; margin: 0; border: 0; background-color: transparent;
+}
+#ironruby-homepage #get #tutorial a#tutorial-image:hover {
+  padding: 0; margin: 0; border: 0; background-color: transparent;
+}
+#ironruby-homepage #get #tutorial a#tutorial-image {
+  display: block;
+}
+#ironruby-homepage #get #tutorial a#tutorial-image:link,
+#ironruby-homepage #get #tutorial a#tutorial-image:visited {
+  padding: 5px;
+  background-color: #ccc;
+}
+#ironruby-homepage #get #tutorial a#tutorial-image:hover {
+  padding: 5px;
+  background-color: #fe8;
+}
+
+.clear {
+  clear: both;
+  position: relative;
+  width: 0px;
+  height: 0px;
+  display: block;
+}
+
+ul.question-answer {
+  width: 780px;
+  margin: 0 auto 30px auto;
+  font-family: georgia, serif;
+}
+ul.question-answer li {
+  list-style: none;
+  position: relative;
+}
+ul.question-answer li h3 {
+  position: absolute;
+  width: 220px;
+  text-align: left;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+ul.question-answer li p {
+  margin-left: 240px;
+  text-align: left;
+  font-size: 24px;
+}
+
+ul#footer {
+  padding: 20px;
+  margin: 0;
+  color: #eee;
+  background-color: #222;
+}
+ul#footer li {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+ul#footer li:first-child {
+  float: left;
+}
+ul#footer li#footer-nav {
+  float: right;
+}
+ul#footer li a:link,
+ul#footer li a:visited {
+  color: white;
+  padding: 0 2px;
+  margin: 0 2px;
+}
+ul#footer li a:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
