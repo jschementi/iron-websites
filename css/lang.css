@@ -1,0 +1,29 @@
+#ironruby-homepage .lang-color { 
+  color: #A41E20;
+}
+#ironpython-homepage .lang-color {
+  color: green;
+}
+
+#ironruby-homepage #header h1 a {
+  background-image: url(../images/ironruby-logo.png);
+}
+#ironpython-homepage #header h1 a {
+  background-image: url(../images/ironpython-logo.png);
+}
+
+#ironruby-homepage #get,
+#ironruby-homepage #get a:hover {
+  background-color: #A41E20;
+}
+#ironpython-homepage #get,
+#ironpython-homepage #get a:hover {
+  background-color: green;
+}
+
+#ironruby-homepage #get #download h3 a {
+  background-image: url(../images/download-ironruby.png);
+}
+#ironpython-homepage #get #download h3 a {
+  background-image: url(../images/download-ironpython.png);
+}

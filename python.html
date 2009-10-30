@@ -1,81 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<title>IronPython</title>
-  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"
+  <title>IronPython</title>
+  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="css/lang.css" type="text/css" media="screen"
         charset="utf-8" />
 </head>
 
-<body>
+<body id="ironpython-homepage" class='homepage'>
 
-  <div id="homepage-ironpython" class="homepage">
-    
-    <div id="header">
-      <h1><a href="#">IronPython</a></h1>
-      <div id="latest_release">
-        Latest release: 2.6 RC2 (<a href="#">Release notes</a>)<br />
-        Download: <a href='#'>installer</a> |
-                  <a href='#'>zip</a> |
-                  <a href="#">source</a>
-      </div>
-    </div>
-    
-    <div id="tagline">
-      <h2>
-        <span class="dotnet-color">.NET</span>
-        implementation of the
-        <span class="lang-color">Python</span> 
-        programming language
-      </h2>
-    </div>
-    
-    <ul id="navigation">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Download</a></li>
-      <li><a href="#">Documentation</a></li>
-      <li><a href="#">Contribute</a></li>
-      <li><a href='#'>Support</a></li>
+  <div id="nav">
+    <a href='#'>Overview</a>|<a href='#'>Download</a>|<a href='#'>Documentation</a>|<a href='#'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
+  </div>
+
+  <div id="header">
+    <h1><a href="#">IronPython</a></h1>
+    <h2>the <span class="lang-color">Python</span> programming language for the <span class="dotnet-color">.NET</span> framework</h2>
+  </div>
+
+  <div id="what-is">
+    <p>
+      IronPython is an open-source implementation of the Python
+      programming language which is tightly integrated with the
+      .NET Framework. IronPython can use the entire .NET
+      Framework and any Python libraries, and all other .NET
+      languages can use Python code just as easily.
+    </p>
+  </div>
+
+  <div id="get">
+    <ul>
+      <li id='download'>
+        <h3><a href='#'>Download IronPython 2.6</a></h3>
+        <p>
+          2.6 RC2 released 10/21/2009<br />
+          <a href='#'>release notes</a> | <a href="#">source</a>
+        </p>
+      </li>
+      <li id="tryruby">
+        <h3><a href='#'>Try Python <span>in the <u>browser</u></span></a></h3>
+        <p>
+          Quickly run Python code in your 
+          browser, without installing IronPython.
+        </p>
+        <div id="console">
+          TODO: IronPython console
+        </div>
+      </li>
+      <li id="tutorial">
+        <pre id="code-snippet"><code><span class="comment"># namespaces are modules</span>
+<span class="keyword">import</span> <span class="constant">System</span>
+<span class="keyword">from</span> <span class="constant">Collections</span>.<span class="constant">Generic</span> import (
+  <span class="constant">Dictionary</span>
+)
+
+<span class="comment"># indexers constrains type</span>
+d = <span class="constant">Dictionary</span>[<span class="constant">str</span>, <span class="constant">int</span>])()
+
+<span class="comment"># Python idioms just work</span>
+d[<span class="string">'Hello'</span>] = <span class="number">1</span>
+d[<span class="string">'Hi'</span>] = <span class="number">2</span>
+
+<span class="comment"># this gives an error</span>
+d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
+        <p>
+          Learn more with the online tutorial:
+        </p>
+        <a href='#' id="tutorial-image">
+          <img src="images/ironpython-tutorial.jpg" alt="IronPython tutorial" />
+        </a>
+      </li>
+      <li class='clear'>&nbsp;</li>
     </ul>
-    
-    <div id="download">
-      <h2><a href="#">Download IronPython</a></h2>
-      <p>Latest release: 2.6 RC2 (<a href='#'>Release notes</a>)</p>
-    </div>
-    
-    <ul id="content">
+  </div>
 
-      <li>
-        <div class="heading-section">
-          <h3>Why IronPython?</h3>
-          <p>
-            What makes IronPython special and why it deserves a place in  
-            your toolbox
-          </p>
-        </div>
-        <div class="body-section">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci eu arcu sollicitudin cursus. Nulla facilisi. Sed sed nulla gravida nisi lacinia vestibulum sed ut augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus lobortis vulputate malesuada. Nam dolor augue, viverra eu pretium non, suscipit pretium nunc. Donec consectetur augue euismod turpis interdum ultrices. Ut tempor magna in magna dictum non bibendum metus malesuada. Curabitur a orci eu diam tincidunt venenatis id at augue. In hendrerit fringilla lobortis. Integer vehicula elementum neque et feugiat. Nunc sed purus non nulla egestas volutpat. Donec interdum condimentum pharetra. Nullam sollicitudin risus eget turpis porttitor fringilla varius magna pulvinar. 
-        </div>
-      </li>
+  <ul class="question-answer">
+    <li>
+      <h3>Why IronPython?</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </li>
+  </ul>
 
-      <li>
-        <div class="heading-section">
-          <h3>Why IronPython?</h3>
-          <p>
-            What makes IronPython special and why it deserves a place in  
-            your toolbox
-          </p>
-        </div>
-        <div class="body-section">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci eu arcu sollicitudin cursus. Nulla facilisi. Sed sed nulla gravida nisi lacinia vestibulum sed ut augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus lobortis vulputate malesuada. Nam dolor augue, viverra eu pretium non, suscipit pretium nunc. Donec consectetur augue euismod turpis interdum ultrices. Ut tempor magna in magna dictum non bibendum metus malesuada. Curabitur a orci eu diam tincidunt venenatis id at augue. In hendrerit fringilla lobortis. Integer vehicula elementum neque et feugiat. Nunc sed purus non nulla egestas volutpat. Donec interdum condimentum pharetra. Nullam sollicitudin risus eget turpis porttitor fringilla varius magna pulvinar. 
-        </div>
-      </li>
+  <ul class="question-answer">
+    <li>
+      <h3>Why IronPython?</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </li>
+  </ul>
 
-    </ul> <!-- #content -->
-    
-  </div> <!-- .homepage -->
+  <ul id="footer">
+    <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+    <li id="footer-nav">
+      <a href='#'>Overview</a>|<a href='#'>Download</a>|<a href='#'>Documentation</a>|<a href='#'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
+    </li>
+    <li class="clear">&nbsp;</li>
+  </ul>
 
 </body>
 </html>
