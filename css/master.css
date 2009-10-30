@@ -1,6 +1,6 @@
 body {
   font-family: verdana, "Lucida Grande", arial, helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -19,10 +19,16 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   display: block;
 }
 
+a:link, a:visted {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
 
 /* colors */
 
-.dotnet-color {
+.dotnet {
   color: #1A61E5;
 }
 
@@ -76,20 +82,22 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
 .homepage #header h2,
 .homepage #what-is {
-  font-size: 29px;
-  font-family: "Gill Sans", "Lucida Grande", arial, helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", "Lucida Grande", arial, helvetica, sans-serif;
   font-weight: normal;
   text-align: left;
   letter-spacing: -1px;
   color: #666;
 }
 .homepage #header h2 {
+  font-size: 29px;
+  line-height: 30px;
   margin: 0;
   margin-left: 403px;
   padding: 20px 0 7px;
 }
 .homepage #what-is {
   font-size: 24px;
+  line-height: 30px;
   width: 780px;
   margin: 0 auto;
 }
@@ -160,7 +168,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 }
 .homepage #get #tryruby h3 {
   font-size: 36px;
-  font-family: "Gill Sans", "Lucida Grande", arial, helvetica, sans-serif;
+  line-height: 38px;
+  font-family: "Gill Sans", "gill sans mt", "Lucida Grande", arial, helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: -1px;
 }
