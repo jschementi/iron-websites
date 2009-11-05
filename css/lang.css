@@ -1,29 +1,35 @@
-#ironruby-homepage .lang {
+#ironruby .lang {
   color: #A41E20;
 }
-#ironpython-homepage .lang {
+#ironpython .lang {
   color: green;
 }
 
-#ironruby-homepage #header h1 a {
-  background-image: url(../images/ironruby-logo.png);
+#ironruby.page #header h1 a {
+  background-image: url(../images/ironruby-logo-202x50.png);
 }
-#ironpython-homepage #header h1 a {
-  background-image: url(../images/ironpython-logo.png);
+#ironpython.page #header h1 a {
+  background-image: url(../images/ironpython-logo-202x50.png);
+}
+#ironruby.home.page #header h1 a {
+  background-image: url(../images/ironruby-logo-383x95.png);
+}
+#ironpython.home.page #header h1 a {
+  background-image: url(../images/ironpython-logo-383x95.png);
 }
 
-#ironruby-homepage #get,
-#ironruby-homepage #get a:hover {
+#ironruby.page #get,
+#ironruby.page #get a:hover {
   background-color: #A41E20;
 }
-#ironpython-homepage #get,
-#ironpython-homepage #get a:hover {
+#ironpython.page #get,
+#ironpython.page #get a:hover {
   background-color: green;
 }
 
-#ironruby-homepage #get #download h3 a {
+#ironruby.home.page #get #download h3 a {
   background-image: url(../images/download-ironruby.png);
 }
-#ironpython-homepage #get #download h3 a {
+#ironpython.home.page #get #download h3 a {
   background-image: url(../images/download-ironpython.png);
 }

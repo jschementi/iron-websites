@@ -5,16 +5,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>IronRuby</title>
-  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen"
         charset="utf-8" />
-  <link rel="stylesheet" href="css/lang.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../css/lang.css" type="text/css" media="screen"
         charset="utf-8" />
+
+  <script type="text/javascript">
+    window.DLR = {}
+    DLR.path = "../silverlight"
+  </script>
+  <script type="text/javascript" src="../silverlight/dlr.js"></script>
+
+  <script type="text/ruby" src="../silverlight/animate.rb" defer='false'></script>
 </head>
 
-<body id="ironruby-homepage" class='homepage'>
+<body id="ironruby" class='home page'>
 
   <div id="nav">
-    <a href='#'>Overview</a>|<a href='#'>Download</a>|<a href='#'>Documentation</a>|<a href='#'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
+    <a href='index.html' class='active'>Overview</a><a href='download.html'>Download</a><a href='#'>Documentation</a><a href='#'>Support</a><a href='#'>Community</a><a href='#'>Blog</a>
   </div>
 
   <div id="header">
@@ -46,7 +54,7 @@
       <li id="tryruby">
         <h3><a href='http://ironruby.codeplex.com/wikipage?title=SilverlightInteractiveSession&referringTitle=Home' target="_blank">Try Ruby <span>in the <u>browser</u></span></a></h3>
         <p>
-          Quickly run Ruby code in your 
+          Quickly run Ruby code in your
           browser, without installing IronRuby.
         </p>
         <div id="console">
@@ -55,12 +63,10 @@
       </li>
       <li id="tutorial">
         <pre id="code-snippet"><code><span class="comment"># namespaces are modules</span>
-<span class="keyword">include</span> <span class="constant">System</span>
-<span class="keyword">include</span> <span class="constant">Collections</span>::<span class="constant">Generic</span>
+<span class="keyword">include</span> <span class="constant">System</span>::<span class="constant">Collections</span>::<span class="constant">Generic</span>
 
 <span class="comment"># indexers constrains type</span>
-MD = <span class="constant">Dictionary</span>[<span class="constant">String</span>, <span class="constant">Fixnum</span>]
-d = <span class="constant">MD</span>.new
+d = <span class="constant">Dictionary</span>[<span class="constant">String</span>, <span class="constant">Fixnum</span>].new
 
 <span class="comment"># Ruby idioms just work</span>
 d[<span class="string">'Hello'</span>] = <span class="number">1</span>
@@ -75,7 +81,7 @@ d.each{|kvp| <span class="keyword">puts</span> kvp}</code></pre>
           Learn more with the online tutorial:
         </p>
         <a href='http://ironruby.com/tutorial' id="tutorial-image" target='_blank'>
-          <img src="images/ironruby-tutorial.jpg" alt="IronRuby tutorial" />
+          <img src="../images/ironruby-tutorial.jpg" alt="IronRuby tutorial" />
         </a>
       </li>
       <li class='clear'>&nbsp;</li>

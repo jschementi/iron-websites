@@ -33,117 +33,162 @@ a:hover {
 }
 
 
-/* homepage nav */
+/* page nav */
 
-.homepage #nav {
+.page #nav {
   text-align: center;
-  color: gray;
+  position: relative;
+  background-color: #eee;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
 }
-.homepage #nav a:link,
-.homepage #nav a:visited {
-  color: black;
+.page #nav a {
+  padding: 5px 6px;
+  font-size: 14px;
   font-weight: bold;
-  text-decoration: underline;
-  padding: 0 2px;
-  margin: 0 2px;
-}
-.homepage #nav a:hover {
-  color: white;
-  background-color: black;
+  border-left: 1px solid #ccc;
   text-decoration: none;
+}
+.page #nav a:last-child {
+  border-right: 1px solid #ccc;
+}
+.page #nav a:link,
+.page #nav a:visited {
+  color: black;
+}
+.page #nav a:hover {
+  background-color: #fff;
+}
+.page #nav a.active {
+  background-color: white;
+  border-bottom: 1px solid white;
+  position: relative;
 }
 
 
 /* homepage header */
 
-.homepage #header {
-  margin: 30px auto;
-  width: 780px;
+.page #header {
+  margin: 10px 40px;
   position: relative;
+
 }
-.homepage #header h1 {
+.page #header h1 {
   position: absolute;
-  width: 383px;
-  height: 95px;
   top: 0;
   margin: 0;
+  width: 202px;
+  height: 50px;
 }
-.homepage #header h1 a {
-  width: 383px;
-  height: 95px;
-
+.page #header h1 a {
+  width: 202px;
+  height: 50px;
   background-repeat: no-repeat;
   display: block;
   text-indent: -100000px;
+}
+.home.page #header {
+  margin: 25px auto 30px auto;
+  width: 780px;
+  position: relative;
+}
+.home.page #header h1 {
+  width: 383px;
+  height: 95px;
+}
+.home.page #header h1 a {
+  width: 383px;
+  height: 95px;
 }
 
 
 /* tagline/what is? */
 
-.homepage #header h2,
-.homepage #what-is {
+.page #header h2,
+.page #what-is {
   font-family: "Gill Sans", "Gill Sans MT", "Lucida Grande", arial, helvetica, sans-serif;
   font-weight: normal;
   text-align: left;
   letter-spacing: -1px;
   color: #666;
 }
-.homepage #header h2 {
+.page #header h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  margin-left: 240px;
+  padding: 17px 0 7px;
+}
+.home.page #header h2 {
   font-size: 29px;
   line-height: 30px;
   margin: 0;
   margin-left: 403px;
   padding: 20px 0 7px;
 }
-.homepage #what-is {
+.home.page #what-is {
   font-size: 24px;
   line-height: 30px;
   width: 780px;
   margin: 0 auto;
 }
-.homepage #what-is p {
+.home.page #what-is p {
   margin-right: 240px;
 }
 
 
 /* get bar */
 
-.homepage #get {
+.page #get {
   color: white;
   text-align: center;
   position: relative;
-  margin: 30px 0;
+  margin: 10px 0 20px;
   padding: 15px 0;
 }
-.homepage #get a:link,
-.homepage #get a:visited {
+.home.page #get {
+  margin: 30px 0;
+}
+.page #get a:link,
+.page #get a:visited {
   color: white;
   text-decoration: underline;
 }
-.homepage #get a:hover {
+.page #get a:hover {
   background-color: white;
   text-decoration: none;
 }
-.homepage #get ul {
-  margin: 0 auto;
+.page #get ul {
+  margin: 0 40px;
   padding: 0;
   text-align: left;
+}
+.home.page #get ul {
   width: 780px;
+  margin: 0 auto;
+}
+.page #get ul li {
+  list-style: none;
+  font-size: 18px;
+}
+.home.page #get ul li {
+  list-style: inherit;
+  font-size: inherit;
 }
 
 
 /* get download */
 
-.homepage #get li#download {
+.home.page #get li#download {
   list-style: none;
   width: 220px;
   margin-right: 10px;
   float: left;
 }
-.homepage #get #download h3 {
+.home.page #get #download h3 {
   margin: 0;
 }
-.homepage #get #download h3 a {
+.home.page #get #download h3 a {
   position: relative;
   left: 26px;
   display: block;
@@ -152,7 +197,7 @@ a:hover {
   width: 163px;
   height: 162px;
 }
-.homepage #get #download p {
+.home.page #get #download p {
   text-align: center;
   margin: 0;
 }
@@ -160,33 +205,33 @@ a:hover {
 
 /* get tryruby in the browser */
 
-.homepage #get #tryruby {
+.home.page #get #tryruby {
   float: left;
   width: 300px;
   list-style: none;
   margin: 0 10px;
 }
-.homepage #get #tryruby h3 {
+.home.page #get #tryruby h3 {
   font-size: 36px;
   line-height: 38px;
   font-family: "Gill Sans", "gill sans mt", "Lucida Grande", arial, helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: -1px;
 }
-.homepage #get #tryruby h3 a {
+.home.page #get #tryruby h3 a {
   text-decoration: none;
 }
-.homepage #get #tryruby h3 a:hover {
+.home.page #get #tryruby h3 a:hover {
   background-color: transparent;
   color: white;
 }
-.homepage #get #tryruby h3 a span {
+.home.page #get #tryruby h3 a span {
   font-size: 24px;
 }
-.homepage #get #tryruby p {
+.home.page #get #tryruby p {
   margin: 10px;
 }
-.homepage #get #tryruby #console {
+.home.page #get #tryruby #console {
   background-color: #333;
   font-family: consolas, 'courier new', monospace;
   padding: 39px 0;
@@ -198,62 +243,63 @@ a:hover {
 
 /* get tutorial */
 
-.homepage #get #tutorial {
+.home.page #get #tutorial {
   float: left;
   width: 220px;
   list-style: none;
   margin-left: 10px;
 }
-.homepage #get #tutorial #code-snippet code {
+.home.page #get #tutorial #code-snippet code {
   width: 200px;
   height: 250px;
   background-image: url(../images/code-snippet-bg.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   padding: 10px;
   position: absolute;
   top: -190px;
   font-family: consolas, "courier new", monospace;
-  font-size: 12px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  font-size: 13px;
+  overflow: hidden;
   line-height: 14px;
-  letter-spacing: -0.3px;
+  letter-spacing: 0px;
 }
-.homepage #get #tutorial #code-snippet code .constant {
+.home.page #get #tutorial #code-snippet code .constant {
   color: #ff0;
 }
-.homepage #get #tutorial #code-snippet code .keyword {
+.home.page #get #tutorial #code-snippet code .keyword {
   color: #fc6;
 }
-.homepage #get #tutorial #code-snippet code .string {
+.home.page #get #tutorial #code-snippet code .string {
   color: #0f0;
 }
-.homepage #get #tutorial #code-snippet code .number {
+.home.page #get #tutorial #code-snippet code .number {
   color: #0af;
 }
-.homepage #get #tutorial #code-snippet code .comment {
+.home.page #get #tutorial #code-snippet code .comment {
   color: #f0f;
 }
 
-.homepage #get #tutorial p {
+.home.page #get #tutorial p {
   margin: 75px 0px 5px;
 }
 
-.homepage #get #tutorial a#tutorial-image,
-.homepage #get #tutorial a#tutorial-image img {
+.home.page #get #tutorial a#tutorial-image,
+.home.page #get #tutorial a#tutorial-image img {
   padding: 0; margin: 0; border: 0; background-color: transparent;
 }
-.homepage #get #tutorial a#tutorial-image:hover {
+.home.page #get #tutorial a#tutorial-image:hover {
   padding: 0; margin: 0; border: 0; background-color: transparent;
 }
-.homepage #get #tutorial a#tutorial-image {
+.home.page #get #tutorial a#tutorial-image {
   display: block;
 }
-.homepage #get #tutorial a#tutorial-image:link,
-.homepage #get #tutorial a#tutorial-image:visited {
+.home.page #get #tutorial a#tutorial-image:link,
+.home.page #get #tutorial a#tutorial-image:visited {
   padding: 5px;
   background-color: #ccc;
 }
-.homepage #get #tutorial a#tutorial-image:hover {
+.home.page #get #tutorial a#tutorial-image:hover {
   padding: 5px;
   background-color: #fe8;
 }
@@ -261,10 +307,13 @@ a:hover {
 
 /* question-answer */
 
-ul.question-answer {
-  width: 780px;
-  margin: 0 auto 30px auto;
+.page ul.question-answer {
+  margin: 0 40px 30px;
   font-family: georgia, serif;
+}
+.home.page ul.question-answer {
+  margin: 0 auto 30px auto;
+  width: 780px;
 }
 ul.question-answer li {
   list-style: none;
@@ -274,14 +323,15 @@ ul.question-answer li h3 {
   position: absolute;
   width: 220px;
   text-align: left;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: normal;
   letter-spacing: 0px;
 }
 ul.question-answer li p {
   margin-left: 240px;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 

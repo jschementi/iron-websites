@@ -4,17 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>IronPython</title>
-  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen"
+  <title>IronPython.net</title>
+  <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen"
         charset="utf-8" />
-  <link rel="stylesheet" href="css/lang.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../css/lang.css" type="text/css" media="screen"
         charset="utf-8" />
+
+  <script type="text/javascript">
+    window.DLR = {}
+    DLR.path = "../silverlight"
+  </script>
+  <script type="text/javascript" src="../silverlight/dlr.js"></script>
 </head>
 
-<body id="ironpython-homepage" class='homepage'>
+<body id="ironpython" class='home page'>
 
   <div id="nav">
-    <a href='#'>Overview</a>|<a href='#'>Download</a>|<a href='#'>Documentation</a>|<a href='#'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
+    <a href='index.html' class='active'>Overview</a><a href='download.html'>Download</a><a href='#'>Documentation</a><a href='#'>Support</a><a href='#'>Community</a><a href='#'>Blog</a>
   </div>
 
   <div id="header">
@@ -28,16 +34,16 @@
     <p>
       IronPython is an open-source implementation of the Python
       programming language which is tightly integrated with the
-      .NET Framework. IronPython can use the entire .NET
-      Framework and any Python libraries, and all other .NET
-      languages can use Python code just as easily.
+      .NET Framework. IronPython can use the .NET Framework and
+      Python libraries, and other .NET languages can use
+      Python code just as easily.
     </p>
   </div>
 
   <div id="get">
     <ul>
       <li id='download'>
-        <h3><a href=http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89547' target='_blank'>Download IronPython 2.6</a></h3>
+        <h3><a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89547' target='_blank'>Download IronPython 2.6</a></h3>
         <p>
           <a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451' target='_blank'>2.6 RC2 released 10/27/2009<br />
           <a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451' target='_blank'>release notes</a> | <a href="http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89549" target='_blank'>source</a>
@@ -46,7 +52,7 @@
       <li id="tryruby">
         <h3><a href='http://ironpython.codeplex.com/wikipage?title=SilverlightInteractiveSession&referringTitle=Home' target="_blank">Try Python <span>in the <u>browser</u></span></a></h3>
         <p>
-          Quickly run Python code in your 
+          Quickly run Python code in your
           browser, without installing IronPython.
         </p>
         <div id="console">
@@ -55,10 +61,7 @@
       </li>
       <li id="tutorial">
         <pre id="code-snippet"><code><span class="comment"># namespaces are modules</span>
-<span class="keyword">from</span> <span class="constant">System</span> import *
-<span class="keyword">from</span> <span class="constant">Collections</span>.<span class="constant">Generic</span> import (
-  <span class="constant">Dictionary</span>
-)
+<span class="keyword">from</span> <span class="constant">System</span>.<span class="constant">Collections</span>.<span class="constant">Generic</span> import <span class="constant">Dictionary</span>
 
 <span class="comment"># indexers constrains type</span>
 d = <span class="constant">Dictionary</span>[<span class="constant">str</span>, <span class="constant">int</span>])()
@@ -73,28 +76,32 @@ d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
           Learn more with the online tutorial:
         </p>
         <a href='http://trypython.org' id="tutorial-image" target='_blank'>
-          <img src="images/ironpython-tutorial.jpg" alt="IronPython tutorial" />
+          <img src="../images/ironpython-tutorial.jpg" alt="IronPython tutorial" />
         </a>
       </li>
       <li class='clear'>&nbsp;</li>
     </ul>
   </div>
 
+  <script type="text/ruby" src="../silverlight/animate.rb" defer='false'></script>
+
   <ul class="question-answer">
     <li>
       <h3>Why IronPython?</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Python is an excellent
+        addition to the .NET Framework, providing Python developers with the power
+        of the .NET framework. Existing .NET developers can also use IronPython
+        as a fast and expressive scripting language for embedding, testing, or
+        writing a new application from scratch.
       </p>
-    </li>
-  </ul>
-
-  <ul class="question-answer">
-    <li>
-      <h3>Lorem Ipsum?</h3>
+      <br />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+        And why target .NET you ask? The CLR is a great platform for creating
+        programming languages, and the DLR makes it all the more better for
+        dynamic languages. Also, the .NET framework (base class library,
+        presentation foundation, Silverlight, etc) give an amazing amount of
+        functionality and power to developers.</p>
     </li>
   </ul>
 
