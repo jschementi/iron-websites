@@ -32,22 +32,34 @@ a:hover {
   color: #1A61E5;
 }
 
+.page {
+  min-width: 780px;
+}
 
 /* page nav */
 
 .page #nav {
-  text-align: center;
+  text-align: right;
   position: relative;
   background-color: #eee;
   padding: 5px;
   border-bottom: 1px solid #ccc;
+  padding: 25px 40px 5px 280px;
+}
+.home.page #nav {
+  padding-top: 5px;
+  text-align: center;
 }
 .page #nav a {
-  padding: 5px 6px;
+  padding: 25px 6px 5px;
   font-size: 14px;
   font-weight: bold;
   border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
   text-decoration: none;
+}
+.home.page #nav a {
+  padding: 5px 6px;
 }
 .page #nav a:last-child {
   border-right: 1px solid #ccc;
@@ -69,13 +81,13 @@ a:hover {
 /* homepage header */
 
 .page #header {
-  margin: 10px 40px;
+  margin: 0px 40px;
   position: relative;
 
 }
 .page #header h1 {
   position: absolute;
-  top: 0;
+  top: -42px;
   margin: 0;
   width: 202px;
   height: 50px;
@@ -95,6 +107,7 @@ a:hover {
 .home.page #header h1 {
   width: 383px;
   height: 95px;
+  top: 0;
 }
 .home.page #header h1 a {
   width: 383px;
@@ -113,11 +126,12 @@ a:hover {
   color: #666;
 }
 .page #header h2 {
-  font-size: 24px;
+  font-size: 26px;
   line-height: 30px;
   margin: 0;
-  margin-left: 240px;
-  padding: 17px 0 7px;
+  /* margin-left: 240px; */
+  padding: 20px 0 30px;
+  text-align: center;
 }
 .home.page #header h2 {
   font-size: 29px;
@@ -125,6 +139,7 @@ a:hover {
   margin: 0;
   margin-left: 403px;
   padding: 20px 0 7px;
+  text-align: left;
 }
 .home.page #what-is {
   font-size: 24px;
