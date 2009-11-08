@@ -1,5 +1,5 @@
 body {
-  font-family: verdana, "Lucida Grande", arial, helvetica, sans-serif;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 11px;
   text-align: center;
   margin: 0;
@@ -119,31 +119,29 @@ a:hover {
 
 .page #header h2,
 .page #what-is {
-  font-family: "Gill Sans", "Gill Sans MT", "Lucida Grande", arial, helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, arial, helvetica, sans-serif;
   font-weight: normal;
   text-align: left;
   letter-spacing: -1px;
+  line-height: 105%;
   color: #666;
+  margin: 0;
 }
 .page #header h2 {
   font-size: 26px;
-  line-height: 30px;
-  margin: 0;
   /* margin-left: 240px; */
   padding: 20px 0 30px;
   text-align: center;
 }
 .home.page #header h2 {
   font-size: 29px;
-  line-height: 30px;
-  margin: 0;
   margin-left: 403px;
-  padding: 20px 0 7px;
+  padding: 21px 0 7px;
   text-align: left;
 }
 .home.page #what-is {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 125%;
   width: 780px;
   margin: 0 auto;
 }
@@ -228,8 +226,8 @@ a:hover {
 }
 .home.page #get #tryruby h3 {
   font-size: 36px;
-  line-height: 38px;
-  font-family: "Gill Sans", "gill sans mt", "Lucida Grande", arial, helvetica, sans-serif;
+  line-height: 95%;
+  font-family: "Gill Sans", "gill sans mt", Calibri, arial, helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: -1px;
 }
@@ -276,7 +274,7 @@ a:hover {
   font-family: consolas, "courier new", monospace;
   font-size: 13px;
   overflow: hidden;
-  line-height: 14px;
+  line-height: 110%;
   letter-spacing: 0px;
 }
 .home.page #get #tutorial #code-snippet code .constant {
@@ -296,7 +294,7 @@ a:hover {
 }
 
 .home.page #get #tutorial p {
-  margin: 75px 0px 5px;
+  margin: 70px 0px 5px;
 }
 
 .home.page #get #tutorial a#tutorial-image,
@@ -338,43 +336,44 @@ ul.question-answer li h3 {
   position: absolute;
   width: 220px;
   text-align: left;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: normal;
   letter-spacing: 0px;
 }
 ul.question-answer li p {
   margin-left: 240px;
   text-align: left;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 140%;
 }
 
 
 /* footer */
 
-ul#footer {
-  padding: 20px;
-  margin: 0;
+#footer {
   color: #eee;
   background-color: #222;
 }
-ul#footer li {
+#footer ul {
+  padding: 20px 40px;
+}
+#footer li {
   list-style: none;
   padding: 0; margin: 0;
 }
-ul#footer li:first-child {
+#footer li:first-child {
   float: left;
 }
-ul#footer li#footer-nav {
+#footer li#footer-nav {
   float: right;
 }
-ul#footer li a:link,
-ul#footer li a:visited {
+#footer li a:link,
+#footer li a:visited {
   color: white;
   padding: 0 2px;
   margin: 0 2px;
 }
-ul#footer li a:hover {
+#footer li a:hover {
   background-color: white;
   color: black;
   text-decoration: none;
