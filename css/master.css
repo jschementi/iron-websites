@@ -44,7 +44,7 @@ a:hover {
   background-color: #eee;
   padding: 5px;
   border-bottom: 1px solid #ccc;
-  padding: 25px 40px 5px 280px;
+  padding: 25px 40px 5px 330px;
 }
 .home.page #nav {
   padding-top: 5px;
@@ -301,7 +301,8 @@ a.download_link:hover {
 .home.page #get #tutorial #code-snippet code {
   width: 200px;
   height: 250px;
-  background-image: url(../images/code-snippet-bg.png);
+  /* background-image: url(../images/code-snippet-bg.png); */
+  background-color: #484848; 
   background-position: 0 0;
   background-repeat: no-repeat;
   padding: 10px;
