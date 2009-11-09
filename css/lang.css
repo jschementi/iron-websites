@@ -5,6 +5,50 @@
   color: green;
 }
 
+
+.page #nav a.active {
+  padding-top: 20px;
+}
+#ironruby.page #nav a.active {
+  border-top: 5px solid #A41E20;
+}
+#ironpython.page #nav a.active {
+  border-top: 5px solid green;
+}
+
+#ironruby.page ul.question-answer p a:link,
+#ironruby.page ul.question-answer p a:visited {
+  color: #A41E20;
+}
+#ironpython.page ul.question-answer p a:link,
+#ironpython.page ul.question-answer p a:visited {
+  color: green;
+}
+
+#ironpython a.download_link:link,
+#ironpython a.download_link:visited {
+  color: white;
+  background-color: green;
+  border: 2px solid #333;
+}
+#ironpython a.download_link:hover {
+  color: white;
+  background-color: #080;
+  border: 2px solid #555;
+}
+#ironruby a.download_link:link,
+#ironruby a.download_link:visited {
+  color: white;
+  background-color: #A41E20;
+  border: 2px solid #333;
+}
+#ironruby a.download_link:hover {
+  color: white;
+  background-color: #CA1E20;
+  border: 2px solid #555;
+}
+
+
 #ironruby.page #header h1 a {
   background-image: url(../images/ironruby-logo-202x50.png);
 }
@@ -32,4 +76,59 @@
 }
 #ironpython.home.page #get #download h3 a {
   background-image: url(../images/download-ironpython.png);
+}
+
+#ironruby.page #header h1 a {
+  background-image: url(../images/ironruby-logo-202x50.png);
+}
+#ironpython.page #header h1 a {
+  background-image: url(../images/ironpython-logo-202x50.png);
+}
+#ironruby.home.page #header h1 a {
+  background-image: url(../images/ironruby-logo-383x95.png);
+}
+#ironpython.home.page #header h1 a {
+  background-image: url(../images/ironpython-logo-383x95.png);
+}
+
+#ironruby.page #get,
+#ironruby.page #get a:hover {
+  background-color: #A41E20;
+}
+#ironpython.page #get,
+#ironpython.page #get a:hover {
+  background-color: green;
+}
+
+#ironruby.home.page #get #download h3 a {
+  background-image: url(../images/download-ironruby.png);
+}
+#ironpython.home.page #get #download h3 a {
+  background-image: url(../images/download-ironpython.png);
+}
+
+
+#ironpython ul.question-answer p a.download {
+  background-color: green;
+  padding: 3px;
+}
+#ironpython ul.question-answer p a.download:link,
+#ironpython ul.question-answer p a.download:visited {
+  color: white;
+  text-decoration: none;
+}
+#ironpython ul.question-answer p a.download:hover {
+  background-color: #080;
+}
+#ironruby ul.question-answer p a.download {
+  background-color: #A41E20;
+  padding: 3px;
+}
+#ironruby ul.question-answer p a.download:link,
+#ironruby ul.question-answer p a.download:visited {
+  color: white;
+  text-decoration: none;
+}
+#ironruby ul.question-answer p a.download:hover {
+  background-color: #CA1E20;
 }

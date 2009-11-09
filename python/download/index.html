@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>IronPython.net / Download</title>
-  <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../../css/master.css" type="text/css" media="screen"
         charset="utf-8" />
-  <link rel="stylesheet" href="../css/lang.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../../css/lang.css" type="text/css" media="screen"
         charset="utf-8" />
-  <link rel="stylesheet" href="../css/sticky-footer.css" type="text/css" media="screen"
+  <link rel="stylesheet" href="../../css/sticky-footer.css" type="text/css" media="screen"
         charset="utf-8" />
 </head>
 
@@ -19,12 +19,12 @@
     <div id="main" class="clearfix">
 
       <div id="nav">
-        <a href='index.html'>Overview</a><a href='download.html' class='active'>Download</a><a href='#'>Documentation</a><a href='#'>Support</a><a href='#'>Community</a><a href='#'>Blog</a>
+        <a href='..'>Overview</a><a href='.' class='active'>Download</a><a href='#'>Documentation</a><a href='../support'>Support</a><a href='#'>Community</a><a href='#'>Blog</a>
       </div>
 
       <div id="header">
-        <h1><a href="#">IronPython</a></h1>
-        <h2><a target='_blank' href="http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451">Download the latest release (2.6 RC2)</a></h2>
+        <h1><a href="..">IronPython</a></h1>
+        <h2><a class='download_link' target='_blank' href="http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89547">Download release<br /><span style='font-size: 18px'>IronPython 2.6 RC2</span></a></h2>
       </div>
 
       <ul class="question-answer">
@@ -46,62 +46,70 @@
           <h3>Prerequisites</h3>
           <p>
             IronPython is a cross-platform and cross-browser programming language,
-            so your prerequisites will vary based on usage.<br /><br />
+            so prerequisites will vary based on usage.
           </p>
-          <p>Here are the recommended runtimes are for each platform:
+          <p class='space'>
+            Here are the recommended runtimes are for each platform:
           </p>
           
-          <h4>Windows desktop &amp; server</h4>
-          <p class='space'>
+          <h4>Windows desktop &amp; server apps</h4>
+          <p class="space strip">
             On Windows for desktop and server usage, the .NET framework is the
             recommended runtime.
           </p>
-          <p class='space half'>
-            <a target='_blank' href="http://bit.ly/iron-dotnet35sp1">&raquo; Latest .NET version (3.5 SP1)</a>
+          <p class="space strip half">
+            <a class='download' target='_blank' href="http://bit.ly/iron-dotnet35sp1">&raquo; Latest .NET version (3.5 SP1)</a>
           </p>
-          <p class='space half note'>
-            Note: IronPython will also run on these versions of .NET:<br />
+          <p class="space strip half note">
+            <b>Note</b>: IronPython will also run on these versions of .NET:<br />
             <a target='_blank' href="http://bit.ly/iron-dotnet35">3.5</a>,
             <a target='_blank' href="http://bit.ly/iron-dotnet3">3.0</a>, and
             <a target='_blank' href="http://bit.ly/iron-dotnet20sp1">2.0 SP1</a>.
           </p>
           
-          <h4>Windows &amp; Mac OS browser</h4>
-          <p class='space'>
+          <h4>Windows &amp; Mac OS browser apps</h4>
+          <p class='space strip'>
             On Windows &amp; Mac OS for browser usage, Silverlight is the recommended
             runtime.
           </p>
-          <p class='space half'>
-            <a target='_blank' href=''>&raquo; Latest Silverlight version (3.0.40818.0)</a>
+          <p class='space strip half'>
+            <a class='download' target='_blank' href=''>&raquo; Latest Silverlight version (3.0)</a>
           </p>
-          <p class='space half'>
+          <p class='space strip half'>
             Silverlight enables you to use Python to script HTML pages just as
             you would with JavaScript, and also enables advanced vector graphics
             for rich user-interfaces and video.
           </p>
-          <p class='space half'>
+          <p class='space strip half'>
             <a href='browser'>Learn more about Python in the browser</a>
           </p>
 
-          <h4>Mac OS &amp; Linux desktop &amp; server</h4>
-          <p class='space'>
+          <h4>Mac OS &amp; Linux desktop &amp; server apps</h4>
+          <p class='space strip'>
             IronPython runs on
             <a target='_blank' href='http://www.mono-project.com'>Mono: a cross platform, open source .NET framework</a>,
             enabled IronPython to be used on Linux, Mac OS, and BSD systems.
           </p>
-          <p class='space half'>
-            <a target='_blank' href='http://www.go-mono.com/mono-downloads/download.html'>&raquo; Latest Mono version (2.4)</a>
+          <p class='space strip half'>
+            <a class='download' target='_blank' href='http://www.go-mono.com/mono-downloads/download.html'>&raquo; Latest Mono version (2.4)</a>
           </p>
-        </li>
-      </ul>
 
-
-      <ul class="question-answer">
-        <li>
-          <h3>Dolor sit amet?</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <h4>Linux browser apps</h4>
+          <p class='space strip'>
+            IronPython also runs on
+            <a target='_blank' href='http://www.mono-project.com/Moonlight'>Moonlight</a>,
+            a open source implementation of Microsoft Silverlight for Unix systems.
           </p>
+          <p class='space strip half'>
+            <a class='download' target='_blank' href='http://go-mono.com/moonlight-beta'>&raquo; Latest Moonlight version (2.0)</a>
+          </p>
+          <p class='space strip half note'>
+            <b>Note</b>: Moonlight 2 targets the Silverlight 2 API, so if you want to
+            run the same application on all platforms make sure to only use
+            Silverlight 2 APIs, or provide a fallback implementation for
+            Moonlight.
+          </p>
+
         </li>
       </ul>
 
@@ -113,7 +121,7 @@
     <ul>
       <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
       <li id="footer-nav">
-        <a href='index.html'>Overview</a>|<a href='download.html'>Download</a>|<a href='#'>Documentation</a>|<a href='#'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
+        <a href='..'>Overview</a>|<a href='.'>Download</a>|<a href='#'>Documentation</a>|<a href='../support'>Support</a>|<a href='#'>Community</a>|<a href='#'>Blog</a>
       </li>
       <li class="clear">&nbsp;</li>
     </ul>

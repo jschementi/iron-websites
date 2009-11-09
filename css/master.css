@@ -148,6 +148,34 @@ a:hover {
 .home.page #what-is p {
   margin-right: 240px;
 }
+a.download_link {
+  margin: 0 auto;
+  display: block;
+  width: 180px;
+
+  padding: 10px 75px 10px 10px;
+
+  text-decoration: none;
+  text-align: left;
+  font-family: 'gill sans', 'gill sans mt', 'Trebuchet MS', verdana, sans-serif;
+  letter-spacing: -1px;
+
+  background-image: url(../images/arrow-light.png);
+  background-repeat: no-repeat;
+  background-position: 210px center;
+  color: inherit;
+}
+a.download_link:link,
+a.download_link:visited {
+  color: white;
+  background-color: #555;
+  border: 1px solid #999;
+}
+a.download_link:hover {
+  color: white;
+  background-color: #777;
+  border: 1px solid #ccc;
+}
 
 
 /* get bar */
@@ -244,13 +272,21 @@ a:hover {
 .home.page #get #tryruby p {
   margin: 10px;
 }
-.home.page #get #tryruby #console {
-  background-color: #333;
-  font-family: consolas, 'courier new', monospace;
-  padding: 39px 0;
-  font-size: 18px;
-  text-align: center;
-  border: 5px solid gray;
+.home.page #get #tryruby a#console {
+  display: block;
+  width: 290px;
+  height: 100px;
+  padding: 5px;
+}
+.home.page #get #tryruby a#console img {
+  border: 0;
+}
+.home.page #get #tryruby a#console:link,
+.home.page #get #tryruby a#console:visited {
+  background-color: #ccc;
+}
+.home.page #get #tryruby a#console:hover {
+  background-color: #fe8;
 }
 
 
@@ -348,7 +384,7 @@ ul.question-answer li p {
 }
 ul.question-answer li h4 {
   letter-spacing: -1px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   font-style: italic;
   margin-top: 15px;
@@ -356,18 +392,24 @@ ul.question-answer li h4 {
   text-align: right;
   width: 200px;
 }
-ul.question-answer li p.space {
+p.space {
   margin-top: 10px;
-  border-left: 8px solid #bbb;
-  padding: 5px 8px; 
-  background-color: #fafafa;
 }
-ul.question-answer li p.space.half {
+p.space.strip {
+  border-left: 10px solid #ddd;
+  /* border-left: 10px solid #ff9; */
+  padding: 5px 10px; 
+}
+p.half {
   padding-top: 5px;
   margin-top: 0px
 }
 ul.question-answer li p.note {
   font-style: italic;
+  font-size: 15px;
+}
+p a.download {
+  font-size: 20px;
 }
 
 /* footer */
