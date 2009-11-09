@@ -44,11 +44,16 @@ a:hover {
   background-color: #eee;
   padding: 5px;
   border-bottom: 1px solid #ccc;
-  padding: 25px 40px 5px 330px;
+  padding: 25px 40px 5px;
 }
 .home.page #nav {
   padding-top: 5px;
   text-align: center;
+}
+.home.page #nav div {
+  margin: 0 auto;
+  width: 780px;
+  text-align: right;
 }
 .page #nav a {
   padding: 25px 6px 5px;
