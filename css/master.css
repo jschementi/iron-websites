@@ -55,6 +55,16 @@ a:hover {
   width: 780px;
   text-align: right;
 }
+.sub.page #nav {
+  text-align: center;
+}
+.sub.page #nav div {
+  margin: 0 auto;
+  width: 780px;
+  text-align: right;
+  position: relative;
+}
+
 .page #nav a {
   padding: 25px 6px 5px;
   font-size: 14px;
@@ -86,9 +96,8 @@ a:hover {
 /* homepage header */
 
 .page #header {
-  margin: 0px 40px;
+  margin: 0 40px;
   position: relative;
-
 }
 .page #header h1 {
   position: absolute;
@@ -103,6 +112,10 @@ a:hover {
   background-repeat: no-repeat;
   display: block;
   text-indent: -100000px;
+}
+.sub.page #header {
+  margin: 0 auto;
+  width: 780px;
 }
 .home.page #header {
   margin: 25px auto 30px auto;
@@ -162,7 +175,7 @@ a.download_link {
 
   text-decoration: none;
   text-align: left;
-  font-family: 'gill sans', 'gill sans mt', 'Trebuchet MS', verdana, sans-serif;
+  font-family: "Gill Sans", "gill sans mt", Calibri, arial, helvetica, sans-serif;
   letter-spacing: -1px;
 
   background-image: url(../images/arrow-light.png);
@@ -363,11 +376,9 @@ a.download_link:hover {
 /* question-answer */
 
 .page ul.question-answer {
-  margin: 0 40px 30px;
+  /*margin: 0 40px 30px;*/
   font-family: georgia, serif;
-}
-.home.page ul.question-answer {
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
   width: 780px;
 }
 ul.question-answer li {
@@ -417,6 +428,9 @@ ul.question-answer li p.note {
 p a.download {
   font-size: 20px;
 }
+ul.question-answer p a.download {
+  background-color: #fffcb9;
+}
 
 /* footer */
 
@@ -426,6 +440,15 @@ p a.download {
 }
 #footer ul {
   padding: 20px 40px;
+}
+.sub.page #footer {
+  text-align: center;
+}
+.sub.page #footer ul,
+.home.page #footer ul {
+  margin: 0 auto;
+  text-align: left;
+  width: 780px;
 }
 #footer li {
   list-style: none;
