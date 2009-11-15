@@ -382,6 +382,7 @@ a.download_link:hover {
   font-family: georgia, serif;
   margin: 0 auto 30px;
   font-size: 18px;
+  width: 780px;
 }
 ul.question-answer li {
   list-style: none;
@@ -399,7 +400,6 @@ ul.question-answer li h3 {
   text-align: left;
   font-size: 18px;
   line-height: 140%;
-  margin: 0 60px;
 }
 ul.question-answer li p {
   margin-left: 240px;
