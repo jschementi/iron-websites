@@ -28,18 +28,10 @@ object#silverlightDlrObject_DOMOnly {
 }
 
 a, a:link, a:visited {
-  color: black;
   text-decoration: underline;
 }
 a:hover {
-  color: black;
   text-decoration: none;
-}
-
-/* colors */
-
-a.dotnet, .dotnet {
-  color: #1A61E5;
 }
 
 .page {

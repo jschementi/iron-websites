@@ -1,8 +1,15 @@
-#ironruby .lang {
+#ironruby .lang, #ironruby a, #ironruby a.lang {
   color: #A41E20;
 }
-#ironpython .lang {
+#ironpython .lang, #ironpython a, #ironpython a.lang {
   color: green;
+}
+
+/* colors */
+
+#ironruby a.dotnet, #ironruby .dotnet,
+#ironpython a.dotnet, #ironpython .dotnet {
+  color: #1A61E5;
 }
 
 
