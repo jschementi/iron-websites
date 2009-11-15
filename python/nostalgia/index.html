@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+  <title>IronPython.net / Nostalgia</title>
+  <link rel="stylesheet" href="../../css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/lang.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/sticky-footer.css" type="text/css" media="screen"
+        charset="utf-8" />
+</head>
+
+<body id="ironpython" class="sub page">
+
+  <div id="wrap">
+    <div id="main" class="clearfix">
+
+      <div id="nav">
+        <div>
+          <a href='..'>Overview</a><a href='../download'>Download</a><a href='../documentation'>Documentation</a><a href='.'>Support</a>
+        </div>
+      </div>
+
+      <div id="header">
+        <h1><a href="..">IronPython</a></h1>
+        <h2>Original IronPython website</h2>
+      </div>
+
+      <p style="margin-bottom: 30px">
+        IronPython is a new <a href="http://python.org/">Python</a> implementation targeting the <a href="http://msdn.microsoft.com/netframework/">.NET</a> and <a href="http://www.go-mono.com/">Mono</a> platforms.  It is...
+      </p>
+      <ul style="text-align: left; margin: 0 60px; padding: 0 0 30px; list-style: none;">
+        <li style="margin-bottom: 10px"><b>Fast</b> - IronPython-0.6 is up to 1.7x faster than Python-2.3 on the standard pystone benchmark.  An early performance report is are contained in <a href="http://www.python.org/pycon/dc2004/papers/9">this paper for PyCon 2004</a>.</li>
+        <li style="margin-bottom: 10px"><b>Integrated with the Common Language Runtime</b> - IronPython code can easily use CLR libraries and Python classes can extend CLR classes.</li>
+        <li style="margin-bottom: 10px"><b>Fully dynamic</b> - IronPython supports an interactive interpreter and transparent on-the-fly compilation of source files just like standard Python.</li>
+        <li style="margin-bottom: 10px"><b>Optionally static</b> - IronPython also supports static compilation of Python code to produce static executables (.exe's) that can be run directly or static libraries (.dll's) that can be called from other CLR languages including C#, VB, managed C++ and many more.  <i>Note: static compilation is only partially implemented in the 0.6 public release.  This will need further development before being useful.</i></li>
+        <li style="margin-bottom: 10px"><b>Managed and verifiable</b> - IronPython generates verifiable assemblies with no dependencies on native libraries that can run in environments which require verifiable managed code.</li>
+        <li style="margin-bottom: 10px"><b>Not finished</b> - IronPython is currently at a pre-alpha stage suitable for experimentation but not for serious development work.  The latest public release can be downloaded below.</li>
+      </ul>
+
+      <ul class="question-answer">
+        <li>
+          <h3>Public Release</h3>
+          <p class="">
+            IronPython-0.6 is now available as Open Source Software under the <a href="http://www.eclipse.org/legal/cpl-v10.html">Common Public License version 1.0</a>.  A single zip file containing both the source code and the binary executables can be downloaded below.
+          </p>
+          <p class="space">
+            <a href="http://ironpython.com/IronPython-0.6.zip">IronPython-0.6.zip</a> released on July 28, 2004
+          </p>
+        </li>
+      </ul>
+
+      <ul class="question-answer">
+        <li>
+          <h3>Public Mailing List</h3>
+          <p>
+            After many requests there is now a mailing list to discuss IronPython.  Please use this list to share your experiences, bug reports, suggestions, or questions.  <a href="http://lists.ironpython.com/listinfo.cgi/users-ironpython.com">Click here for archives and/or to join the list</a>.
+          </p>
+        </li>
+      </ul>
+
+
+      <ul class="question-answer">
+        <li>
+          <h3>Release Announcement from July 28, 2004</h3>
+          <p>
+            It was a little less than a year ago that I first started investigating the Common Language Runtime (CLR). My plan was to do a little work and then write a short pithy article called, "Why .NET is a terrible platform for dynamic languages". My plans changed when I found the CLR to be an excellent target for the highly dynamic Python language. Since then I've spent much of my spare time working on the development of IronPython.
+          </p>
+          <p class='space'>
+            The more time that I spent with the CLR, the more excited I became about its potential. At the same time, I was becoming more frustrated with the slow pace of progress that I was able to make working on this project in my spare time. After exploring many alternatives, I think that I've found the ideal way to continue working to realize the amazing potential of the vision of the CLR. I've decided to join the CLR team at Microsoft beginning on August 2.
+          </p>
+          <p class='space'>
+            At Microsoft I plan to continue the work that I've begun with IronPython to bring the power and simplicity of dynamic/scripting languages to the CLR. My work with Python should continue as a working example of a high-performance production quality implementation of a dynamic language for the CLR. I will also reach out to other languages to help overcome any hurdles that are preventing them from targeting the CLR effectively. I welcome any and all feedback about how to best accomplish this. You can reach me at jim@ironpython.com .
+          </p>
+        </li>
+      </ul>
+      
+      <ul class="question-answer">
+        <li>
+          <h3>Past News and Presentations</h3>
+          <p>
+            <b>July 28, 2004</b> - <a href="http://conferences.oreillynet.com/presentations/os2004/hugunin_jim_up.ppt">IronPython: A fast Python implementation for .NET and Mono</a>, by <a href="http://hugunin.net/">Jim Hugunin</a> at <a href="http://conferences.oreilly.com/oscon/">O'Reilly OsCon</a> in Portland, OR
+          </p>
+          <p class="space">
+            <b>March 24, 2004</b> - <a href="http://www.python.org/pycon/dc2004/papers/9">IronPython: A fresh look at Python on .NET</a> presented by <a href="http://hugunin.net/">Jim Hugunin</a> at <a href="http://pycon.org/dc2004/">PyCon 2004</a> in Washington, DC
+          </p>
+          <p class="space">
+            <b>February 27, 2004</b> - <a href="http://www.infoworld.com/article/04/02/27/09FEmsnetdynamic_1.html">Does .Net have a dynamic-language deficiency?</a> by Jon Udell in InfoWorld
+          </p>
+          <p class="space">
+            <b>February 1, 2004</b> - <a href="http://www.sdtimes.com/cols/winwatch_095.htm">Ignoring the Scripts</a> by Larry O'Brien in SDTimes 
+          </p>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+      <li id="footer-nav">
+        <a href='..'>Overview</a>|<a href='../download'>Download</a>|<a href='../documentation'>Documentation</a>|<a href='.'>Support</a>
+      </li>
+      <li class="clear">&nbsp;</li>
+    </ul>
+  </div>
+
+</body>
+</html>

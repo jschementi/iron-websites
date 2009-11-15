@@ -1,7 +1,10 @@
-#include Microsoft::Scripting::Silverlight
-#repl = Repl.show
-#$stdout = repl.OutputBuffer
-#$stderr = repl.OutputBuffer
+include Microsoft::Scripting::Silverlight
+
+if document.query_string.contains_key 'console'
+  repl = Repl.show
+  $stdout = repl.OutputBuffer
+  $stderr = repl.OutputBuffer
+end
 
 codebox = document.send('code-snippet').children.first
 codebox.mouseover do |s, e|

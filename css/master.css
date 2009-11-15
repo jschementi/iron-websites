@@ -11,6 +11,14 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   margin: 0;
 }
 
+object#silverlightDlrObject_DOMOnly {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
 .clear {
   clear: both;
   position: relative;
@@ -19,16 +27,18 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
   display: block;
 }
 
-a:link, a:visted {
+a, a:link, a:visited {
+  color: black;
   text-decoration: underline;
 }
 a:hover {
+  color: black;
   text-decoration: none;
 }
 
 /* colors */
 
-.dotnet {
+a.dotnet, .dotnet {
   color: #1A61E5;
 }
 
@@ -375,11 +385,11 @@ a.download_link:hover {
 
 /* question-answer */
 
-.page ul.question-answer {
+.page .question-answer {
   /*margin: 0 40px 30px;*/
   font-family: georgia, serif;
   margin: 0 auto 30px;
-  width: 780px;
+  font-size: 18px;
 }
 ul.question-answer li {
   list-style: none;
@@ -393,11 +403,14 @@ ul.question-answer li h3 {
   font-weight: normal;
   letter-spacing: 0px;
 }
-ul.question-answer li p {
-  margin-left: 240px;
+.question-answer p {
   text-align: left;
   font-size: 18px;
   line-height: 140%;
+  margin: 0 60px;
+}
+ul.question-answer li p {
+  margin-left: 240px;
 }
 ul.question-answer li h4 {
   letter-spacing: -1px;
