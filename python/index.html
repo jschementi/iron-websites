@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="../css/sticky-footer.css" type="text/css" media="screen"
         charset="utf-8" />
 
-  <script type="text/javascript" src="http://ironruby.com/release/dlr.js"></script>
+  <!--<script type="text/javascript" src="http://ironruby.com/release/dlr.js"></script>-->
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.3.2.js"></script>
 </head>
 
 <body id="ironpython" class='home page'>
@@ -24,12 +25,12 @@
 
       <div id="nav">
         <div>
-          <a href='.' class='active'>Overview</a><a href='download'>Download</a><a href='documentation'>Documentation</a><a href='support'>Support</a>
+          <a href='.' class='active'>Overview</a><a href='download/'>Download</a><a href='documentation/'>Documentation</a><a href='support/'>Support</a>
         </div>
       </div>
 
       <div id="header">
-        <h1><a href="index.html">IronPython</a></h1>
+        <h1><a href=".">IronPython</a></h1>
         <h2>the <a href="http://python.org" class='lang' target='_blank'>Python</a>
         programming language for the <a href='http://microsoft.com/NET' class='dotnet' target='_blank'>.NET</a> Framework
         </h2>
@@ -50,17 +51,17 @@
           <li id='download'>
             <h3><a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89547' target='_blank'>Download IronPython 2.6</a></h3>
             <p>
-              <a href='download' target='_blank'>2.6 RC2 released 10/27/2009<br />
+              <a href='download/' target='_blank'>2.6 RC2 released 10/27/2009<br />
               <a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451' target='_blank'>release notes</a> | <a href="http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34451#DownloadId=89549" target='_blank'>source</a>
             </p>
           </li>
           <li id="tryruby">
-            <h3><a href='try' target="_blank">Try Python <span>in the <u>browser</u></span></a></h3>
+            <h3><a href='try/' target="_blank">Try Python <span>in the <u>browser</u></span></a></h3>
             <p>
               Quickly run Python code in your
               browser, without installing IronPython.
             </p>
-            <a id="console" href="try">
+            <a id="console" href="try/">
               <img src="../images/trypythoninbrowser-290x100.png" alt="Try Python in the Browser" />
             </a>
           </li>
@@ -80,7 +81,7 @@ d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
             <p>
               Learn more with the online tutorial:
             </p>
-            <a href='tutorial' id="tutorial-image">
+            <a href='tutorial/' id="tutorial-image">
               <img src="../images/ironpython-tutorial.jpg" alt="IronPython tutorial" />
             </a>
           </li>
@@ -88,7 +89,17 @@ d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
         </ul>
       </div>
 
-      <script type="text/ruby" src="../silverlight/animate.rb"></script>
+      <!--<script type="text/ruby" src="../silverlight/animate.rb"></script>-->
+
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('#code-snippet code').mouseover(function() {
+                  $(this).css('width', '350px')
+              }).mouseout(function() {
+                  $(this).css('width', '200px')
+              })
+          })
+      </script>
 
       <ul class="question-answer">
         <li>
@@ -146,7 +157,7 @@ d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
     <ul>
       <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a> | <a href="http://github.com/jschementi/iron-websites">website source code</a></li>
       <li id="footer-nav">
-        <a href='.'>Overview</a>|<a href='download'>Download</a>|<a href='documentation'>Documentation</a>|<a href='support'>Support</a>
+        <a href='.'>Overview</a>|<a href='download/'>Download</a>|<a href='documentation/'>Documentation</a>|<a href='support/'>Support</a>
       </li>
       <li class="clear">&nbsp;</li>
     </ul>
