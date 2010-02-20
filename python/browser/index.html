@@ -1,0 +1,59 @@
+<style type="text/css">
+  body {
+    font-family: Calibri, sans-serif;
+  }
+  pre {
+    font-family: Consolas, monospace;
+  }
+</style>
+
+<h1>Python in the Browser</h1>
+
+<h2>Getting Started</h2>
+<p>
+Include the <code>http://mschnlnine.vo.llnwd.net/d1/dlr-20091120.js</code> file on your page to enable Python script-tags on the HTML page:
+</p>
+
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript" src="http://mschnlnine.vo.llnwd.net/d1/dlr-20091120.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script type="text/python"&gt;
+      window.Alert("Hello World from Python")
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><b>Try out some simple examples: (note: they need to be run in a web-server like Apache or IIS)</b>
+<a href="getting-started/02_python.html">python</a> |
+<a href="getting-started/03_xaml.html">xaml</a> |
+<a href="getting-started/04_animation.html">animation</a> |
+<a href="getting-started/05_final.html">final</a>
+</p>
+
+<p><b>And take a look at the paper:</b>
+<a href="sl-back-to-just-text.pdf">Back to "Just-Text"</a>
+</p>
+
+<h2>Custom Installation</h2>
+
+<p><a href="gestalt-20091120.zip">Download the redistributable package</a></p>
+
+<p>
+Place the package anywhere on your webserver, but keep in mind if you have
+to reference dlr.js with a path that's different than "../dlr.js", you'll 
+have to add this to your HTML file <b>before</b> referencing dlr.js:
+</p>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  window.DLR = {}
+  DLR.path = "../../path/to/dlr" // where ../../path/to/dlr.js exists
+&lt;/script&gt;
+</pre>
+
+<p>However, if you don't want to add this to every file, you can also 
+add it to the top of dlr.js</p>
