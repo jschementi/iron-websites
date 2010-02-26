@@ -1,2 +1,5 @@
+deploy
+*.html.orig
+*.pyc
 Thumbs.db
 *.swp

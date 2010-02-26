@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+  <title>IronPython.net / {{title}}</title>
+  <link rel="stylesheet" href="{{path_to_css}}/css/rst.css" type="text/css" media="screen"
+            charset="utf-8" />
+  <link rel="stylesheet" href="{{path_to_css}}/css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="{{path_to_css}}/css/lang.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="{{path_to_css}}/css/sticky-footer.css" type="text/css" media="screen"
+        charset="utf-8" />
+  {% if style %}
+  <style type="text/css">
+    {{ style }}
+  </style>
+  {% endif %}
+</head>
+
+<body id="ironpython" class="{{page_class}} page">
+
+  <div id="wrap">
+    <div id="main" class="clearfix">
+
+      {{body}}
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+      <li id="footer-nav">
+        {{main_nav}}
+      </li>
+      <li class="clear">&nbsp;</li>
+    </ul>
+  </div>
+
+</body>
+</html>

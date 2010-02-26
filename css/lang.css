@@ -114,3 +114,14 @@
   background-image: url(../images/download-ironpython.png);
 }
 
+#ironpython.page.browser #get-started-button {
+  display: block;
+  background-image: url(../images/btn_getstarted.png);
+  width: 283px;
+  height: 43px;
+  padding: 0;
+  text-indent: -100000px;
+}
+#ironpython.page.browser #get-started-button:hover {
+  background-position: 0 -43px;
+}
