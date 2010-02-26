@@ -14,7 +14,7 @@ from jinja2 import Template
 #PYGMENTS_FORMATTER = HtmlFormatter(style='pastie', cssclass='syntax')
 
 main_path = os.path.join(__thisfile__, 'python\\')
-print "main_path: %s" % main_path
+#print "main_path: %s" % main_path
 
 NAV = [
     ("Overview", '/'),
@@ -47,11 +47,11 @@ def main_navigation(active_page, path_to_root):
 
 def main_nav_href((name, link), active_page, path_to_root):
     active = is_main_nav_active(active_page, link)
-    if active:
-        print "(active)"
+    #if active:
+    #    print "(active)"
     
     rel = normalize(os.path.normpath(os.path.join(path_to_root, link if link[0] != '/' else ('.%s' % link))))
-    print "link '%s' => %s" % (name, rel)
+    #print "link '%s' => %s" % (name, rel)
 
     t = Template("<a href='{{link}}' {% if active %} class='active' {% endif %}>{{name}}</a>")
     c = { 'link': rel, 'name': name, 'active': active }
@@ -87,22 +87,22 @@ def page_specific_html(page, scope):
 def main(argv):
     for rst_file in argv:
         rst_file = os.path.abspath(rst_file);
-        print "rst_file: %s" % rst_file
+        #print "rst_file: %s" % rst_file
 
         basename, extension = os.path.splitext(rst_file)
 
         result_file = "%s.html" % basename
 
         with codecs.open(result_file, 'w', encoding='utf-8') as result:
-            print "%s => %s" % (rst_file, result_file)
+            #print "%s => %s" % (rst_file, result_file)
             
             path_to_root = normalize(os.path.dirname(os.path.relpath(main_path, result_file)))
             path_to_root = "./" if path_to_root == '' else path_to_root
-            print "path_to_root: %s" % path_to_root
+            #print "path_to_root: %s" % path_to_root
 
             path_to_css = normalize(os.path.dirname(os.path.relpath(__thisfile__, result_file)))
             path_to_css = "./" if path_to_css == '' else path_to_css
-            print "path_to_css: %s" % path_to_css
+            #print "path_to_css: %s" % path_to_css
 
             # get the rst file contents and render it into parts
             rst = open(rst_file).read()
@@ -111,16 +111,19 @@ def main(argv):
             # get the main template's content and render it
             template = open('templates/layout.html').read()
             t = Template(template)
+
+            main_nav = main_navigation(result_file, path_to_root)
             c = {
                 'title':        parts['title'],
                 'body':         page_specific_html(result_file, {
                                     'body':     parts['body'], 
                                     'title':    parts['title'],
-                                    'main_nav': main_navigation(result_file, path_to_root),
+                                    'main_nav': main_nav,
                                 }),
                 'page_class':   page_class(result_file),
                 'path_to_root': path_to_root,
                 'path_to_css':  path_to_css,
+                'main_nav':     main_nav,
             }
             r = t.render(c)
             result.write(r)
@@ -135,7 +138,7 @@ files = [
     'python/support/index',
 ]
 
-print 'removing files'
+#print 'removing files'
 for file in files:
     if os.path.isfile(file):
         os.remove("%s.html" % file)

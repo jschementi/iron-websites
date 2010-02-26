@@ -38,6 +38,17 @@ from Python.
    `IronPython .NET Integration documentation`_
 
 
+-----------------------
+Silverlight Integration
+-----------------------
+IronPython also runs in all major web-browsers through Silverlight, which
+contains a significantly large subset of the .NET framework APIs.
+
+.. container:: download col
+
+   `Silverlight Documentation`_
+
+
 -----
 Books
 -----
@@ -83,3 +94,4 @@ List of regression tests currently passing
 .. _IronPython .NET Integration documentation: dotnet/
 .. _IronPython in Action: http://ironpythoninaction.com
 .. _Michael Foord: http://www.voidspace.org.uk
+.. _Silverlight Documentation: http://localhost/iron-websites/python/browser/docs.html

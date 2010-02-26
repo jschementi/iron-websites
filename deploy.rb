@@ -10,7 +10,7 @@ class Deploy
     end
 
     def perform
-      puts "transforming #{@to_replace_regex.inspect} to #{@replacement_str} in #{@file_path_str}"
+      # puts "transforming #{@to_replace_regex.inspect} to #{@replacement_str} in #{@file_path_str}"
       newhtml = File.read(@file_path_str).gsub(@to_replace_regex, @replacement_str)
       File.open(@file_path_str, 'w'){|f| f.write newhtml}
     end
@@ -22,7 +22,7 @@ class Deploy
     end
 
     def deploy
-      puts "Deploying #{self.class.content_dir}"
+      # puts "Deploying #{self.class.content_dir}"
       copy
       transform_css_paths
       transform_image_paths
@@ -76,7 +76,7 @@ class Deploy
   end
 
   def clean
-    puts "Cleaning"
+    # puts "Cleaning"
     d = Pathname('deploy')
     d.rmtree if d.exist?
   end

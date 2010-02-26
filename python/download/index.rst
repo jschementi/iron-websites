@@ -71,10 +71,9 @@ Windows & Mac OS browser apps
    Silverlight enables you to use Python to script HTML pages just as
    you would with JavaScript, and also enables advanced vector graphics
    for rich user-interfaces and video.
-
-   .. container:: space
-
-      `Learn more about Python in the browser`_
+    
+   |
+   | `Learn more about Python in the browser`_
 
 
 Mac OS & Linux desktop & server apps
@@ -103,12 +102,10 @@ Linux browser apps
 
    .. note::
 
-      Moonlight 2 targets the Silverlight 2 API, so if you want to
-      run the same application on all platforms make sure to only use
-      Silverlight 2 APIs, or provide a fallback implementation for
-      Moonlight.
-
-
+      | Moonlight 2 targets the Silverlight 2 API, so if you want to
+      | run the same application on all platforms make sure to only use
+      | Silverlight 2 APIs, or provide a fallback implementation for
+      | Moonlight.
 
 
 
