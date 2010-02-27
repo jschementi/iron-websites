@@ -18,10 +18,10 @@ main_path = os.path.join(__thisfile__, 'python', '')
 
 NAV = [
     ("Overview", '/'),
-    ("Download", "/download"),
-    ("Browser", "/browser"),
-    ("Documentation", "/documentation"),
-    ("Support", "/support"),
+    ("Download", "/download/"),
+    ("Browser", "/browser/"),
+    ("Documentation", "/documentation/"),
+    ("Support", "/support/"),
 ]
 
 STYLES = {
@@ -55,6 +55,7 @@ def main_nav_href((name, link), active_page, path_to_root):
     #    print "(active)"
     
     rel = normalize(os.path.normpath(os.path.join(path_to_root, link if link[0] != '/' else ('.%s' % link))))
+    rel = "%s/" % rel
     #print "link '%s' => %s" % (name, rel)
 
     t = Template("<a href='{{link}}' {% if active %} class='active' {% endif %}>{{name}}</a>")
