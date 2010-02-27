@@ -148,6 +148,8 @@ files = [
     'python/download/index',
     'python/browser/index',
     'python/browser/gettingstarted',
+    'python/browser/download',
+    'python/browser/examples',
     'python/browser/docs',
     'python/browser/spec.v2',
     'python/documentation/index',
@@ -155,9 +157,9 @@ files = [
 ]
 
 #print 'removing files'
-for file in files:
+for file in ["%s.html" % file for file in files]:
     if os.path.isfile(file):
-        os.remove("%s.html" % file)
+        os.remove(file)
 
 if __name__ == "__main__":
     main(["%s.rst" % file for file in files])

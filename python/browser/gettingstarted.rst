@@ -45,47 +45,9 @@ format and uses Python to start animations defined in the XAML file::
       bm.right_eye_blink.Begin()
     </script>
 
-Download
---------
-No downloads are required to develop and deploy Python applications for the
-browser, though you can always download the pieces hosted online.
+And that's it! Next see some `Examples`_, `Download`_ things to your local
+machine, and learn more from the `Documentation`_.
 
-- `Silverlight (developer version) <http://microsoft.com/silverlight>`_
-
-  Though any Python-based web-applications will prompt the user to install
-  Silverlight if it is not already, there is a specific version of Silverlight
-  for developers, which contains full strings for error messages.
-
-- `IronPython in Silverlight re-distributable package <gestalt-20091120.zip>`_
-  
-  Zip-compressed file containing all the pieces needed to develop and deploy
-  Python applications for the browser. You can also download the contents 
-  separately:
-  
-  - `dlr.js <http://gestalt.ironpython.net/dlr-latest.js>`_
-  
-    Handles enabling the HTML page to run Python code with IronPython in
-    Silverlight.
-    
-  - `dlr.xap <http://gestalt.ironpython.net/dlr-latest/dlr.xap>`_
-  - `Microsoft.Scripting.slvx <http://gestalt.ironpython.net/dlr-latest/Microsoft.Scripting.slvx>`_
-  - `IronPython.slvx <http://gestalt.ironpython.net/dlr-latest/IronPython.slvx>`_
-
-Examples
---------
-- `Gestalt Widget Pack <http://www.visitmix.com/labs/gestalt/widgets/>`_
-
-Documentation
--------------
-- `Full Documentation <docs.html>`_
-- Specs
-
-  - `Back to "Just Text" <spec.v2.html>`_ (last updated: 2010-02-23)
-  - `Dynamic Silverlight <spec.v1.html>`_ (last updated: 2008-03-14)
-
-Public APIs
-~~~~~~~~~~~
-- dlr.js
-- Microsoft.Scripting.Silverlight.dll
-- DLR Hosting API
-
+.. _Examples: examples.html
+.. _Download: download.html
+.. _Documentation: docs.htma

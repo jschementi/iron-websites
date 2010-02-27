@@ -732,3 +732,16 @@ Can I write offline Silverlight applications with this?
     supports HTML hosted in an OOB app, so it's possible to directly support this
     in the future.
 
+-----
+Specs
+-----
+- `Back to "Just Text" <spec.v2.html>`_ (last updated: 2010-02-23)
+- `Dynamic Silverlight <spec.v1.html>`_ (last updated: 2008-03-14)
+
+-----------
+Public APIs
+-----------
+- dlr.js
+- Microsoft.Scripting.Silverlight.dll
+- DLR Hosting API
+
