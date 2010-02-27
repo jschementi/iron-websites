@@ -94,4 +94,4 @@ List of regression tests currently passing
 .. _IronPython .NET Integration documentation: dotnet/
 .. _IronPython in Action: http://ironpythoninaction.com
 .. _Michael Foord: http://www.voidspace.org.uk
-.. _Silverlight Documentation: http://localhost/iron-websites/python/browser/docs.html
+.. _Silverlight Documentation: ../browser/docs.html

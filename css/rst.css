@@ -1,6 +1,6 @@
 pre.literal-block,
 tt.docutils.literal {
-  font-family: consolas, monotype;
+  font-family: consolas, monaco, monospace;
 }
 pre.literal-block {
   font-size: 12px;

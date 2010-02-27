@@ -37,8 +37,10 @@ a:hover {
   font-size: 18px;
 }
 .larger #body pre.literal-block {
-  font-size: 26px;
-  margin: 40px auto;
+  border: 15px solid #222;
+  padding: 10px;
+  font-size: 130%;
+  margin: 40px auto 0;
   width: 525px;
 }
 
@@ -559,33 +561,43 @@ div.container.divider {
 }
 
 #page-nav {
-  font-size: 18px;
+  font-family: "Gill Sans","Gill Sans MT",Calibri,arial,helvetica,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: -0.4px;
   text-align: center;
+  
+  background-color: white;
   border-bottom: 1px solid #ccc;
-  padding: 0;
-  padding-top: 15px;
-  padding-bottom: 3px;
+  
   margin: 0;
-  font-size: 14px;
-  font-weight: bold;
+  
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 5px;  
 }
+
+.sub.page #page-nav {
+  text-align: center;
+}
+
 #page-nav li {
   display: inline;
   list-style: none;
   padding: 0; margin: 0; border: 0;
 }
 #page-nav li a, #page-nav li a:visited {
-  padding: 5px;
+  padding: 5px 5px 5px;
   text-decoration: none;
   color: black;
 }
 #page-nav li a:hover {
   position: relative;
-  border-bottom: 5px solid green;
+  background-color: #eee;
 }
 #page-nav li a.active {
-  background-color: white;
-  font-weight: bold;
+  color: white;
+  background: green;
 }
 #page-nav li:last-child {
   
@@ -593,19 +605,29 @@ div.container.divider {
 
 .browser-nav {
   font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .browser-nav ul {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 40px;
-  padding: 0;
+  padding: 0 0 15px;
+  background: #222;
+  width: 575px;
 }
 .browser-nav li {
   display: inline;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 5px;
   border: 0;
+}
+.browser-nav li:first-child {
+  margin-left: 10px;
+}
+.browser-nav li:last-child {
+  margin-right: 10px;
 }
 #ironpython .browser-nav li a, #ironpython .browser-nav li a:visited {
   color: white;

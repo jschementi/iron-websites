@@ -1,5 +1,8 @@
 <ul id="page-nav">
+{% if title %}
+<li><a href="{{title[1]}}" style="font-weight: bold">{{title[0]}}</a>:</li>
+{% endif %}
 {% for (name, uri) in nav %}
-<li><a href="{{uri}}">{{name}}</a></li>
+<li><a href="{{uri}}"{% if uri == this_page %} class="active"{% endif %}>{{name}}</a></li>
 {% endfor %}
 </ul>
