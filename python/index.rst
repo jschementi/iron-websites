@@ -36,7 +36,7 @@ Announcements
    See `Dino Viehland's <http://blogs.msdn.com/dinoviehland>`_
    talk at PDC 2009 on utilizing Python from statically typed .NET languages such as 
    C# `here <http://microsoftpdc.com/Sessions/FT30>`_
-              
+
 .. admonition:: October 21, 2009
    :class: strip 
 

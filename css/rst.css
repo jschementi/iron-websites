@@ -30,12 +30,6 @@ p, blockquote, ul.simple {
 ul, ol, blockquote {
   padding-left: 40px;
 }
-a.toc-backref, a.toc-backref:visited {
-  text-decoration: none;
-}
-a.toc-backref:hover {
-  text-decoration: underline;
-}
 div.contents {
   background-color: #eee;
   float: right;

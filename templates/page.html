@@ -6,6 +6,9 @@
 
 <div id="header">
   <h1><a href="..">IronPython</a></h1>
+{% if page_nav %}
+  {{page_nav}}
+{% endif %}
   <h2>
     {{ title.split("/")[-1:][0] }}
   </h2>

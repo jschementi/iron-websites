@@ -33,6 +33,15 @@ a:hover {
   min-width: 780px;
 }
 
+.larger #body {
+  font-size: 18px;
+}
+.larger #body pre.literal-block {
+  font-size: 26px;
+  margin: 40px auto;
+  width: 525px;
+}
+
 /* page nav */
 
 .page #nav {
@@ -42,6 +51,7 @@ a:hover {
   padding: 5px;
   border-bottom: 1px solid #ccc;
   padding: 25px 40px 5px;
+  font-size:11px;
 }
 .home.page #nav {
   padding-top: 5px;
@@ -390,7 +400,8 @@ a.download_link:hover {
   font-size: 18px;
   width: 780px;
 }
-.columns #body .section > h1 {
+.columns #body .section > h1,
+#body > .admonition p.admonition-title {
   position: absolute;
   width: 200px;
   text-align: right;
@@ -429,6 +440,14 @@ a.download_link:hover {
   text-align: right;
   width: 200px;
 }
+
+.section a.toc-backref, .section a.toc-backref:visited {
+  text-decoration: none;
+}
+.section a.toc-backref:hover {
+  text-decoration: underline;
+}
+
 .columns.page #body .section > .container.col {
   margin-left: 240px;
 }
@@ -436,16 +455,18 @@ a.download_link:hover {
   margin-right: 10px;
 }
 
-.columns p.half {
+#body .half.admonition {
   padding-top: 5px;
   margin-top: 0px
 }
-.columns p.space {
+#body .space.admonition {
   margin-top: 10px;
 }
 
 /* left vertical grey strip */
-.columns div.strip {
+.columns div.strip,
+#body > .admonition.strip p,
+#body > .admonition.strip div.line-block {
   padding: 0;
   background-color: white;
   width: auto;
@@ -509,11 +530,111 @@ div.container.divider {
   margin-top: 30px;
 }
 
+#body > .admonition {
+  width: 780px;
+  margin: 0 auto;
+}
+#body > .strip.admonition {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#body > .admonition p.admonition-title {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+#body > .admonition p {
+  font-size: 18px;
+}
+#body > .strip.admonition p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#body > .space.strip.admonition {
+  margin-bottom: 20px;
+}
+#body > .strip.admonition div.last.line-block {
+  margin-top: 0px;
+}
+
+#page-nav {
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 3px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+#page-nav li {
+  display: inline;
+  list-style: none;
+  padding: 0; margin: 0; border: 0;
+}
+#page-nav li a, #page-nav li a:visited {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+#page-nav li a:hover {
+  position: relative;
+  border-bottom: 5px solid green;
+}
+#page-nav li a.active {
+  background-color: white;
+  font-weight: bold;
+}
+#page-nav li:last-child {
+  
+}
+
+.browser-nav {
+  font-size: 24px;
+  text-align: center;
+}
+.browser-nav ul {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.browser-nav li {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#ironpython .browser-nav li a, #ironpython .browser-nav li a:visited {
+  color: white;
+  background-color: green;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0;
+}
+#ironpython .browser-nav li a:hover {
+  color: white;
+  background-color: #080;
+}
+
+.tweet a, .tweet a:visited {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  font-size: 24px;
+}
+.tweet a:hover {
+  background-color: #090;
+}
+
 /* footer */
 
 #footer {
   color: #eee;
   background-color: #222;
+  font-size:11px;
 }
 #footer ul {
   padding: 20px 40px;

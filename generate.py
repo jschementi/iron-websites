@@ -28,7 +28,8 @@ STYLES = {
     'index.html': 'home columns',
     'download/index.html': 'sub columns',
     'support/index.html': 'sub columns',
-    'browser/index.html': 'sub columns',
+    'browser/index.html': 'sub larger',
+    'browser/gettingstarted.html': 'sub',
     'documentation/index.html': 'sub columns',
 }
 
@@ -37,6 +38,7 @@ PAGE_TEMPLATES = {
     'index.html': 'templates/home.html',
     'download/index.html': 'templates/download.html',
 }
+PAGE_NAV_FILE = 'nav.py'
 
 def page_class(page):
     key = normalize(os.path.relpath(page, main_path))
@@ -112,6 +114,17 @@ def main(argv):
             template = open('templates/layout.html').read()
             t = Template(template)
 
+            # sub-page navigation
+            navpy_path = os.path.join(os.path.dirname(result_file), PAGE_NAV_FILE)
+            subpage_nav = None
+            if os.path.exists(navpy_path):
+                navpy = eval(open(navpy_path).read())
+                nav_vars = {
+                    'this_page': os.path.relpath(result_file, os.path.dirname(navpy_path)),
+                    'nav': navpy,
+                }
+                subpage_nav = Template(open('templates/nav.html').read()).render(nav_vars)
+
             main_nav = main_navigation(result_file, path_to_root)
             c = {
                 'title':        parts['title'],
@@ -119,6 +132,7 @@ def main(argv):
                                     'body':     parts['body'], 
                                     'title':    parts['title'],
                                     'main_nav': main_nav,
+                                    'page_nav': subpage_nav,
                                 }),
                 'page_class':   page_class(result_file),
                 'path_to_root': path_to_root,
@@ -130,9 +144,11 @@ def main(argv):
 
 files = [
     'python/index',
+    'python/announcements/index',
     'python/download/index',
-    'python/browser/docs',
     'python/browser/index',
+    'python/browser/gettingstarted',
+    'python/browser/docs',
     'python/browser/spec.v2',
     'python/documentation/index',
     'python/support/index',
