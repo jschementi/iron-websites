@@ -13,7 +13,7 @@ from jinja2 import Template
 #from pygments.formatters import HtmlFormatter
 #PYGMENTS_FORMATTER = HtmlFormatter(style='pastie', cssclass='syntax')
 
-main_path = os.path.join(__thisfile__, 'python/')
+main_path = os.path.join(__thisfile__, 'python', '')
 #print "main_path: %s" % main_path
 
 NAV = [
@@ -30,6 +30,8 @@ STYLES = {
     'support/index.html': 'sub columns',
     'browser/index.html': 'sub larger',
     'browser/gettingstarted.html': 'sub',
+    'browser/download.html': 'sub',
+    'browser/examples.html': 'sub',
     'documentation/index.html': 'sub columns',
 }
 

@@ -14,15 +14,19 @@ without a network connection).
 - `IronPython in Silverlight re-distributable package <gestalt-20091120.zip>`_
   
   Zip-compressed file containing all the pieces needed to develop and deploy
-  Python applications for the browser. You can also download the contents 
-  separately:
+  Python applications for the browser. Here are its contents:
   
-  - `dlr.js <http://gestalt.ironpython.net/dlr-latest.js>`_
+  - `dlr.js <http://gestalt.ironpython.net/dlr-20091120.js>`_
   
     Handles enabling the HTML page to run Python code with IronPython in
     Silverlight.
     
-  - `dlr.xap <http://gestalt.ironpython.net/dlr-latest/dlr.xap>`_
-  - `Microsoft.Scripting.slvx <http://gestalt.ironpython.net/dlr-latest/Microsoft.Scripting.slvx>`_
-  - `IronPython.slvx <http://gestalt.ironpython.net/dlr-latest/IronPython.slvx>`_
+  - `dlr.xap <http://gestalt.ironpython.net/dlr-20091120/dlr.xap>`_
 
+    Actual static Silverlight application, which has logic for executing
+    Python.
+
+  - `Microsoft.Scripting.slvx <http://gestalt.ironpython.net/dlr-20091120/Microsoft.Scripting.slvx>`_
+    and `IronPython.slvx <http://gestalt.ironpython.net/dlr-20091120/IronPython.slvx>`_
+ 
+    IronPython binaries, including the Dynamic Language Runtime.

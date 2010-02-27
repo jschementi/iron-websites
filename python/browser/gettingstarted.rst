@@ -17,9 +17,9 @@ reference it::
     <script src="path/to/gestalt.latest/dlr.js" type="text/javascript">
     </script>
 
-Note: depending on the ``gestalt.ironpython.net`` version is preferred (`see why <faq.html>`_).
-However, rather than depending on ``dlr-latest.js``, you should pick a version
-to ensure stability, like ``dlr-20091120.js``.
+Note: depending on the ``gestalt.ironpython.net`` version is preferred.
+``dlr-latest.js`` will always give you the latest version of IronPython.
+You can also pick a specific version to ensure stability, like ``dlr-20091120.js``.
    
 And that's it! Now you can place Python script tags on the HTML page to script
 the HTML page. For example, here's handling a button click::
