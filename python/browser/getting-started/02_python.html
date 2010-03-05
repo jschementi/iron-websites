@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-	<script src="http://mschnlnine.vo.llnwd.net/d1/dlr-20091120.js" type="text/javascript"></script>
+	<script src="http://gestalt.ironpython.net/dlr-latest.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
     def OnClick(s,e):
       window.Alert("Hello, World!")
 
-    document.say_hello.AttachEvent('onclick', System.EventHandler[System.Windows.Browser.HtmlEventArgs](OnClick))
+    document.say_hello.events.onclick += OnClick
   </script>
 
 </body>

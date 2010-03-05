@@ -19,7 +19,7 @@ reference it::
 
 Note: depending on the ``gestalt.ironpython.net`` version is preferred.
 ``dlr-latest.js`` will always give you the latest version of IronPython.
-You can also pick a specific version to ensure stability, like ``dlr-20091120.js``.
+You can also pick a specific version to ensure stability, like ``dlr-20100305.js``.
    
 And that's it! Now you can place Python script tags on the HTML page to script
 the HTML page. For example, here's handling a button click::

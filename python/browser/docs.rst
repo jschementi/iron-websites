@@ -24,7 +24,7 @@ reference it::
     </script>
 
 .. note:: using the ``gestalt.ironpython.net`` version is preferred, especially in
-   production. However, please pick a specific version (like ``dlr-20091120.js``,
+   production. However, please pick a specific version (like ``dlr-20100305.js``,
    rather than ``dlr-latest.js``), as this will ensure your application keeps
    working between releases; ``dlr-latest.js`` will always point to the most
    recent version.
