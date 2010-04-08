@@ -269,15 +269,15 @@ a.download_link:hover {
 }
 
 
-/* get tryruby in the browser */
+/* try *lang* in the browser */
 
-.home.page #get #tryruby {
+.home.page #get #try {
   float: left;
   width: 300px;
   list-style: none;
   margin: 0 10px;
 }
-.home.page #get #tryruby h3 {
+.home.page #get #try h3 {
   font-size: 36px;
   line-height: 95%;
   font-family: "Gill Sans", "gill sans mt", Calibri, arial, helvetica, sans-serif;
@@ -285,33 +285,33 @@ a.download_link:hover {
   letter-spacing: -1px;
   margin: 0;
 }
-.home.page #get #tryruby h3 a {
+.home.page #get #try h3 a {
   text-decoration: none;
 }
-.home.page #get #tryruby h3 a:hover {
+.home.page #get #try h3 a:hover {
   background-color: transparent;
   color: white;
 }
-.home.page #get #tryruby h3 a span {
+.home.page #get #try h3 a span {
   font-size: 24px;
 }
-.home.page #get #tryruby p {
+.home.page #get #try p {
   margin: 10px;
 }
-.home.page #get #tryruby a#console {
+.home.page #get #try a#console {
   display: block;
   width: 290px;
   height: 100px;
   padding: 5px;
 }
-.home.page #get #tryruby a#console img {
+.home.page #get #try a#console img {
   border: 0;
 }
-.home.page #get #tryruby a#console:link,
-.home.page #get #tryruby a#console:visited {
+.home.page #get #try a#console:link,
+.home.page #get #try a#console:visited {
   background-color: #ccc;
 }
-.home.page #get #tryruby a#console:hover {
+.home.page #get #try a#console:hover {
   background-color: #fe8;
 }
 
@@ -520,7 +520,6 @@ div.strip.container > div.download.container {
 .columns #body .section .download a {
   background-color: #fffcb9;
   padding: 5px 10px;
-  border-left: 10px solid green;
 }
 
 div.container.divider {
@@ -597,7 +596,6 @@ div.container.divider {
 }
 #page-nav li a.active {
   color: white;
-  background: green;
 }
 #page-nav li:last-child {
   
@@ -629,16 +627,14 @@ div.container.divider {
 .browser-nav li:last-child {
   margin-right: 10px;
 }
-#ironpython .browser-nav li a, #ironpython .browser-nav li a:visited {
+.browser-nav li a, .browser-nav li a:visited {
   color: white;
-  background-color: green;
   text-decoration: none;
   padding: 5px 10px;
   margin: 0;
 }
-#ironpython .browser-nav li a:hover {
+.browser-nav li a:hover {
   color: white;
-  background-color: #080;
 }
 
 .tweet a, .tweet a:visited {

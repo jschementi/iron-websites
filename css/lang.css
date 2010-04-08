@@ -125,3 +125,33 @@
 #ironpython.page.browser #get-started-button:hover {
   background-position: 0 -43px;
 }
+
+#ironruby.columns #body .section .download a {
+  border-left: 10px solid #A41E20;
+}
+
+#ironpython.columns #body .section .download a {
+  border-left: 10px solid green;
+}
+
+#ironpython #page-nav li a.active {
+  background-color: green;
+}
+#ironruby #page-nav li a.active {
+  background-color: #A41E20;
+}
+
+#ironpython .browser-nav li a, #ironpython .browser-nav li a:visited {
+  color: white;
+  background-color: green;
+}
+#ironpython .browser-nav li a:hover {
+  background-color: #080;
+}
+#ironruby .browser-nav li a, #ironruby .browser-nav li a:visited {
+  color: white;
+  background-color: #c00;
+}
+#ironruby .browser-nav li a:hover {
+  background-color: #d00;
+}

@@ -5,9 +5,9 @@
 </div>
 
 <div id="header">
-  <h1><a href="..">IronPython</a></h1>
+  <h1><a href="..">Iron{{language}}</a></h1>
   <h2>
-    the <a target="_blank" class="lang" href="http://python.org">Python</a>
+    the <a target="_blank" class="lang" href="{{language_website}}">{{language}}</a>
     programming language for the
     <a target="_blank" class="dotnet" href="http://microsoft.com/NET">.NET</a>
     Framework
@@ -16,9 +16,9 @@
 
 <div id="what-is">
   <p>
-    IronPython is an <a target='_blank' href="http://www.opensource.org/licenses/ms-pl.html">open-source</a> implementation of the Python
+    Iron{{language}} is an <a target='_blank' href="http://www.opensource.org/licenses/ms-pl.html">open-source</a> implementation of the {{language}}
     programming language which is tightly integrated with the
-    .NET Framework. IronPython can use the .NET Framework and
+    .NET Framework. Iron{{language}} can use the .NET Framework and
     Python libraries, and other .NET languages can use
     Python code just as easily.
   </p>
@@ -27,40 +27,29 @@
 <div id="get">
   <ul>
     <li id='download'>
-      <h3><a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482#DownloadId=96606' target='_blank'>Download IronPython 2.6</a></h3>
+      <h3><a href='{{stable_release_url}}' target='_blank'>Download {{language}} {{stable_version}}</a></h3>
       <p>
-        <a href='download/' target='_blank'>2.6 released 12/11/2009<br />
-        <a href='http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482' target='_blank'>release notes</a> | <a href="http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482#DownloadId=96608" target='_blank'>source</a>
+        <a href='download/' target='_blank'>{{stable_release_date}}<br />
+        <a href='{{stable_release_notes}}' target='_blank'>release notes</a> | <a href="{{stable_release_source}}" target='_blank'>source</a>
       </p>
     </li>
-    <li id="tryruby">
-      <h3><a href='try/' target="_blank">Try Python <span>in the <u>browser</u></span></a></h3>
+    <li id="try">
+      <h3><a href='try/' target="_blank">Try {{language}} <span>in the <u>browser</u></span></a></h3>
       <p>
-        Quickly run Python code in your
-        browser, without installing IronPython.
+        Quickly run {{language}} code in your
+        browser, without installing Iron{{language}}.
       </p>
       <a id="console" href="try/">
-        <img src="../images/trypythoninbrowser-290x100.png" alt="Try Python in the Browser" />
+        <img src="../images/try{{language_lower}}inbrowser-290x100.png" alt="Try {{language}} in the Browser" />
       </a>
     </li>
     <li id="tutorial">
-      <pre id="code-snippet"><code><span class="comment"># namespaces are modules</span>
-<span class="keyword">from</span> <span class="constant">System</span>.<span class="constant">Collections</span>.<span class="constant">Generic</span> import <span class="constant">Dictionary</span>
-
-<span class="comment"># indexers constrains type</span>
-d = <span class="constant">Dictionary</span>[<span class="constant">str</span>, <span class="constant">int</span>]()
-
-<span class="comment"># Python idioms just work</span>
-d[<span class="string">'Hello'</span>] = <span class="number">1</span>
-d[<span class="string">'Hi'</span>] = <span class="number">2</span>
-
-<span class="comment"># this gives an error</span>
-d[<span class="number">3</span>] = <span class="number">3</span></code></pre>
+      <pre id="code-snippet"><code>{{code_snippet_html}}</code></pre>
       <p>
         Learn more with the online tutorial:
       </p>
       <a href='tutorial/' id="tutorial-image">
-        <img src="../images/ironpython-tutorial.jpg" alt="IronPython tutorial" />
+        <img src="../images/iron{{language_lower}}-tutorial.jpg" alt="Iron{{language}} tutorial" />
       </a>
     </li>
     <li class='clear'>&nbsp;</li>

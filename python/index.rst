@@ -1,9 +1,9 @@
----------------
-Why IronPython?
----------------
-Python is an excellent
-addition to the .NET Framework, providing Python developers with the power
-of the .NET framework. Existing .NET developers can also use IronPython
+---------------------
+Why Iron{{language}}?
+---------------------
+{{language}} is an excellent
+addition to the .NET Framework, providing {{language}} developers with the power
+of the .NET framework. Existing .NET developers can also use Iron{{language}}
 s a fast and expressive scripting language for embedding, testing, or
 writing a new application from scratch.
 
@@ -60,4 +60,4 @@ Announcements
 
 .. container:: download col
 
-   `All IronPython Announcements <announcements/>`_
+   `All Iron{{language}} Announcements <announcements/>`_

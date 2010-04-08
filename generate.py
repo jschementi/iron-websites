@@ -13,8 +13,6 @@ from jinja2 import Template
 #from pygments.formatters import HtmlFormatter
 #PYGMENTS_FORMATTER = HtmlFormatter(style='pastie', cssclass='syntax')
 
-main_path = os.path.join(__thisfile__, 'python', '')
-#print "main_path: %s" % main_path
 
 NAV = [
     ("Overview", '/'),
@@ -41,6 +39,59 @@ PAGE_TEMPLATES = {
     'download/index.html': 'templates/download.html',
 }
 PAGE_NAV_FILE = 'nav.py'
+
+language_info = {
+  'ironruby': {
+    'stable_version': '1.0',
+    'language': 'Ruby',
+    'language_website': 'http://ruby-lang.org',
+    'stable_version': '1.0',
+    'stable_release_url': 'http://ironruby.codeplex.com/',
+    'stable_release_date': '1.0 released on 2010-04-12',
+    'stable_release_notes': 'http://rubyforge.org/projects/ironruby',
+    'stable_release_source': 'http://github.com/ironruby/ironruby/tags/v1.0/zipball',
+    'code_snippet_html': """<span class="comment"># namespaces are modules</span>
+<span class="keyword">include</span> <span class="constant">System</span>::<span class="constant">Collections</span>::<span class="constant">Generic</span>
+
+<span class="comment"># indexers constrains type</span>
+d = <span class="constant">Dictionary</span>[<span class="constant">String</span>, <span class="constant">Fixnum</span>].new
+
+<span class="comment"># Ruby idioms just work</span>
+d[<span class="string">'Hello'</span>] = <span class="number">1</span>
+d[<span class="string">'Hi'</span>] = <span class="number">2</span>
+
+<span class="comment"># this gives a TypeError</span>
+d[<span class="number">3</span>] = <span class="number">3</span>
+
+<span class="comment"># Enumerable methods work</span>
+d.each{|kvp| <span class="keyword">puts</span> kvp}""",
+  },
+  'ironpython': {
+    'stable_version': '2.6',
+    'language': 'Python',
+    'language_website': 'http://python.org',
+    'stable_version': '2.6',
+    'stable_release_url': 'http://ironpython.codeplex.com/',
+    'stable_release_date': '2.6 released on 2009-xx-xx',
+    'stable_release_notes': 'http://ironpython.codeplex.com',
+    'stable_release_source': 'http://ironpython.codeplex.com',
+    'code_snippet_html': """<span class="comment"># namespaces are modules</span>
+<span class="keyword">from</span> <span class="constant">System</span>.<span class="constant">Collections</span>.<span class="constant">Generic</span> import <span class="constant">Dictionary</span>
+
+<span class="comment"># indexers constrains type</span>
+d = <span class="constant">Dictionary</span>[<span class="constant">str</span>, <span class="constant">int</span>]()
+
+<span class="comment"># Python idioms just work</span>
+d[<span class="string">'Hello'</span>] = <span class="number">1</span>
+d[<span class="string">'Hi'</span>] = <span class="number">2</span>
+
+<span class="comment"># this gives an error</span>
+d[<span class="number">3</span>] = <span class="number">3</span>""",
+  }
+}
+
+main_path = __thisfile__
+language = None
 
 def page_class(page):
     key = normalize(os.path.relpath(page, main_path))
@@ -89,8 +140,19 @@ def page_specific_html(page, scope):
     t = Template(open(template).read())
     return t.render(scope)
 
+def merge_dicts(d1, d2):
+  for k in d2:
+    d1[k] = d2[k]
+  return d1
+
 def main(argv):
+    global language
+    global main_path
+    main_path = os.path.join(__thisfile__, language_info[language]['language'].lower(), '')
+
     for rst_file in argv:
+
+        rst_file = language_info[language]['language'].lower() + '/'  + rst_file
         rst_file = os.path.abspath(rst_file);
         #print "rst_file: %s" % rst_file
 
@@ -128,42 +190,70 @@ def main(argv):
                 }
                 subpage_nav = Template(open('templates/nav.html').read()).render(nav_vars)
 
+            # render the main navigation
             main_nav = main_navigation(result_file, path_to_root)
-            c = {
+
+            # each language has it's own template variables
+            lang_spec = {
+                'language':               language_info[language]['language'],
+                'language_lower':         language_info[language]['language'].lower(),
+                'language_website':       language_info[language]['language_website'],
+                'stable_version':         language_info[language]['stable_version'],
+                'stable_release_url':     language_info[language]['stable_release_url'],
+                'stable_release_date':    language_info[language]['stable_release_date'],
+                'stable_release_notes':   language_info[language]['stable_release_notes'],
+                'stable_release_source':  language_info[language]['stable_release_source'],
+                'code_snippet_html':      language_info[language]['code_snippet_html'],
+            }
+
+            # throw the rst body through the templater too
+            parts['body'] = Template(parts['body']).render(lang_spec) 
+
+            # now render the full layout
+            r = t.render(merge_dicts({
                 'title':        parts['title'],
-                'body':         page_specific_html(result_file, {
-                                    'body':     parts['body'], 
+                'body':         page_specific_html(result_file, merge_dicts({
+                                    'body':     parts['body'],
                                     'title':    parts['title'],
                                     'main_nav': main_nav,
                                     'page_nav': subpage_nav,
-                                }),
+                                }, lang_spec)),
                 'page_class':   page_class(result_file),
                 'path_to_root': path_to_root,
                 'path_to_css':  path_to_css,
                 'main_nav':     main_nav,
-            }
-            r = t.render(c)
+
+            }, lang_spec))
             result.write(r)
 
 files = [
-    'python/index',
-    'python/announcements/index',
-    'python/download/index',
-    'python/browser/index',
-    'python/browser/gettingstarted',
-    'python/browser/download',
-    'python/browser/examples',
-    'python/browser/docs',
-    'python/browser/spec.v2',
-    'python/documentation/index',
-    'python/support/index',
+    'index',
+    'announcements/index',
+    'download/index',
+    'browser/index',
+    'browser/gettingstarted',
+    'browser/download',
+    'browser/examples',
+    'browser/docs',
+    'browser/spec.v2',
+    'documentation/index',
+    'support/index',
 ]
+
+import sys
+language = 'ironpython'
+for i in sys.argv:
+    if i == '-ruby':
+          language = 'ironruby'
+    if i == '-python':
+          language = 'ironpython'
 
 #print 'removing files'
 for file in ["%s.html" % file for file in files]:
-    if os.path.isfile(file):
-        os.remove(file)
+    if os.path.isfile(language_info[language]['language'] + '/' + file):
+        os.remove(language_info[language]['language'] + '/' + file)
 
 if __name__ == "__main__":
+    import sys
     main(["%s.rst" % file for file in files])
 
