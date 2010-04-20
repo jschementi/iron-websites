@@ -3,3 +3,7 @@ deploy
 *.pyc
 Thumbs.db
 *.swp
+*.csproj.user
+*.suo
+obj
+bin
