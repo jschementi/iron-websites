@@ -1,6 +1,6 @@
-===================================
-Python in the browser documentation
-===================================
+=====================================
+Python in the browser - Documentation
+=====================================
 
 .. contents::
 
@@ -223,14 +223,14 @@ XAML markup can be embedded into a script-tag, either inline or as an external
 file::
 
     <!-- inline XAML file -->
-    <script type="application/xaml+xml" id="inlineXAML" width="200" height="75">
+    <script type="application/xml+xaml" id="inlineXAML" width="200" height="75">
       <Canvas Background="Wheat">
         <TextBlock Canvas.Left="20" FontSize="24" />
       </Canvas>
     </script>
 
     <!-- external XAML file -->
-    <script type="application/xaml+xml" id="externalXAML" src="foo.xaml">
+    <script type="application/xml+xaml" id="externalXAML" src="foo.xaml">
     </script>
 
 The following attributes are used with a HTML script-tag to embed XAML content:
@@ -239,8 +239,10 @@ The following attributes are used with a HTML script-tag to embed XAML content:
 
 - ``height``: the height of Silverlight control surface.
 
-- ``type``: should be set to ``application/xaml+xml``, though
-  ``application/xml+xaml`` also works.
+- ``type``: should be set to ``application/xml+xaml`` (``application/xaml+xml``
+  is also supported in the `current sources <http://ironpython.codeplex.com/SourceControl/changeset/changes/65283>`_,
+  and will be available in the redistributable package and from dlr-latest.js
+  in all future releases after version 20100305).
 
 - ``src``: URI to a XAML file. It behaves like external scripts ``src``
   attribute with regard to downloading and caching. If it is not set, the XAML
@@ -257,7 +259,7 @@ The following attributes are used with a HTML script-tag to embed XAML content:
   content was provided by the ``src`` attribute, then the file is still
   downloaded and cached. Setting the RootVisual can be done manually, however::
 
-      <script type="application/xaml+xml" id="xamlContent" defer="true">
+      <script type="application/xml+xaml" id="xamlContent" defer="true">
         <Canvas Background="Wheat">
           <TextBlock Canvas.Left="20" FontSize="24" />
         </Canvas>
@@ -276,7 +278,7 @@ The following attributes are used with a HTML script-tag to embed XAML content:
       </script>
       <script type="text/javascript" src="dlr.js"></script>
       
-      <script type="application/xaml+xml" id="xamlContent" defer="true">
+      <script type="application/xml+xaml" id="xamlContent" defer="true">
         <Canvas Background="Wheat">
           <TextBlock Canvas.Left="20" FontSize="24" />
         </Canvas>
@@ -298,7 +300,7 @@ From Python
 XAML is simply a markup language for creating objects, so the same thing can
 be done directly from Python. Given this XAML::
       
-    <script type="application/xaml+xml" id="xamlContent">
+    <script type="application/xml+xaml" id="xamlContent">
       <Canvas Background="Wheat">
         <TextBlock Canvas.Left="20" FontSize="24" />
       </Canvas>
@@ -671,7 +673,7 @@ an attribute on a XAML tag, its value being the method name to use as a
 callback when the event fires. The method should take two arguments: the
 sender and the event_args::
 
-    <script type="application/xaml+xml"> 
+    <script type="application/xml+xaml"> 
       ... 
       <TextBox Click="do_click" Text="Click Me" /> 
       ... 
