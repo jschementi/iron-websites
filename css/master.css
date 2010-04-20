@@ -687,3 +687,71 @@ div.container.divider {
   color: black;
   text-decoration: none;
 }
+
+
+
+
+.tools .tools-image {
+  background-repeat: no-repeat;
+  height: 471px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  text-indent: -1000000px;
+  top: 0;
+  width: 500px;
+}
+
+.tools.page #body {
+  padding-left: 500px;
+  width: 280px;
+}
+
+.tools #body > p {
+  padding: 0 10px;
+  background-color: white;
+  margin: 0;
+}
+.tools #body > p strong 
+{
+    font-weight: normal;
+    background-color: #ffc;
+    padding: 1px 3px;
+}
+
+.tools .download-link {
+  padding: 0 10px;
+  margin-top: 40px;
+}
+
+.tools .download-link a {
+  background-image: url("../images/arrow-light.png");
+  background-position: 210px center;
+  background-repeat: no-repeat;
+  color: inherit;
+  display: block;
+  font-family: "Gill Sans","gill sans mt",Calibri,arial,helvetica,sans-serif;
+  letter-spacing: -1px;
+  margin: 0;
+  padding: 10px 65px 10px 10px;
+  text-align: left;
+  text-decoration: none;
+  width: 190px;
+  font-size: 24px;
+}
+
+.tools .tools-nav {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+.tools .tools-nav p,
+.tools .tools-nav ul.simple {
+  margin: 0;
+}
+tools .tools-nav ul.simple {
+  padding-left: 20px;
+}
+
+

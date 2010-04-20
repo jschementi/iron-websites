@@ -155,3 +155,37 @@
 #ironruby .browser-nav li a:hover {
   background-color: #d00;
 }
+
+#ironruby.tools .tools-image {
+  background-image: url("../images/ironruby-tools-rails-500.png");
+}
+#ironpython.tools .tools-image {
+  background-image: url("../images/ironpython-tools-wpf-500.png");
+}
+
+#ironruby.tools .download-link a:link,
+#ironruby.tools .download-link a:visited {
+  color: white;
+  background-color: #A41E20;
+  border: 2px solid #333;
+}
+#ironruby.tools .download-link a:hover {
+  color: white;
+  background-color: #CA1E20;
+  border: 2px solid #555;
+}
+
+#ironpython.tools .download-link a:link,
+#ironpython.tools .download-link a:visited {
+  color: white;
+  background-color: green;
+  border: 2px solid #333;
+}
+#ironpython.tools .download-link a:hover {
+  color: white;
+  background-color: #080;
+  border: 2px solid #555;
+}
+
+
+

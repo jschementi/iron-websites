@@ -17,6 +17,7 @@ from jinja2 import Template
 NAV = [
     ("Overview", '/'),
     ("Download", "/download/"),
+    ("Tools", "/tools/"),
     ("Browser", "/browser/"),
     ("Documentation", "/documentation/"),
     ("Support", "/support/"),
@@ -26,6 +27,7 @@ STYLES = {
     'index.html': 'home columns',
     'download/index.html': 'sub columns',
     'support/index.html': 'sub columns',
+    'tools/index.html': 'sub larger tools',
     'browser/index.html': 'sub larger',
     'browser/gettingstarted.html': 'sub',
     'browser/download.html': 'sub',
@@ -228,6 +230,7 @@ files = [
     'index',
     'announcements/index',
     'download/index',
+    'tools/index',
     'browser/index',
     'browser/gettingstarted',
     'browser/download',
@@ -246,7 +249,7 @@ for i in sys.argv:
     if i == '-python':
           language = 'ironpython'
 
-#print 'removing files'
+#print 'removing generated HTML files'
 for file in ["%s.html" % file for file in files]:
     if os.path.isfile(language_info[language]['language'] + '/' + file):
         os.remove(language_info[language]['language'] + '/' + file)
