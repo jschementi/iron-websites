@@ -1,0 +1,16 @@
+<% if @flickr.stat == "ok" && @flickr.photos.total.to_i > 0 %>
+  <div class='images'>
+    <% @flickr.photos.photo.each do |p| %>
+      <div class='image'>
+        <a href="<%= flickr_source(p) %>.jpg"
+           title="<%= encode("<a href='#{flickr_page(p)}' target='_blank'>#{ p.title }</a>") %>"
+           rel="lightbox[<%= @tags %>]"
+        >
+          <img src="<%= flickr_source(p) %>_s.jpg" />
+        </a>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  No images found!
+<% end %>

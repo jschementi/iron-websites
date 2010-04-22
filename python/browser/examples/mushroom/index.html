@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+  <title>Speaking Mushroom</title>
+  <script type="text/javascript" 
+          src="http://gestalt.ironpython.net/dlr-latest.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body id="demo">
+    <div>
+      Type your name: 
+      <input id="name" type="text" /><input id="go" type="button" value="go!" />
+    </div>
+
+    <script type="application/xml+xaml" src="mushroom.xaml" id="mushroom" width="200" height="280">
+    </script>
+
+    <script type="text/python" class="mushroom">
+        bm = xaml.blinking_mushroom
+        bm.left_eye_blink.Begin()
+        bm.right_eye_blink.Begin()
+
+        def Completed(s,e):
+            bm.float_bubble.Begin()
+
+        bm.show_bubble.Completed += Completed
+
+        def OnClick(s,e):
+            xaml.bubble_text.Text = "Hello, " + document.name.value + "!"
+            bm.show_bubble.Begin()
+        
+        document.go.events.onclick += OnClick
+    </script>
+  </body>
+</html>
+
