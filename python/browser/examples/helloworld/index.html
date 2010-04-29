@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+  <title>Hello, World</title>
+  <script type="text/javascript" 
+          src="http://gestalt.ironpython.net/dlr-latest.js"></script>
+  </head>
+  <body>
+  
+    <!-- code which will run when you click the "run-me" button -->
+    <pre><code class="code_block">
+&lt;script src=&quot;http://gestalt.ironruby.net/dlr-latest.js&quot;
+        type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/ruby&quot;&gt;
+    window.alert &quot;Ruby in the browser!&quot;
+&lt;/script&gt;
+&lt;script type=&quot;text/python&quot;&gt;
+    window.Alert(&quot;Python works too!&quot;)
+&lt;/script&gt;</code></pre>
+    <input type="button" value="Run me!" id="run_me" />
+    
+    <!-- non-escaped version of the code above, but it doesn't run -->
+    <script type="text/ruby" defer="defer" id="rubySnippet">
+      window.alert "Ruby in the browser!"
+    </script>
+    <script type="text/python" defer="defer" id="pythonSnippet">
+      window.Alert("Python works too!")
+    </script>
+    
+    <!-- invokes the code above when the button is clicked -->
+    <script type="text/ruby">
+      document.run_me.onclick do |s, e|
+        eval document.rubySnippet.innerHTML.to_s
+      end
+    </script>
+    <script type="text/python">
+      def run_code(s, e):
+        eval(document.pythonSnippet.innerHTML.strip())
+      document.run_me.events.onclick += run_code
+    </script>
+    
+  </body>
+</html>
+

@@ -2,8 +2,14 @@
 Announcements
 =============
 
+.. admonition:: April 12, 2010
+   :class: strip
+
+   `IronPython 2.6.1 Final <http://ironpython.codeplex.com/releases/view/36280>`_
+   was released, support both .NET 2.0 SP1 and .NET 4.0 RTM.
+
 .. admonition:: February 10, 2010
-   :class: strip space 
+   :class: strip 
 
    `IronPython 2.6.1 RC1 <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=40144>`_
    containing important fixes to IronPython 2.6, was released, along with a
@@ -13,7 +19,7 @@ Announcements
    :class: strip space
    
    `IronPython 2.6 Final <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482>`_
-   our latest *stable release* of IronPython 2.6, was released.
+   our first *stable release* of IronPython 2.6, was released.
           
 .. admonition:: November 20, 2009
    :class: strip space

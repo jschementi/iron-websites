@@ -1,34 +1,32 @@
 ---------------------
 Why Iron{{language}}?
 ---------------------
-{{language}} is an excellent
-addition to the .NET Framework, providing {{language}} developers with the power
-of the .NET framework. Existing .NET developers can also use Iron{{language}}
-s a fast and expressive scripting language for embedding, testing, or
-writing a new application from scratch.
+Iron{{language}} is an excellent addition to the .NET Framework, providing {{language}}
+developers with the power of the .NET framework. Existing .NET developers can
+also use Iron{{language}} as a fast and expressive scripting language for embedding,
+testing, or writing a new application from scratch.
 
-The CLR is a great platform for creating
-programming languages, and the DLR makes it all the more better for
-dynamic languages. Also, the .NET framework (base class library,
-presentation foundation, Silverlight, etc) give an amazing amount of
-functionality and power to developers.
+The CLR is a great platform for creating programming languages, and the DLR
+makes it all the better for dynamic languages. Also, the .NET framework
+(base class library, presentation foundation, Silverlight, etc.) gives
+developers an amazing amount of functionality and power.
+
 
 -------------
 Announcements
 -------------
 
-.. admonition:: February 10, 2010
-   :class: strip 
+.. admonition:: April 12, 2010
+   :class: strip
 
-   `IronPython 2.6.1 RC1 <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=40144>`_
-   containing important fixes to IronPython 2.6, was released, along with a
-   `.NET 4.0 RC compatibile <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=4014>`_ release.
+   `IronPython 2.6.1 Final <http://ironpython.codeplex.com/releases/view/36280>`_
+   was released, supporting both .NET 2.0 SP1 and .NET 4.0 RTM.
 
 .. admonition:: December 11, 2009
    :class: strip 
    
    `IronPython 2.6 Final <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482>`_
-   our latest *stable release* of IronPython 2.6, was released.
+   our latest the first *stable release* of IronPython 2.6, was released.
 
 .. admonition:: November 18, 2009
    :class: strip 

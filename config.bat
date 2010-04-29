@@ -1,4 +1,4 @@
 @echo off
 
 REM set your merlin root here
-set MERLIN_ROOT=c:\dev\vsl1s\Merlin\Main
+set MERLIN_ROOT=D:\dlr1\dlr
