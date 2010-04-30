@@ -86,6 +86,7 @@
     <Content Include="python\documentation\dotnet\dotnet.html" />
     <Content Include="python\documentation\dotnet\index.html" />
     <Content Include="python\documentation\images\ironpythoninaction-100x75.jpg" />
+    <Content Include="python\download\aspnet-201001\index.html" />
     <Content Include="python\nostalgia\index.html" />
     <Content Include="python\support\articles.html" />
     <Content Include="python\try\index.html" />
@@ -124,7 +125,6 @@
     <None Include="python\browser\sl-back-to-just-text.pdf" />
     <None Include="python\browser\spec.v2.rst" />
     <None Include="python\documentation\index.rst" />
-    <Content Include="python\download\aspnet-201001\web.config" />
     <None Include="python\download\index.rst" />
     <None Include="python\index.rst" />
     <Content Include="python\nostalgia\IronPython-0.6.zip" />
