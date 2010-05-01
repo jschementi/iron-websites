@@ -327,8 +327,8 @@ a.download_link:hover {
 .home.page #get #tutorial #code-snippet code {
   width: 200px;
   height: 250px;
-  /* background-image: url(../images/code-snippet-bg.png); */
-  background-color: #484848; 
+  background-image: url(../images/code-snippet-bg.png);
+  background-color: #484848;
   background-position: 0 0;
   background-repeat: no-repeat;
   padding: 10px;
@@ -357,7 +357,7 @@ a.download_link:hover {
 }
 
 .home.page #get #tutorial p {
-  margin: 70px 0px 5px;
+  margin: 105px 5px 5px;
 }
 
 .home.page #get #tutorial a#tutorial-image,
@@ -697,10 +697,10 @@ div.container.divider {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  left: 0px;
+  left: -10px;
   z-index: -1;
   text-indent: -1000000px;
-  top: 0;
+  top: -10px;
   width: 500px;
 }
 

@@ -1,7 +1,7 @@
 ==================================
 IronPython tools for Visual Studio
 ==================================
-`IronPython tools <download.html>`_ provide a
+`IronPython tools <download/>`_ provide a
 *Python code editor*, a 
 *file-based project system*, and an 
 *interactive Python interpreter*, 
@@ -18,7 +18,7 @@ all inside `Visual Studio 2010 <http://www.microsoft.com/express/>`_, and
    :class: download-link
    
    **Download**
-   `IronPython Tools 0.1 <download.html>`_
+   `IronPython Tools CTP2 <download/>`_
 
 
 .. container::
@@ -26,6 +26,7 @@ all inside `Visual Studio 2010 <http://www.microsoft.com/express/>`_, and
 
    **Resources**
    
-   - `Documentation <examples.html>`_
-   - `Spread the word <http://twitter.com/home/?status=RT+IronPython+tools:+Python+IDE+in+Visual+Studio+http://ironpython.net/tools+%23ironpython+%23vs2010>`_
+   - `Walkthrough <IronPython-Tools-for-Visual-Studio-Walkthrough.pdf>`_
+   - `Specification <ipy-tools-spec-ctp2.pdf>`_
+   - `Spread the word <http://twitter.com/home/?status=RT+IronPython+tools:+Python+IDE+in+Visual+Studio+http://ironpython.net/tools/+%23ironpython+%23vs2010>`_
 

@@ -1,5 +1,5 @@
 [
     ("IronPython Tools",  "index.html"),
-    ("Download",        'download.html'),
-    ("Documentation",   'documentation.html'),
+    ("Download",        'download/'),
+    ("Walkthrough",   'IronPython-Tools-for-Visual-Studio-Walkthrough.pdf'),
 ]

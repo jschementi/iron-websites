@@ -160,7 +160,7 @@
   background-image: url("../images/ironruby-tools-rails-500.png");
 }
 #ironpython.tools .tools-image {
-  background-image: url("../images/ironpython-tools-wpf-500.png");
+  background-image: url("../images/ironpython-vstools-fade.png");
 }
 
 #ironruby.tools .download-link a:link,
@@ -189,3 +189,11 @@
 
 
 
+#ironpython.home.page #get #tutorial #code-snippet code {
+    background: none;
+    height: 279px;
+    padding: 0;
+    top: -173px;
+    width: 256px;
+    z-index: 10;
+}

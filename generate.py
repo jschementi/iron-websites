@@ -75,7 +75,8 @@ d.each{|kvp| <span class="keyword">puts</span> kvp}""",
     'stable_release_date': '2.6.1 released on 2010-04-12',
     'stable_release_notes': 'http://ironpython.codeplex.com/releases/view/36280',
     'stable_release_source': 'http://ironpython.codeplex.com/releases/view/36280#DownloadId=116511',
-    'code_snippet_html': """<span class="comment"># namespaces are modules</span>
+    'code_snippet_html': """<img src="../images/ironpython-interactive.png" height="279" alt="IronPython Interactive in Visual Studio 2010" />""",
+    'old_code_snippet_html': """<span class="comment"># namespaces are modules</span>
 <span class="keyword">from</span> <span class="constant">System</span>.<span class="constant">Collections</span>.<span class="constant">Generic</span> import <span class="constant">Dictionary</span>
 
 <span class="comment"># indexers constrains type</span>
