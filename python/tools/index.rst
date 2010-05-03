@@ -5,7 +5,7 @@ IronPython tools for Visual Studio
 *Python code editor*, a 
 *file-based project system*, and an 
 *interactive Python interpreter*, 
-all inside `Visual Studio 2010 <http://www.microsoft.com/express/>`_, and 
+all inside `Visual Studio 2010 <http://www.microsoft.com/visualstudio/>`_, and 
 **all for free**.
 
 .. container::
