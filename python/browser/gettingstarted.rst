@@ -28,7 +28,7 @@ the HTML page. For example, here's handling a button click::
     <script type="text/python">
       def button_onclick(s, e):
           window.Alert("Hello from Python!")
-      document.button.onclick += button_onclick
+      document.button.events.onclick += button_onclick
     </script>
 
 Vector-graphics can also be used; here's an example which loads a 

@@ -504,7 +504,7 @@ You can hook the ``onclick`` event from Python::
     <script type="application/python"> 
       def do_c(link): 
         link.innerHTML = "Clicked!" 
-      document.cm.onclick += do_c 
+      document.cm.events.onclick += do_c 
     </script> 
  
 Hooking XAML events also works::
