@@ -48,7 +48,7 @@ files is to just use::
     
 This will generate HTML for both sites and stage it for deployment. If for some
 reason you only want to generate HTML for a specific site, you can use the
-``-python`` or ``-ruby`` flags
+``-python`` or ``-ruby`` flags::
 
     Usage: python generate.py [-python|-ruby|-h]
     
@@ -56,8 +56,10 @@ View website
 ------------
 After generating the website, you can view it by going to the language-specific
 directories:
-- `ruby\index.html <http://localhost/iron-websites/ruby/>`_
-- `python\index.html <http://localhost/iron-websites/python/>`_
+
+- `ruby/index.html <http://localhost/iron-websites/ruby/>`_
+
+- `python/index.html <http://localhost/iron-websites/python/>`_
 
 Staging for deploy
 ------------------
@@ -67,7 +69,9 @@ Otherwise, just run ``deploy.rb``::
     ruby deploy.rb
     
 The websites are then staged at:
+
 - `deploy\IronRubyNet <http://localhost/iron-websites/deploy/IronRubyNet>`_
+
 - `deploy\IronPythonNet <http://localhost/iron-websites/deploy/IronPythonNet>`_
 
 These directories are ready to go online, with all dependencies self-contained.
@@ -79,13 +83,14 @@ the main repository, or else you risk someone else deploying changes which overw
 yours. Here's the simple steps:
 
 1. `Push your changes back into your own fork <http://help.github.com/forking/#pushing_your_changes>`_.
+
 2. Send a `pull-request <http://github.com/guides/pull-requests>`_, which effectively starts a code-review.
+
 3. When `jschementi <http://github.com/jschementi>`_ signs off on the changes, they'll be pulled into the main
    repository, and then you're ready to deploy.
 
 Deploying
 ---------
-
 Currently deploying is only a manual process, so the completion of the
 code review will also include pushing the site live. Please let `jschementi <http://github.com/jschementi>`_
 know if the changes are urgent.
