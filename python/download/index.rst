@@ -64,7 +64,7 @@ Windows & Mac OS browser apps
 
    .. container:: download
 
-      `Latest Silverlight version (3.0)`_
+      `Latest Silverlight version (4.0)`_
 
    Silverlight enables you to use Python to script HTML pages just as
    you would with JavaScript, and also enables advanced vector graphics
@@ -124,7 +124,7 @@ Linux browser apps
 .. _3.5: http://bit.ly/iron-dotnet35
 .. _3.0: http://bit.ly/iron-dotnet3
 .. _2.0 SP1: http://bit.ly/iron-dotnet20sp1
-.. _Latest Silverlight version (3.0): http://go.microsoft.com/fwlink/?linkid=150228
+.. _Latest Silverlight version (4.0): http://go.microsoft.com/fwlink/?linkid=150228
 .. _Learn more about Python in the browser: ../browser/
 .. _Mono: http://www.mono-project.com
 .. _Latest Mono version (2.6.4): http://www.go-mono.com/mono-downloads/download.html

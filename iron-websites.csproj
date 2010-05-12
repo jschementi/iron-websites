@@ -82,6 +82,7 @@
     <Content Include="python\browser\getting-started\04_animation.html" />
     <Content Include="python\browser\getting-started\05_final.html" />
     <Content Include="python\browser\new-index.html" />
+    <Content Include="python\clientaccesspolicy.xml" />
     <Content Include="python\documentation\dotnet\docutils.css" />
     <Content Include="python\documentation\dotnet\dotnet.html" />
     <Content Include="python\documentation\dotnet\index.html" />
@@ -89,6 +90,7 @@
     <Content Include="python\download\aspnet-201001\index.html" />
     <Content Include="python\nostalgia\index.html" />
     <Content Include="python\support\articles.html" />
+    <Content Include="python\tools\download\index.html" />
     <Content Include="python\try\index.html" />
     <Content Include="python\tutorial\index.html" />
     <Content Include="ruby\browser\new-index.html" />
