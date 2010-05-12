@@ -242,6 +242,10 @@ files = [
     'support/index',
 ]
 
+def usage():
+    print "python generate.py [-ruby|-python|-h]"
+    exit(1)
+
 import sys
 language = 'ironpython'
 for i in sys.argv:
@@ -249,6 +253,8 @@ for i in sys.argv:
           language = 'ironruby'
     if i == '-python':
           language = 'ironpython'
+    if i == '-h':
+          usage()
 
 #print 'removing generated HTML files'
 for file in ["%s.html" % file for file in files]:
