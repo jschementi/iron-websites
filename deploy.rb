@@ -88,5 +88,10 @@ class Deploy
 end
 
 if __FILE__ == $0
-  Deploy.new.deploy
+  d = Deploy.new
+  if ARGV.include?('-clean')
+    d.clean
+  else
+    d.deploy
+  end
 end
