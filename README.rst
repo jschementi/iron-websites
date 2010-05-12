@@ -15,20 +15,6 @@ Quickstart
 
       generate.bat
 
-- Generate HTML files in-place for a specific site::
-
-      python generate.py -[python|ruby]
-      
-- Visit the site::
-
-      start (python|ruby)\index.html
-
-- Stage for deployment and view it::
-
-      ruby deploy.rb
-
-      start deploy\Iron(Ruby|Python)Net\index.html
-
 - See "Deploying" section below for instruction on how to get your change
   checked in and pushed to the live website.
 
@@ -55,44 +41,59 @@ by RST to generate a HTML file to disk.
 Generating HTML files
 ---------------------
 The logic for generating the HTML files is in ``generate.py``, including
-navigation, style, and template info.::
+navigation, style, and template info. The simplest way to generate the HTML
+files is to just use::
 
-    Usage: python generate.py -[python|ruby]
+    generate.bat
+    
+This will generate HTML for both sites and stage it for deployment. If for some
+reason you only want to generate HTML for a specific site, you can use the
+``-python`` or ``-ruby`` flags
+
+    Usage: python generate.py [-python|-ruby|-h]
     
 View website
 ------------
 After generating the website, you can view it by going to the language-specific
-folders:
-- IronRuby: http://localhost/iron-websites/ruby/index.html
-- IronPython: http://localhost/iron-websites/python/index.html
+directories:
+- ruby/index.html
+- python/index.html
 
 Staging for deploy
 ------------------
-To stage the sites for deployment, use ``deploy.rb``::
+If you used ``generate.bat``, you already have staged the sites for deployment.
+Otherwise, just run ``deploy.rb``::
 
     ruby deploy.rb
     
-The websites are copied to:
-- http://localhost/iron-websites/deploy/IronRubyNet
-- http://localhost/iron-websites/deploy/IronPythonNet
+The websites are then staged at:
+- deploy\IronRubyNet
+- deploy\IronPythonNet
 
 These directories are ready to go online, with all dependencies self-contained.
 
 Checking in your changes
 ------------------------
-Before you deploy these changes to the live websites, they must be in the main
-repository. 
-Check your changes back into your own fork, and push them back up to github. Then
-send a "pull-request", which effectively is a code-review. When jschementi signs
-off on the changes, they'll be pulled into the main repository. Then you're ready
-to deploy.
+Before you deploy these changes to the live website(s), they must be checked into
+the main repository, or else you risk someone else deploying changes which overwrite
+yours. Here's the simple steps:
+
+1. Push your changes back into your own fork.
+2. Send a "pull-request", which effectively starts a code-review.
+3. When jschementi signs off on the changes, they'll be pulled into the main
+   repository, and then you're ready to deploy.
 
 Deploying
 ---------
-Pass the ``-production`` flag to actually push the site online. This requires
-the correct FTP password to be in the passwd file; jschementi will give you
-this password when your code-review is okayed.
 
+Currently deploying is only a manual process, so the completion of the
+code review will also include pushing the site live. Please let jschementi
+know if the changes are urgent.
+
+..
+  Pass the ``-production`` flag to actually push the site online. This requires
+  the correct FTP password to be in the passwd file; jschementi will give you
+  this password when your code-review is okayed.
 
 
 Please ask jschementi if you have any additional questions.
