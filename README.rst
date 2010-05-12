@@ -70,9 +70,9 @@ Otherwise, just run ``deploy.rb``::
     
 The websites are then staged at:
 
-- `deploy\IronRubyNet <http://localhost/iron-websites/deploy/IronRubyNet>`_
+- `deploy/IronRubyNet <http://localhost/iron-websites/deploy/IronRubyNet>`_
 
-- `deploy\IronPythonNet <http://localhost/iron-websites/deploy/IronPythonNet>`_
+- `deploy/IronPythonNet <http://localhost/iron-websites/deploy/IronPythonNet>`_
 
 These directories are ready to go online, with all dependencies self-contained.
 
