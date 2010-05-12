@@ -27,10 +27,10 @@ which are stored in the ``python`` and ``ruby`` directories.
 
 Getting the source
 ------------------
-If you intend to submit a change to the website, please "fork" this repository
+If you intend to submit a change to the website, please `fork <http://help.github.com/forking/>`_ this repository
 and follow the instructions on how to get the source code locally. This will
 make it really easy to check-in your changes to your own private copy,
-and then submit a pull-request to get your changes back into the original repo.
+and then send a `pull-request <http://github.com/guides/pull-requests>`_ to get your changes back into the original repo.
 
 Updating content
 ----------------
@@ -56,8 +56,8 @@ View website
 ------------
 After generating the website, you can view it by going to the language-specific
 directories:
-- ruby/index.html
-- python/index.html
+- `ruby\index.html <http://localhost/iron-websites/ruby/>`_
+- `python\index.html <http://localhost/iron-websites/python/>`_
 
 Staging for deploy
 ------------------
@@ -67,8 +67,8 @@ Otherwise, just run ``deploy.rb``::
     ruby deploy.rb
     
 The websites are then staged at:
-- deploy\IronRubyNet
-- deploy\IronPythonNet
+- `deploy\IronRubyNet <http://localhost/iron-websites/deploy/IronRubyNet>`_
+- `deploy\IronPythonNet <http://localhost/iron-websites/deploy/IronPythonNet>`_
 
 These directories are ready to go online, with all dependencies self-contained.
 
@@ -78,22 +78,22 @@ Before you deploy these changes to the live website(s), they must be checked int
 the main repository, or else you risk someone else deploying changes which overwrite
 yours. Here's the simple steps:
 
-1. Push your changes back into your own fork.
-2. Send a "pull-request", which effectively starts a code-review.
-3. When jschementi signs off on the changes, they'll be pulled into the main
+1. `Push your changes back into your own fork <http://help.github.com/forking/#pushing_your_changes>`_.
+2. Send a `pull-request <http://github.com/guides/pull-requests>`_, which effectively starts a code-review.
+3. When `jschementi <http://github.com/jschementi>`_ signs off on the changes, they'll be pulled into the main
    repository, and then you're ready to deploy.
 
 Deploying
 ---------
 
 Currently deploying is only a manual process, so the completion of the
-code review will also include pushing the site live. Please let jschementi
+code review will also include pushing the site live. Please let `jschementi <http://github.com/jschementi>`_
 know if the changes are urgent.
 
 ..
   Pass the ``-production`` flag to actually push the site online. This requires
-  the correct FTP password to be in the passwd file; jschementi will give you
+  the correct FTP password to be in the passwd file; `jschementi <http://github.com/jschementi>`_ will give you
   this password when your code-review is okayed.
 
 
-Please ask jschementi if you have any additional questions.
+Please ask `jschementi <http://github.com/jschementi>`_ if you have any additional questions.
