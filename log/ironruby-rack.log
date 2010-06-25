@@ -1,0 +1,457 @@
+
+=== Booting ironruby-rack at 6/24/2010 10:20:09 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4075 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:20:13 PM
+>>> Request finished (263ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:20:14 PM
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1356 ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:21:10 PM
+>>> Request finished (15ms)
+File not found: d:\iron-websites\public\python
+
+=== Request started at 6/24/2010 10:21:13 PM
+>>> Request finished (17ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:21:18 PM
+>>> Request finished (11ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:21:18 PM
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1310 ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:21:20 PM
+>>> Request finished (16ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:21:22 PM
+>>> Request finished (11ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File found: http://localhost:9292/python/index.html -> d:\iron-websites\public\python\index.html
+File found: http://localhost:9292/css/rst.css -> d:\iron-websites\public\css\rst.css
+
+
+=== Booting ironruby-rack at 6/24/2010 10:21:26 PM
+
+=== Booting ironruby-rack at 6/24/2010 10:21:26 PM
+File found: http://localhost:9292/css/master.css -> d:\iron-websites\public\css\master.css
+=== Booting ironruby-rack at 6/24/2010 10:21:26 PM
+
+=== Booting ironruby-rack at 6/24/2010 10:21:26 PM
+File found: http://localhost:9292/css/lang.css -> d:\iron-websites\public\css\lang.css
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Setting RACK_ENV: ''
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading RubyGems
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loading Rack >=1.0.0
+=> Loading Rack >=1.0.0
+undefined method `gem' for main:Object
+    (eval):0: undefined method `gem' for main:Object (NoMethodError)
+    	from IronRuby.Rack:0:in `Execute'
+    	from IronRuby.Rack:0:in `Require'
+    	from IronRuby.Rack:0:in `InitRack'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `<Init>b__1'
+    	from System.Web:0:in `System.Web.HttpApplication.IExecutionStep.Execute'
+    	from System.Web:0:in `ExecuteStep'
+    	from System.Web:0:in `ResumeSteps'
+    	from System.Web:0:in `System.Web.IHttpAsyncHandler.BeginProcessRequest'
+    	from System.Web:0:in `ProcessRequestInternal'
+    	from System.Web:0:in `ProcessRequestNoDemand'
+    	from System.Web:0:in `ProcessRequest'
+    	from Cassini:0:in `Process'
+    	from Cassini:0:in `ProcessRequest'
+    	from mscorlib:0:in `_PrivateProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessageCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    	from mscorlib:0:in `InternalCrossContextCallback'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncDispatchMessage'
+    	from mscorlib:0:in `DoDispatch'
+    	from mscorlib:0:in `DoTransitionDispatchCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    
+    
+undefined method `gem' for main:Object
+    (eval):0: undefined method `gem' for main:Object (NoMethodError)
+    	from IronRuby.Rack:0:in `Execute'
+    	from IronRuby.Rack:0:in `Require'
+    	from IronRuby.Rack:0:in `InitRack'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `<Init>b__1'
+    	from System.Web:0:in `System.Web.HttpApplication.IExecutionStep.Execute'
+    	from System.Web:0:in `ExecuteStep'
+    	from System.Web:0:in `ResumeSteps'
+    	from System.Web:0:in `System.Web.IHttpAsyncHandler.BeginProcessRequest'
+    	from System.Web:0:in `ProcessRequestInternal'
+    	from System.Web:0:in `ProcessRequestNoDemand'
+    	from System.Web:0:in `ProcessRequest'
+    	from Cassini:0:in `Process'
+    	from Cassini:0:in `ProcessRequest'
+    	from mscorlib:0:in `_PrivateProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessageCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    	from mscorlib:0:in `InternalCrossContextCallback'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncDispatchMessage'
+    	from mscorlib:0:in `DoDispatch'
+    	from mscorlib:0:in `DoTransitionDispatchCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    
+    
+undefined method `gem' for main:Object
+    (eval):0: undefined method `gem' for main:Object (NoMethodError)
+    	from IronRuby.Rack:0:in `Execute'
+    	from IronRuby.Rack:0:in `Require'
+    	from IronRuby.Rack:0:in `InitRack'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `.ctor'
+    	from IronRuby.Rack:0:in `<Init>b__1'
+    	from System.Web:0:in `System.Web.HttpApplication.IExecutionStep.Execute'
+    	from System.Web:0:in `ExecuteStep'
+    	from System.Web:0:in `ResumeSteps'
+    	from System.Web:0:in `System.Web.IHttpAsyncHandler.BeginProcessRequest'
+    	from System.Web:0:in `ProcessRequestInternal'
+    	from System.Web:0:in `ProcessRequestNoDemand'
+    	from System.Web:0:in `ProcessRequest'
+    	from Cassini:0:in `Process'
+    	from Cassini:0:in `ProcessRequest'
+    	from mscorlib:0:in `_PrivateProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncProcessMessageCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    	from mscorlib:0:in `InternalCrossContextCallback'
+    	from mscorlib:0:in `SyncProcessMessage'
+    	from mscorlib:0:in `SyncDispatchMessage'
+    	from mscorlib:0:in `DoDispatch'
+    	from mscorlib:0:in `DoTransitionDispatchCallback'
+    	from mscorlib:0:in `CompleteCrossContextCallback'
+    
+    
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1419 ms)
+File found: http://localhost:9292/images/trypythoninbrowser-290x100.png -> d:\iron-websites\public\images\trypythoninbrowser-290x100.png
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:21:47 PM
+>>> Request finished (23ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+
+=== Booting ironruby-rack at 6/24/2010 10:22:33 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4172 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:22:37 PM
+>>> Request finished (281ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:22:37 PM
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1297 ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File found: http://localhost:9292/ruby/index.html -> d:\iron-websites\public\ruby\index.html
+File found: http://localhost:9292/css/master.css -> d:\iron-websites\public\css\master.css
+File found: http://localhost:9292/css/rst.css -> d:\iron-websites\public\css\rst.css
+File found: http://localhost:9292/css/sticky-footer.css -> d:\iron-websites\public\css\sticky-footer.css
+
+=== Booting ironruby-rack at 6/24/2010 10:22:43 PM
+File not found: d:\iron-websites\public\images\tryrubyinbrowser-290x100.png
+
+=== Request started at 6/24/2010 10:22:43 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+>>> Request finished (97ms)
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1340 ms)
+File found: http://localhost:9292/css/lang.css -> d:\iron-websites\public\css\lang.css
+File found: http://localhost:9292/images/ironruby-logo-383x95.png -> d:\iron-websites\public\images\ironruby-logo-383x95.png
+File found: http://localhost:9292/images/download-ironruby.png -> d:\iron-websites\public\images\download-ironruby.png
+File found: http://localhost:9292/images/code-snippet-bg.png -> d:\iron-websites\public\images\code-snippet-bg.png
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:22:47 PM
+>>> Request finished (17ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:46:26 PM
+>>> Request finished (15ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+
+=== Booting ironruby-rack at 6/24/2010 10:46:26 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1315 ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:46:43 PM
+>>> Request finished (13ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:46:47 PM
+>>> Request finished (13ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:49:25 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4162 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:49:29 PM
+>>> Request finished (236ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:49:30 PM
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1350 ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:49:39 PM
+>>> Request finished (72ms)
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:49:40 PM
+>>> Request finished (36ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:50:42 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4153 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:50:46 PM
+>>> Request finished (237ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:50:46 PM
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1325 ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:50:53 PM
+>>> Request finished (71ms)
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 10:50:54 PM
+>>> Request finished (38ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:51:14 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4168 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:51:18 PM
+>>> Request finished (101ms)
+File not found: d:\iron-websites\public\root
+
+=== Request started at 6/24/2010 10:51:21 PM
+>>> Request finished (179ms)
+File not found: d:\iron-websites\public\root
+
+=== Request started at 6/24/2010 10:51:22 PM
+>>> Request finished (13ms)
+
+=== Booting ironruby-rack at 6/24/2010 10:53:42 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4279 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 10:53:46 PM
+>>> Request finished (102ms)
+File not found: d:\iron-websites\public\root
+
+=== Request started at 6/24/2010 10:53:47 PM
+>>> Request finished (91ms)
+File not found: d:\iron-websites\public\root
+
+=== Request started at 6/24/2010 10:53:48 PM
+>>> Request finished (12ms)
+
+=== Booting ironruby-rack at 6/24/2010 11:17:20 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (4230 ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 11:17:24 PM
+>>> Request finished (227ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:17:26 PM
+>>> Request finished (64ms)
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 11:17:35 PM
+>>> Request finished (29ms)
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:17:35 PM
+>>> Request finished (11ms)
+File not found: d:\iron-websites\public\python
+
+=== Request started at 6/24/2010 11:17:38 PM
+>>> Request finished (34ms)
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:17:39 PM
+>>> Request finished (12ms)
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 11:17:40 PM
+>>> Request finished (32ms)
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:17:41 PM
+>>> Request finished (12ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 11:17:41 PM
+>>> Request finished (17ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+
+=== Booting ironruby-rack at 6/24/2010 11:17:43 PM
+=> Setting RACK_ENV: ''
+=> Loading RubyGems
+=> Loading Rack >=1.0.0
+=> Loaded rack-1.1
+=> Application root: 'd:\\iron-websites'
+=> Loading Rack application
+=> Rack application loaded (1366 ms)
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:17:44 PM
+>>> Request finished (17ms)
+File not found: d:\iron-websites\public\ruby\
+
+=== Request started at 6/24/2010 11:18:13 PM
+>>> Request finished (22ms)
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:18:13 PM
+>>> Request finished (13ms)
+File not found: d:\iron-websites\public\ruby
+
+=== Request started at 6/24/2010 11:18:16 PM
+>>> Request finished (37ms)
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:18:17 PM
+>>> Request finished (22ms)
+File not found: d:\iron-websites\public\
+
+=== Request started at 6/24/2010 11:18:29 PM
+>>> Request finished (13ms)
+File found: http://localhost:9292/images/ironpython-design-thumb.PNG -> d:\iron-websites\public\images\ironpython-design-thumb.PNG
+File found: http://localhost:9292/images/ironruby-design-thumb.PNG -> d:\iron-websites\public\images\ironruby-design-thumb.PNG
+File not found: d:\iron-websites\public\favicon.ico
+
+=== Request started at 6/24/2010 11:18:30 PM
+>>> Request finished (15ms)
