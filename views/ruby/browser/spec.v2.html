@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+  <title>IronRuby.net / Back to &quot;Just Text&quot; with Silverlight</title>
+  <link rel="stylesheet" href="../../css/rst.css" type="text/css" media="screen"
+            charset="utf-8" />
+  <link rel="stylesheet" href="../../css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/lang.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/sticky-footer.css" type="text/css" media="screen"
+        charset="utf-8" />
+  
+</head>
+
+<body id="ironruby" class=" page">
+
+  <div id="wrap">
+    <div id="main" class="clearfix">
+
+      <div id="nav">
+  <div>
+    <a href='../' >Overview</a><a href='../download/' >Download</a><a href='../tools/' >Tools</a><a href='../browser/'  class='active' >Browser</a><a href='../documentation/' >Documentation</a><a href='../support/' >Support</a>
+  </div>
+</div>
+
+<div id="header">
+  <h1><a href="..">IronRuby</a></h1>
+
+  <ul id="page-nav">
+
+
+<li><a href="index.html">Ruby in the browser</a></li>
+
+<li><a href="gettingstarted.html">Getting started</a></li>
+
+<li><a href="download.html">Downloads</a></li>
+
+<li><a href="examples.html">Examples</a></li>
+
+<li><a href="docs.html">Documentation</a></li>
+
+</ul>
+
+  <h2>
+    Back to &quot;Just Text&quot; with Silverlight
+  </h2>
+</div>
+
+<div id="body">
+  <div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#background" id="id1">Background</a></li>
+<li><a class="reference internal" href="#purpose" id="id2">Purpose</a></li>
+<li><a class="reference internal" href="#minimal-html" id="id3">Minimal HTML</a><ul>
+<li><a class="reference internal" href="#automatically-adding-a-silverlight-control" id="id4">Automatically adding a Silverlight control</a></li>
+<li><a class="reference internal" href="#customizing-default-settings" id="id5">Customizing default settings</a></li>
+<li><a class="reference internal" href="#disabling-the-auto-add-silverlight-control" id="id6">Disabling the &quot;auto-add&quot; Silverlight control</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#script-tags" id="id7">Script Tags</a><ul>
+<li><a class="reference internal" href="#inline-scripts" id="id8">Inline scripts</a></li>
+<li><a class="reference internal" href="#external-scripts" id="id9">External scripts</a></li>
+<li><a class="reference internal" href="#xaml" id="id10">XAML</a></li>
+<li><a class="reference internal" href="#zip-files" id="id11">Zip files</a></li>
+<li><a class="reference internal" href="#multiple-silverlight-controls" id="id12">Multiple Silverlight controls</a></li>
+<li><a class="reference internal" href="#changes-to-existing-behavior" id="id13">Changes to existing behavior</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interacting-with-markup" id="id14">Interacting with markup</a><ul>
+<li><a class="reference internal" href="#html-accessors" id="id15">HTML accessors</a></li>
+<li><a class="reference internal" href="#xaml-accessors" id="id16">XAML accessors</a></li>
+<li><a class="reference internal" href="#event-handling-from-markup" id="id17">Event handling from markup</a></li>
+<li><a class="reference internal" href="#event-handling-from-code" id="id18">Event handling from code</a></li>
+<li><a class="reference internal" href="#jquery-influenced-selectors" id="id19">jQuery-influenced selectors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tiny-xap-file" id="id20">Tiny XAP File</a><ul>
+<li><a class="reference internal" href="#appmanifest-xaml" id="id21">AppManifest.xaml</a></li>
+<li><a class="reference internal" href="#languages-config" id="id22">languages.config</a></li>
+<li><a class="reference internal" href="#microsoft-scripting-slvx" id="id23">Microsoft.Scripting.slvx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#debugging" id="id24">Debugging</a><ul>
+<li><a class="reference internal" href="#visual-studio" id="id25">Visual Studio</a></li>
+<li><a class="reference internal" href="#microsoft-scripting-debugging" id="id26">Microsoft.Scripting.Debugging</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#faq" id="id27">FAQ</a></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h1><a class="toc-backref" href="#id1">Background</a></h1>
+<p>Dynamic languages were first shown working in Silverlight 1.1 Alpha as part of
+the Silverlight platform; writing <tt class="docutils literal">&lt;x:Code <span class="pre">source=&quot;app.py&quot;</span> /&gt;</tt> in XAML
+caused Silverlight to download app.py, and then called a special hook in the
+DLR which ran the code contained in app.py. Developers would just edit their
+script files and refresh the browser to see any updates; staying true to the
+typical browser-development workflow. Silverlight 1.1 Alpha did not have a
+concept of a XAP file, though it was always planned to have the XAP file
+option for deployment. However, as Silverlight 1.1 got closer to shipping
+(and was rebranded Silverlight 2), the XAP file became an absolute requirement
+for applications. Instead of many JavaScript or XAML files, the XAP file
+simplified Silverlight's startup dependencies into one compressed package.
+Coupled with Silverlight 2 moving to a code-first model and the dynamic
+languages moving outside the Silverlight platform to continue shipping every
+couple months, a new solution was needed to make dynamic-language-development
+work as expected.</p>
+<p>Silverlight 2 applications written with a dynamic language require the
+developer to run Chiron.exe to get the edit-refresh development experience.
+Chiron.exe is a basic development-time-only web-server which translates all
+*.xap requests into creating a valid XAP file out of the * folder, injecting
+the language's required binaries and AppManifest.xaml as needed. So given an
+app directory, Silverlight can be pointed at app.xap, and with Chiron.exe
+running it serves the app.xap file as needed. This allows the developer to
+edit their code, save the files, and then refresh the web browser to see the
+updated application; Chiron.exe will generate a new XAP on every request.
+Since this only happens in memory, Chiron.exe can also write the XAP file to
+disk for deploying on a real web-server, like Apache or IIS.</p>
+<p>Since Chiron.exe was introduced, there has been some confusion around how to
+develop DLR-based Silverlight applications. Chiron.exe's role is so strange to
+people who use dynamic languages, false information has propagated about what
+it really does; most notably that Chiron.exe actually performs the compilation
+and is required for deployment.</p>
+<p>The <a class="reference external" href="http://visitmix.com/labs">MIX Online Labs</a> team recently released a
+prototype of this very thing, called
+<a class="reference external" href="http://visitmix.com/labs/gestalt">Gestalt</a>. This write-up aims to build upon
+their prototype's functionality and merge it into the DLR's existing
+Silverlight integration. In the future the Gestalt team will use this new
+implementation to build Silverlight application highlighting the benefits of
+dynamic languages in the browser.</p>
+</div>
+<div class="section" id="purpose">
+<h1><a class="toc-backref" href="#id2">Purpose</a></h1>
+<p>This document will detail the changes to the existing
+<tt class="docutils literal">Microsoft.Scripting.Silverlight.dll</tt> to remove the need for Chiron.exe to
+simply achieve an acceptable development mode, make the development model more
+familiar to browser developers and bring out the &quot;just-text&quot; benefits of
+dynamic languages.</p>
+<p>Making the default close to how browser-JavaScript development works makes
+Ruby or Python that much more familiar in the browser. This will also remove
+any obstacles to developing Silverlight applications on any operating system.
+For example, current Ruby or Python developers who do not use Windows have a
+more difficult time developing Silverlight applications, since they have to
+install Mono to run Chiron.</p>
+<p>These changes will introduce no breaking changes to existing DLR-based
+Silverlight applications; using Chiron.exe for development and starting an
+application with an app.* file or the &quot;start&quot; initParam will still work. These
+changes provide a simpler default while preserving the original functionality.</p>
+<p>Note: throughout the document are indicators on the state of the
+implementation in relation to this spec. For example, sections have an
+&quot;Implemented/Not implemented&quot; subtitle, as well as calling out specific
+details which may currently vary between spec and implementation.</p>
+</div>
+<div class="section" id="minimal-html">
+<h1><a class="toc-backref" href="#id3">Minimal HTML</a></h1>
+<p><em>Implemented!</em></p>
+<p><tt class="docutils literal">Silverlight.js</tt> is a JavaScript API used to construct the object-tag
+required to host Silverlight on a HTML page, as well as doing some
+browser/Silverlight-installation detection. <tt class="docutils literal">Silverlight.js</tt> will be part of
+the default way a Silverlight control for dynamic languages is added to a HTML
+page. However, the DLR integration needs specific features over-and-above what
+<tt class="docutils literal">Silverlight.js</tt> provides, so those additional features will be merged in
+with <tt class="docutils literal">Silverlight.js</tt> to form <tt class="docutils literal">dlr.js</tt>.</p>
+<div class="section" id="automatically-adding-a-silverlight-control">
+<h2><a class="toc-backref" href="#id4">Automatically adding a Silverlight control</a></h2>
+<p>By default, <cite>dlr.js</cite> does the necessary work to host Silverlight on a page,
+just by including the file:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot; src=&quot;dlr.js&quot; /&gt;
+</pre>
+<p>This significantly decreases the amount of boilerplate HTML you need to host
+Silverlight; from about 20 lines of HTML. This adds one hidden Silverlight
+control for using DLR-based languages to only script the DOM. The XAML section
+later on will show how to use Silverlight graphics.</p>
+</div>
+<div class="section" id="customizing-default-settings">
+<h2><a class="toc-backref" href="#id5">Customizing default settings</a></h2>
+<p>To customize the default settings, you can do so before dlr.js is included.
+Defaults are merged with any custom settings, so just provide the settings you
+want to customize:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  if (!window.DLR)
+    window.DLR = {};
+  DLR.settings = { width: &quot;100%&quot;, height: &quot;100%&quot; };
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;dlr.js&quot; /&gt;
+</pre>
+<p>By default the Silverlight control will be created with these settings, which
+are split between DLR-specific settings and settings passed along to
+Silverlight.js, which all are placed on the Silverlight object tag
+(default values are in <strong>bold</strong>):</p>
+<ul class="simple">
+<li><tt class="docutils literal">id</tt>: <strong>silverlightDLRObject&lt;n&gt;</strong> -
+ID that the Silverlight object-tag will have, with &lt;n&gt; being the current
+count of objects added by dlr.js. However, if the first control is
+autoAdded, its <tt class="docutils literal">id</tt> is set to <tt class="docutils literal">silverlightDlrObject_DOMOnly</tt>.</li>
+<li><tt class="docutils literal">width</tt>: <strong>1</strong> - Tells Silverlight the width of the control. Minimum
+value is &quot;1&quot;. Passed directly to Silverlight.js. It is not zero because then
+Silverlight won't load.</li>
+<li><tt class="docutils literal">height</tt>: <strong>1</strong> - Tells Silverlight the height of the control. Minimum
+value is &quot;1&quot;. Passed directly to Silverlight.js. It is not zero because then
+Silverlight won't load.</li>
+<li><tt class="docutils literal">source</tt>: <strong>dlr.xap</strong> - XAP file that Silverlight will use.
+Passed directly to Silverlight.js.</li>
+<li><tt class="docutils literal">onError</tt>: <strong>Silverlight.default_error_handler</strong> - Default error
+handler if an exception reaches the browser page. This is passed directly
+to Silverlight.js.</li>
+</ul>
+<p>There are also settings that can be set directly on the DLR object:</p>
+<ul class="simple">
+<li><tt class="docutils literal">DLR.autoAdd</tt>: <strong>true</strong> - DLR-specific setting to tell <tt class="docutils literal">dlr.js</tt>
+whether or not to auto-add a Silverlight control. Set this to false if you
+need finer control over when and where the control gets created.</li>
+<li><tt class="docutils literal">DLR.path</tt>: <strong>&quot;&quot;</strong> - Base path where the XAP file is located. By
+default it will be in the same location as the HTML file.</li>
+</ul>
+<p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/cc838217(VS.95).aspx">Documentation on Silverlight-specific settings</a></p>
+<p>Here are the remaining DLR-specific settings (when omitted, the <strong>bold</strong> value
+is default). They are all passed along to Silverlight.js as <tt class="docutils literal">initParams</tt>:</p>
+<ul class="simple">
+<li><tt class="docutils literal">reportErrors</tt>: <strong>errorLocation</strong> - DLR-specific setting that provides the
+DOM-id to inject a pretty error window if an syntax or compile error occurs.</li>
+<li><tt class="docutils literal">debug</tt>: ( <strong>true</strong> | <tt class="docutils literal">false</tt> ) - indicates whether the DLR should
+produce debug-able code. This makes stack-traces accurate, and allows the
+Visual Studio debugger to be attached to the Silverlight process to debug
+the script-code (place break points, step, etc).</li>
+<li>console: ( <tt class="docutils literal">true</tt> | <strong>false</strong> ) - indicates whether the DLR should display
+a HTML-based console window, allowing you to switch between all available
+languages. stdout and stderr are redirected to this console so common
+printing operations work.</li>
+<li>start: <strong>&quot;app.*&quot;</strong> - entry-point script; executed after inline
+script-tags. File must be present in the application’s XAP file. Not
+suggested to use when using script-tags. See FAQ for more info.</li>
+<li>exceptionDetail: ( <tt class="docutils literal">true</tt> | <strong>false</strong> ) - Shows the entire managed stack trace
+when an exception is raised. Useful for debugging static code called from
+non-dynamic code.</li>
+<li>xamlid: (no default) - Used to scope script-tags to run only in a given
+control. See the multiple Silverlight controls section.</li>
+</ul>
+</div>
+<div class="section" id="disabling-the-auto-add-silverlight-control">
+<h2><a class="toc-backref" href="#id6">Disabling the &quot;auto-add&quot; Silverlight control</a></h2>
+<p>To get more control over when the first Silverlight control is instantiated,
+disable the autoAdd setting:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  if (!window.DLR)
+    window.DLR = {};
+  DLR.autoAdd: false;
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;dlr.js&quot; /&gt;
+</pre>
+<p>When you want to add the Silverlight control:</p>
+<pre class="literal-block">
+DLR.createObject();
+</pre>
+<p>The DLR.createObject method can be used regardless of autoAdd's value; it
+simply adds a Silverlight control to the HTML page. By default it uses
+DLR.settings, but you can pass custom settings directly to DLR.createObject to
+override them:</p>
+<pre class="literal-block">
+DLR.createObject({width: '100%', height: '100%'})
+</pre>
+</div>
+</div>
+<div class="section" id="script-tags">
+<h1><a class="toc-backref" href="#id7">Script Tags</a></h1>
+<p>Once a Silverlight control is on the page, then DLR-based language code can be
+placed in script tags, either inline or as an external file:</p>
+<pre class="literal-block">
+&lt;!-- external script --&gt;
+&lt;script type=&quot;application/python&quot; src=&quot;foo.py&quot;&gt;&lt;/script&gt;
+
+&lt;!-- inline script --&gt;
+&lt;script type=&quot;application/python&quot;&gt;
+  import foo
+  window.Alert(foo.say_hello())
+&lt;/script&gt;
+</pre>
+<p>This implementation aims to be compliant with the HTML4 specification for
+scripting in HTML pages: &lt;<a class="reference external" href="http://www.w3.org/TR/html4/interact/scripts.html">http://www.w3.org/TR/html4/interact/scripts.html</a>&gt;</p>
+<div class="section" id="inline-scripts">
+<h2><a class="toc-backref" href="#id8">Inline scripts</a></h2>
+<p><em>Implemented!</em></p>
+<p>The HTML script-tag is used to embed code directly into the HTML page, and
+this change allows DLR-based languages to be embedded as well. The <tt class="docutils literal">type</tt>
+attribute defines the mime-type the script code should map to; all DLR-based
+script code should use the <tt class="docutils literal">application/</tt> prefix, but the following prefixes
+are also allowed: <tt class="docutils literal">text/</tt> and <tt class="docutils literal">application/x-</tt>. The actual language name
+will be passed to the DLR hosting API, so the above example could have used
+<tt class="docutils literal">application/ironpython</tt> and it would still work.</p>
+<p>For languages that depend on spacing as part of the syntax, like Python,
+the first non-blank line's indent should be considered the baseline for
+indentation (i.e. no indentation). If a line's indent is smaller than the first
+line's indent, it should be assumed to have no indent as well.</p>
+<p>The inline code will be executed in the order they are defined, but before the
+&quot;start&quot; script is executed (if one is provided). All inline code is to be
+executed in the same scope, which will allow methods defined in one scope to
+be called from another:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/python&quot;&gt;
+  def foo():
+    return &quot;In Foo&quot;
+&lt;/script&gt;
+...
+&lt;script type=&quot;application/python&quot;&gt;
+  window.Alert(foo())
+&lt;/script&gt;
+</pre>
+<p>If the defer attribute on the script tag is not present, its value is false.
+Otherwise, the value is true (even if it's explicitly set to defer=&quot;false&quot;;
+this is how all modern browsers behave). If set to true the code is not run;
+but it can be used to evaluate later:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/ruby&quot; defer=&quot;true&quot; id=&quot;for_later&quot;&gt;
+  2 + 2
+&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;
+  puts eval(document.for_later.innerHTML)
+&lt;/script&gt;
+</pre>
+</div>
+<div class="section" id="external-scripts">
+<h2><a class="toc-backref" href="#id9">External scripts</a></h2>
+<p><em>Implemented!</em></p>
+<p>To embed an external script into the HTML page, the src attribute is used to
+specify the path to the script file. The path is relative to the HTML page.
+The type attribute is still required, as it will be passed to the DLR hosting
+API to identify the language. The code is executed just by placing the
+script-tag on the page, just like inline script-tags. Each <tt class="docutils literal">&lt;script <span class="pre">src=&quot;&quot;&gt;</span></tt>
+tag is downloaded and cached in memory, building a virtual file-system of
+external script code, replacing the role of the XAP file in the previous
+application-model. The external code is run in its own DLR <tt class="docutils literal">ScriptScope</tt>,
+allowing proper isolation between scripts. To just download and cache the file
+but not run it, set <tt class="docutils literal"><span class="pre">defer=&quot;true&quot;</span></tt>. This allows another script to &quot;include&quot;
+it (for example, Python's <tt class="docutils literal">import</tt> statement or Ruby's <tt class="docutils literal">require</tt> method).
+The language will load the cached contents of the requested script and run the
+script as the language sees fit.</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/ruby&quot; src=&quot;foo.rb&quot; defer=&quot;true&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;require 'foo'&lt;/script&gt;
+</pre>
+</div>
+<div class="section" id="xaml">
+<h2><a class="toc-backref" href="#id10">XAML</a></h2>
+<p><em>Implemented!</em></p>
+<p>For applications that want to use Silverlight graphics, XAML content can also
+be embedded into a script- tag, either inline or as an external file. The type
+attribute should be set to <tt class="docutils literal">application/xaml+xml</tt>. Just like DLR-language
+script-tags, XAML script-tags are executed as they are encountered; can be
+only downloaded ahead-of-time by setting <tt class="docutils literal"><span class="pre">defer=&quot;true&quot;</span></tt>. If <tt class="docutils literal">defer</tt> is
+omitted, a XAML script tag creates a totally new Silverlight control just for
+the XAML content, and sets the <tt class="docutils literal">RootVisual</tt> to the inline XAML (note: you
+must set width and height to see the XAML contents):</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/xaml+xml&quot; id=&quot;xamlContent&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+  &lt;?xml version=&quot;1.0&quot;?&gt;
+  &lt;Canvas xmlns=&quot;http://schemas.microsoft.com/client/2007&quot; Background=&quot;Wheat&quot;&gt;
+    &lt;TextBlock Canvas.Left=&quot;20&quot; FontSize=&quot;24&quot; /&gt;
+  &lt;/Canvas&gt;
+&lt;/script&gt;
+</pre>
+<p>Setting <tt class="docutils literal"><span class="pre">defer=&quot;true&quot;</span></tt> will require you to set the RootVisual yourself; you
+can do so by setting the root_visual to the script-tag element containing
+XAML:</p>
+<pre class="literal-block">
+root_visual = document.xamlContent
+</pre>
+<p>Note: root visual's setter is not implemented yet.</p>
+<p>This is the similar way that Silverlight 1.0 allowed XAML to
+be embedded: <a class="reference external" href="http://msdn.microsoft.com/en-us/library/cc189016(VS.95).aspx">http://msdn.microsoft.com/en-us/library/cc189016(VS.95).aspx</a></p>
+</div>
+<div class="section" id="zip-files">
+<h2><a class="toc-backref" href="#id11">Zip files</a></h2>
+<p><em>Implemented!</em></p>
+<p>The external file can be a <tt class="docutils literal">*.zip</tt> file; this is useful for larger libraries
+where it may be cumbersome to list all the script files out as script-tags.
+The type attribute must be set to <tt class="docutils literal"><span class="pre">application/x-zip-compressed</span></tt>. The value of
+the src attribute will be placed on the language’s path, and basically treated
+as a folder. When a script file is requested from any other script, the
+language will try to find it by using its path and checking for the existence
+of the file. If the path contains a <tt class="docutils literal">*.zip</tt> portion of the path, it will
+continue to look inside the zip file:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/x-zip-compressed&quot; src=&quot;ruby-stdlib.zip&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;
+  require 'stringio'
+&lt;/script&gt;
+</pre>
+<p>The <cite>defer</cite> attribute toggles whether the zip file is placed on the path: it
+defaults to false which adds it to the path, and true will not add it to the
+path. When <tt class="docutils literal"><span class="pre">defer=&quot;true&quot;</span></tt> you can always programmatically add it to the path
+using the language's path mechanisms:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/x-zip-compressed&quot; src=&quot;ruby-stdlib.zip&quot; defer=&quot;true&quot;&gt;
+&lt;/script&gt;
+&lt;script type=&quot;application/x-ruby&quot;&gt;
+  $:.unshift &quot;ruby-stdlib.zip&quot;
+&lt;/script&gt;
+
+&lt;script type=&quot;application/x-zip-compressed&quot; src=&quot;python-stdlib.zip&quot; defer=&quot;true&quot;&gt;
+&lt;/script&gt;
+&lt;script type=&quot;application/x-python&quot;&gt;
+  import sys
+  sys.path.append &quot;python-stdlib.zip&quot;
+&lt;/script&gt;
+</pre>
+<p>Note: &quot;added the zip file to the path&quot; is not implemented at the moment, so
+it will always behave as <tt class="docutils literal"><span class="pre">defer=&quot;true&quot;</span></tt>.</p>
+<p>Since zip files are treated just like a folder, you can put anything inside
+the ZIP file; DLLs, XAML files, text files, images, etc, and use them just
+like you would if they were part of the file-system:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/x-zip-compressed&quot; src=&quot;my-archive.zip&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;
+  load_assembly &quot;Foo.dll&quot;
+  txt = File.open(&quot;my-archive.zip/foo.txt&quot;, 'r'){|f| f.read }
+&lt;/script&gt;
+</pre>
+<p>The <tt class="docutils literal">load_assembly</tt> method works because the zip file is placed on the path, and
+it will look there for Foo.dll. When accessing other files with
+relative/absolute paths, you can use the zip filename in the path to get to
+files inside the zip file.</p>
+<p>Note: Today only the zip file's filename (without the .zip extension) is
+required to access it (example: <tt class="docutils literal"><span class="pre">open('my-archive/foo.txt')</span></tt>), though that's
+a bug in the implementation, not the spec.</p>
+</div>
+<div class="section" id="multiple-silverlight-controls">
+<h2><a class="toc-backref" href="#id12">Multiple Silverlight controls</a></h2>
+<p><em>Implemented!</em></p>
+<p>Browsers allow for multiple object-controls to be on a single page, so you
+could have multiple Silverlight controls on the same page. This introduces an
+unexpected side-effect to having Silverlight run code inside script-tags;
+every Silverlight would run run every script-tag. Consider the following:</p>
+<pre class="literal-block">
+&lt;div id=&quot;message&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;dlr.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  DLR.createObject({width: '100', height: '100'})
+&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;
+  root_visual = UserControl.new
+&lt;/script&gt;
+</pre>
+<p>Both Silverlight controls will get their <cite>root_visual</cite> set, since the Ruby
+script-tag is executed twice, once for each Silverlight control. To avoid
+this, script-tags must be scoped to a specific Silverlight control. <tt class="docutils literal">dlr.js</tt>
+instructs <tt class="docutils literal">dlr.xap</tt> to only run un-scoped script-tags on the first control
+added to a page, and only run scoped script-tags with subsequent added
+controls. To “scope” a script-tag, the class attribute contains the same value
+as its corresponding Silverlight control's <tt class="docutils literal">xamlid</tt> initParam:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  DLR.createObject({xamlid: 'control1'})
+&lt;/script&gt;
+&lt;script type=&quot;application/python&quot; class=&quot;control1&quot;&gt;
+  # will only run in the &quot;control1&quot; object
+&lt;/script&gt;
+</pre>
+<p>An un-scoped script-tag is simply a script-tag without a class attribute.
+These will run in a Silverlight control that does not have the xamlid
+initParam set; dlr.js does this for only the first control it injects.</p>
+<p>If you intend to not use Silverlight graphics through script-tags, or only use
+them in one control, then you don't need to worry about scoping; scoping only
+comes into play when you have multiple controls. If you want to use
+Silverlight graphics, you can use this same strategy on script-tags containing
+XAML to make sure the proper RootVisual is set.</p>
+<p>A script-tag having a <tt class="docutils literal">&quot;*&quot;</tt> class attribute will cause it to run in every
+script-tag, so the first-example's behavior is still possible.</p>
+</div>
+<div class="section" id="changes-to-existing-behavior">
+<h2><a class="toc-backref" href="#id13">Changes to existing behavior</a></h2>
+<p>Though there are no major breaking changes to any existing behavior of
+existing applications, there needs to be some changes to existing features to
+make this new activation-model work properly.</p>
+<p>Previously, the &quot;start&quot; initParam (entry-point/start-script to the DLR
+Silverlight app) is required if there is no <tt class="docutils literal">app.*</tt> file in the XAP file. If
+the &quot;start&quot; initParam is omitted in this condition, an error would have been
+raised, complaining about not finding an <tt class="docutils literal">app.*</tt> file.</p>
+<p>This requirement is now completely relaxed; neither an app.* file or a &quot;start&quot;
+initParam is required. If no &quot;start&quot; script or defer=false script-tags exist
+on the page; then nothing runs and no error is raised. This is relaxed because
+a Silverlight application can be only inline XAML.</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/python&quot;&gt;
+  ...
+&lt;/script&gt;
+&lt;object ...&gt;
+  &lt;params name=&quot;source&quot; value=&quot;app.xap&quot; /&gt;
+  &lt;params name=&quot;initParams&quot; value=&quot;&quot; /&gt; &lt;!-- no initParams value needed --&gt;
+&lt;/object&gt;
+</pre>
+<p>Though these changes are being introduced to remove the need for Chiron, it is
+still a useful tool for generating XAP files on the fly. Chiron now serves
+files out of the <tt class="docutils literal">externalUrlPrefix</tt> path if it is a relative path, so
+extensions can be developed locally and Chiron instantly picks them up. Also,
+Chiron's XAP building features will build an appropriate XAP file depending on
+whether you're using slvx files or not.</p>
+</div>
+</div>
+<div class="section" id="interacting-with-markup">
+<h1><a class="toc-backref" href="#id14">Interacting with markup</a></h1>
+<p>To make accessing the HTML and XAML easier and more like how JavaScript works,
+variables pointing to them are added to the scope in which script-tags are
+executed in.</p>
+<div class="section" id="html-accessors">
+<h2><a class="toc-backref" href="#id15">HTML accessors</a></h2>
+<p><em>Implemented!</em></p>
+<p><tt class="docutils literal">document</tt> maps to <tt class="docutils literal">System.Windows.Browser.HtmlPage.Document</tt>, which is of type
+<tt class="docutils literal">HtmlDocument</tt>, and <tt class="docutils literal">window</tt> maps to <tt class="docutils literal">System.Windows.Browser.HtmlPage.Window</tt>, which
+is of type <tt class="docutils literal">HtmlWindow</tt>.</p>
+<p>When a method is called on an <tt class="docutils literal">HtmlDocument</tt> that does not exist, it calls
+<tt class="docutils literal">GetElementById(methodName)</tt>. The following examples are in Python:</p>
+<pre class="literal-block">
+document.a_div_id
+# same as ...
+document.GetElementById(&quot;a_div_id&quot;)
+
+document.doesnotexist # None
+</pre>
+<p>When a method is called on an <tt class="docutils literal">HtmlElement</tt> that does not exist, it should call
+<tt class="docutils literal">GetProperty(methodName)</tt>. When calling the non-existent method as a setter,
+call <tt class="docutils literal">SetProperty(methodName, value)</tt>:</p>
+<pre class="literal-block">
+document.a_div_id.innerHTML
+# same as ...
+document.a_div_id.GetProperty(&quot;innerHTML&quot;)
+
+document.a_div_id.innerHTML = &quot;Hi&quot;
+# same as ...
+document.a_div_id.SetProperty(&quot;innerHTML&quot;, &quot;Hi&quot;)
+</pre>
+<p>When an indexer is used on an <tt class="docutils literal">HtmlElement</tt>, it should call
+<tt class="docutils literal">GetAttribute(methodName)</tt>. When setting the indexer, call
+<tt class="docutils literal">SetAttribute(methodName, value)</tt>:</p>
+<pre class="literal-block">
+document.link_id['href']
+# same as ...
+document.link_id.GetAttribute('href')
+
+document.link_id['href'] = 'http://foo.com'
+# same as ...
+document.a_div_id.SetAttribute('href', 'http://foo.com')
+</pre>
+</div>
+<div class="section" id="xaml-accessors">
+<h2><a class="toc-backref" href="#id16">XAML accessors</a></h2>
+<p><em>Implemented!</em></p>
+<p>Note: the &quot;root_visual&quot; shorthand is not implemented yet, though the &quot;me&quot; and
+&quot;xaml&quot; shorthands are available. So, for now, everywhere you see
+&quot;root_visual&quot;, substitute it with either &quot;me&quot; or &quot;xaml&quot;.</p>
+<p><tt class="docutils literal">root_visual</tt> maps to <tt class="docutils literal">System.Windows.Application.Current.RootVisual</tt>, having a
+base-type of <tt class="docutils literal">FrameworkElement</tt>. When a method is called that does not exist on
+<tt class="docutils literal">root_visual</tt>, then <tt class="docutils literal">FindName(methodName)</tt> is called. This allows access to any
+XAML elements with an <tt class="docutils literal">x:Name</tt> value to be accessed by the <tt class="docutils literal">x:Name</tt> value as a
+method call:</p>
+<pre class="literal-block">
+root_visual.Message.Text = &quot;New Message&quot;
+</pre>
+<p>Note: <tt class="docutils literal">load_root_visual</tt> is not implemented yet. Use
+<tt class="docutils literal">DynamicApplication#LoadRootVisual</tt> directly if you need to, though XAML
+script-tags are recommended.</p>
+<p><tt class="docutils literal">load_root_visual</tt> is a method used to set the value of <tt class="docutils literal">root_visual</tt> when it is
+not auto-set. It is a light wrapper around <tt class="docutils literal">DynamicApplication#LoadRootVisual</tt>.
+It takes the following parameters:</p>
+<ul class="simple">
+<li><tt class="docutils literal">xaml</tt>: Required. Can be the following types:<ul>
+<li><tt class="docutils literal">String</tt>: assumes a URI string, and loads it as XAML using
+DynamicApplication#LoadRootVisual. This will load xaml files referenced
+by a script-tag, a file in a zip file, or in the main XAP file.</li>
+<li><tt class="docutils literal">HtmlElement</tt>: assumes the innerHTML is XAML, and loads it using
+XamlReader.Load</li>
+</ul>
+</li>
+<li><tt class="docutils literal">element</tt>: Optional. Type is FrameworkElement. Only used when the xaml
+argument is a String.</li>
+</ul>
+<p>Defaults to <tt class="docutils literal">UserControl</tt> when not provided.</p>
+<pre class="literal-block">
+load_root_visual(document.xamlContent)
+# same as ...
+DynamicApplication.LoadRootVisual = XamlReader.Load(document.xamlContent.innerHTML)
+</pre>
+</div>
+<div class="section" id="event-handling-from-markup">
+<h2><a class="toc-backref" href="#id17">Event handling from markup</a></h2>
+<p><em>Not implemented!</em></p>
+<p>HTML events can be hooked both through markup and/or code (for HTML/JavaScript
+reference: &lt;<a class="reference external" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.3">http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.3</a>&gt;). Events
+can be hooked directly from HTML by providing the name of the event as an
+attribute on an HTML element, whose value is a string of code in the default
+scripting language. The code is executed when the event fires in the context
+of the current HTML element:</p>
+<pre class="literal-block">
+&lt;meta http-equiv=&quot;Content-Script-Type&quot; content=&quot;application/ruby&quot; /&gt;
+&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;self.innerHTML = 'Clicked!'&quot;&gt;Click Me&lt;/a&gt;
+</pre>
+<p>This is accomplished by scanning all HTML elements on the page for attributes
+which are valid event names (see the HTML4 reference above). For each one
+found, the event is hooked with a handler which evaluates the attribute’s
+value in the default scripting language in the context of the current HTML
+element. Not all events will be supported, as some have already fired by the
+time Silverlight gets control (e.g. <tt class="docutils literal">onload</tt>).</p>
+<p>Events can be hooked directly from XAML by providing the name of the event as
+an attribute on a XAML tag, its value being the method name to use as a
+callback when the event fires. The method should take two arguments: the
+sender and the event_args:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/xaml+xml&quot;&gt;
+  ...
+  &lt;TextBox Click=&quot;do_click&quot; Text=&quot;Click Me&quot; /&gt;
+  ...
+&lt;/script&gt;
+&lt;script type=&quot;application/python&quot;&gt;
+  def do_click(sender, event_args):
+    sender.Text = &quot;Clicked!&quot;
+&lt;/script&gt;
+</pre>
+<p>This is accomplished by scanning all XAML files embedded in script tags,
+parsing the XML and looking for elements with attributes matching a set of
+supported events (to be determined). When the event fires, the method name is
+looked up and called if found, otherwise raises a runtime exception indicating
+the method does not exist. Event hooking will not be supported in XAML files
+provided in the XAP or another ZIP file, since Silverlight does not have a way
+to enumerate zips.</p>
+</div>
+<div class="section" id="event-handling-from-code">
+<h2><a class="toc-backref" href="#id18">Event handling from code</a></h2>
+<p><em>Implemented!</em></p>
+<p>From code, events on both HTML and XAML elements can be hooked via the
+language's specific .NET event hookup syntax. Given the following HTML:</p>
+<pre class="literal-block">
+&lt;a id=&quot;cm&quot;&gt;Click Me&lt;/a&gt;
+</pre>
+<p>You can hook events on it just from Ruby:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/ruby&quot;&gt;
+  # either hook with a block
+  document.cm.onclick do |link|
+    link.innerHTML = &quot;Clicked!&quot;
+  end
+
+  # or a method
+  def do_c(link)
+    link.innerHTML = &quot;Clicked!&quot;
+  end
+  document.cm.onclick.add method(:do_c)
+&lt;/script&gt;
+</pre>
+<p>Or Python:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/python&quot;&gt;
+  def do_c(link):
+    link.innerHTML = &quot;Clicked!&quot;
+  document.cm.events.onclick += do_c
+&lt;/script&gt;
+</pre>
+<p>Or any other scripting language based on the DLR. Hooking XAML events also
+works:</p>
+<pre class="literal-block">
+&lt;script type=&quot;application/xml+xaml&quot;&gt;
+  ...
+  &lt;TextBox x:Name=&quot;xcm&quot; Text=&quot;Click Me&quot; /&gt;
+  ...
+&lt;/script&gt;
+&lt;script type=&quot;application/ruby&quot;&gt;
+  root_visual.xcm.mouse_left_button_down{|s,e| s.text = &quot;Clicked!&quot;}
+&lt;/script&gt;
+</pre>
+</div>
+<div class="section" id="jquery-influenced-selectors">
+<h2><a class="toc-backref" href="#id19">jQuery-influenced selectors</a></h2>
+<p><em>Out of scope</em></p>
+<p>Though the idea of having a jQuery-like selector API for DLR languages is
+attractive, it is less feasible since each language will want a different way
+to specify the syntax. Also, libraries in those languages may exist (eg.
+Ruby's Hpricot), so it'd be best to use those directly. This might be
+addressed in a future change, or another library, but is out of scope for this
+change.</p>
+</div>
+</div>
+<div class="section" id="tiny-xap-file">
+<h1><a class="toc-backref" href="#id20">Tiny XAP File</a></h1>
+<p><em>Implemented!</em></p>
+<p>With both user scripts and larger libraries outside the main XAP file, the
+main XAP only serves as a container for the AppManifest.xaml and any dynamic
+language assemblies required by the application. Silverlight 3 introduced
+&quot;Transparent Silverlight Extensions&quot;, a way to package your own libraries into
+a .slvx (Silverlight versioned extension) file (really just zip file) which
+applications can depend on by referencing it from their AppManifest.xaml.
+Using this feature all the assemblies can be removed from the XAP file, put in
+a slvx file, and hosted on an internet location so other applications can
+depend on it. Instead of IronPython and IronRuby releases containing the
+assemblies built for Silverlight, they will just contain a dlr.xap file. This
+xap file will be shared between all applications; only advanced scenarios will
+need to modify the xap file. It will only containing just two files:</p>
+<div class="section" id="appmanifest-xaml">
+<h2><a class="toc-backref" href="#id21">AppManifest.xaml</a></h2>
+<p>The AppManifest.xaml file just references the Microsoft.Scripting.slvx file,
+and points the Silverlight application at the static entry point in
+Microsoft.Scripting.Silverlight.dll (included in Microsoft.Scripting.slvx):</p>
+<pre class="literal-block">
+&lt;Deployment
+ xmlns=&quot;http://schemas.microsoft.com/client/2007/deployment&quot;
+ xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+ RuntimeVersion=&quot;3.0.40624.0&quot;
+ EntryPointAssembly=&quot;Microsoft.Scripting.Silverlight&quot;
+ EntryPointType=&quot;Microsoft.Scripting.Silverlight.DynamicApplication&quot;&gt;
+ &lt;Deployment.ExternalParts&gt;
+   &lt;ExtensionPart Source=&quot;http://ironpython.net/2.6/Microsoft.Scripting.slvx&quot;/&gt;
+ &lt;/Deployment.ExternalParts&gt;
+&lt;/Deployment&gt;
+</pre>
+</div>
+<div class="section" id="languages-config">
+<h2><a class="toc-backref" href="#id22">languages.config</a></h2>
+<p>The languages.config file lists the configuration information for DLR
+languages that can be used in Silverlight. This file can be present in a
+DLR-based xap today for defining configuration information for languages other
+than Ruby and Python, but now this file must be present if an application
+depends on the Microsoft.Scripting.slvx file. Included in this information is
+the URL for each language’s slvx file:</p>
+<pre class="literal-block">
+&lt;Languages&gt;
+    &lt;Language names=&quot;IronPython;Python;py&quot;
+              extensions=&quot;.py&quot;
+              languageContext=&quot;IronPython.Runtime.PythonContext&quot;
+              assemblies=&quot;IronPython.dll;IronPython.Modules.dll&quot;
+              external=&quot;http://ironpython.net/2.6/IronPython.slvx&quot; /&gt;
+
+    &lt;Language names=&quot;IronRuby;Ruby;rb&quot;
+              extensions=&quot;.rb&quot;
+              languageContext=&quot;IronRuby.Runtime.RubyContext&quot;
+              assemblies=&quot;IronRuby.dll;IronRuby.Libraries.dll&quot;
+              external=&quot;http://ironpython.net/2.6/IronRuby.slvx&quot; /&gt;
+&lt;/Languages&gt;
+</pre>
+<p>The language node can have the following attributes:</p>
+<ul class="simple">
+<li><tt class="docutils literal">names</tt>: <tt class="docutils literal">;</tt>-separated list of names the language can use</li>
+<li><tt class="docutils literal">extensions</tt>: <tt class="docutils literal">;</tt>-separated list of file extensions the language can use</li>
+<li><tt class="docutils literal">languageContext</tt>: language's type that inherits from LanguageContext</li>
+<li><tt class="docutils literal">assemblies</tt>: URIs to assemblies which make up the language<ul>
+<li>Optional: but if external is missing, then this list of assemblies is
+assumed to be in the XAP</li>
+</ul>
+</li>
+<li><tt class="docutils literal">external</tt>: SLVX file for all language assemblies</li>
+</ul>
+</div>
+<div class="section" id="microsoft-scripting-slvx">
+<h2><a class="toc-backref" href="#id23">Microsoft.Scripting.slvx</a></h2>
+<p>Microsoft.Scripting.slvx will contain the following DLLs:</p>
+<ul class="simple">
+<li>Microsoft.Scripting.dll</li>
+<li>Microsoft.Dynamic.dll</li>
+<li>Microsoft.Scripting.Core.dll</li>
+<li>Microsoft.Scripting.ExtensionAttribute.dll</li>
+<li>Microsoft.Scripting.Silverlight.dll</li>
+</ul>
+<p>When an application starts up, Silverlight downloads the
+Microsoft.Scripting.slvx file, loads all the assemblies inside it, and then
+kicks off the static entry point,
+Microsoft.Scripting.Silverlight.DynamicApplication. During its startup logic,
+it tries to load language configuration from the languages.config file; if
+that fails it looks to already loaded assemblies referenced in the
+AppManifest.xaml and loads the configuration info off the assemblies directly.
+Because of this, XAP files must have a languages.config to download languages
+on-demand. After the language configuration is loaded, the script-tags on the
+HTML page are processed; for each language used, the existence of all the
+language’s assemblies in the XAP file is checked, and if they are not all
+found the language's external-package is downloaded, assemblies inside loaded,
+and a ScriptEngine created for the language. Both the list of assemblies and
+external-package URI are provided by languages.config.</p>
+<p>If an application cannot depend on the slvx files hosted on the internet, they
+can be hosted on any machine. Just change the AppManifest.xaml and
+languages.config to point to the new location. If Chiron is still being used
+to generate the XAP file, then the externalUrlPrefix in Chiron.exe.config is
+the only setting that needs to be changed.</p>
+</div>
+</div>
+<div class="section" id="debugging">
+<h1><a class="toc-backref" href="#id24">Debugging</a></h1>
+<div class="section" id="visual-studio">
+<h2><a class="toc-backref" href="#id25">Visual Studio</a></h2>
+<p><em>Implemented!</em></p>
+<p>When you have debug mode turned on, it will just work as it used to. Attach
+the debugger to the browser, open the script file in Visual Studio, place a
+breakpoint, etc. Having the script files in the XAP does not make a difference
+for debugging; it's all about the debug-able code being generated and having
+the file open in VS.</p>
+</div>
+<div class="section" id="microsoft-scripting-debugging">
+<h2><a class="toc-backref" href="#id26">Microsoft.Scripting.Debugging</a></h2>
+<p><em>Not implemented!</em></p>
+<p>TODO: lightweight debugger in HTML page</p>
+</div>
+</div>
+<div class="section" id="faq">
+<h1><a class="toc-backref" href="#id27">FAQ</a></h1>
+<p>The &quot;start&quot; script referenced in the Inline Scripts section ... what is it?</p>
+<blockquote>
+<p>The &quot;start&quot; script is another term for the entry-point script. By default it's
+<tt class="docutils literal">app.*</tt>, and <tt class="docutils literal">*</tt> is used to figure out the correct language to instantiate.
+However, the user can specify the specific start-script in the initParams:</p>
+<pre class="literal-block">
+&lt;param name=&quot;initParams&quot; value=&quot;start=myapp.py&quot; /&gt;
+</pre>
+<p>See the original dynamic languages in Silverlight specification for more
+information TODO add link.</p>
+</blockquote>
+<p>Can I write offline Silverlight applications with this?</p>
+<blockquote>
+Not with Silverlight 3. Offline Silverlight applications do not allow using
+the browser DOM APIs, since they just run the Silverlight control outside the
+browser. Therefore, offline Silverlight applications cannot use &lt;script&gt; tag
+code. If you'd like to write a Silverlight application that runs both in the
+browser and on the desktop, you'll need to keep everything in the XAP file and
+use the &quot;start&quot; script as the application's entry-point. Silverlight 4
+supports HTML hosting, so future work may include a way to do this seamlessly.</blockquote>
+</div>
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+      <li id="footer-nav">
+        <a href='../' >Overview</a><a href='../download/' >Download</a><a href='../tools/' >Tools</a><a href='../browser/'  class='active' >Browser</a><a href='../documentation/' >Documentation</a><a href='../support/' >Support</a>
+      </li>
+      <li class="clear">&nbsp;</li>
+    </ul>
+  </div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16148811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+  <title>IronRuby.net / </title>
+  <link rel="stylesheet" href="../css/rst.css" type="text/css" media="screen"
+            charset="utf-8" />
+  <link rel="stylesheet" href="../css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../css/lang.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../css/sticky-footer.css" type="text/css" media="screen"
+        charset="utf-8" />
+  
+</head>
+
+<body id="ironruby" class="home columns page">
+
+  <div id="wrap">
+    <div id="main" class="clearfix">
+
+      <div id="nav">
+  <div>
+    <a href='./'  class='active' >Overview</a><a href='download/' >Download</a><a href='tools/' >Tools</a><a href='browser/' >Browser</a><a href='documentation/' >Documentation</a><a href='support/' >Support</a>
+  </div>
+</div>
+
+<div id="header">
+  <h1><a href="..">IronRuby</a></h1>
+  <h2>
+    the <a target="_blank" class="lang" href="http://ruby-lang.org">Ruby</a>
+    programming language for the
+    <a target="_blank" class="dotnet" href="http://microsoft.com/NET">.NET</a>
+    Framework
+  </h2>
+</div>
+
+
+
+<div id="what-is">
+  <p>
+    IronRuby is an <a target='_blank' href="http://www.opensource.org/licenses/ms-pl.html">open-source</a> implementation of the Ruby
+    programming language which is tightly integrated with the
+    .NET Framework. IronRuby can use the .NET Framework and
+    Python libraries, and other .NET languages can use
+    Python code just as easily.
+  </p>
+</div>
+
+<div id="get">
+  <ul>
+    <li id='download'>
+      <h3><a href='http://ironruby.codeplex.com/' target='_blank'>Download Ruby 1.0</a></h3>
+      <p>
+        <a href='download/'>1.0 released on 2010-04-12<br />
+        <a href='http://rubyforge.org/projects/ironruby' target='_blank'>release notes</a> | <a href="http://github.com/ironruby/ironruby/tags/v1.0/zipball" target='_blank'>source</a>
+      </p>
+    </li>
+    <li id="try">
+      <h3><a href='try/' target="_blank">Try Ruby <span>in the <u>browser</u></span></a></h3>
+      <p>
+        Quickly run Ruby code in your
+        browser, without installing IronRuby.
+      </p>
+      <a id="console" href="try/">
+        <img src="../images/tryrubyinbrowser-290x100.png" alt="Try Ruby in the Browser" />
+      </a>
+    </li>
+    <li id="tutorial">
+      <pre id="code-snippet"><code><span class="comment"># namespaces are modules</span>
+<span class="keyword">include</span> <span class="constant">System</span>::<span class="constant">Collections</span>::<span class="constant">Generic</span>
+
+<span class="comment"># indexers constrains type</span>
+d = <span class="constant">Dictionary</span>[<span class="constant">String</span>, <span class="constant">Fixnum</span>].new
+
+<span class="comment"># Ruby idioms just work</span>
+d[<span class="string">'Hello'</span>] = <span class="number">1</span>
+d[<span class="string">'Hi'</span>] = <span class="number">2</span>
+
+<span class="comment"># this gives a TypeError</span>
+d[<span class="number">3</span>] = <span class="number">3</span>
+
+<span class="comment"># Enumerable methods work</span>
+d.each{|kvp| <span class="keyword">puts</span> kvp}</code></pre>
+      <p>
+        Yes, that's IntelliSense for Python and .NET modules. Experience a more interactive .NET and Python development experience with <a href="tools/">IronPython Tools for Visual Studio 2010</a>.
+      </p>
+    </li>
+    <li class='clear'>&nbsp;</li>
+  </ul>
+</div>
+
+<!--<script type="text/ruby" src="../silverlight/animate.rb"></script>-->
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.3.2.js"></script>
+<!--<script type="text/javascript">
+    $(document).ready(function() {
+        $('#code-snippet code').mouseover(function() {
+            $(this).css('width', '350px')
+        }).mouseout(function() {
+            $(this).css('width', '200px')
+        })
+    })
+</script>-->
+
+<div id="body">
+  <div class="section" id="why-iron-language">
+<h1>Why IronRuby?</h1>
+<p>Ruby is an excellent
+addition to the .NET Framework, providing Ruby developers with the power
+of the .NET framework. Existing .NET developers can also use IronRuby
+s a fast and expressive scripting language for embedding, testing, or
+writing a new application from scratch.</p>
+<p>The CLR is a great platform for creating
+programming languages, and the DLR makes it all the more better for
+dynamic languages. Also, the .NET framework (base class library,
+presentation foundation, Silverlight, etc) give an amazing amount of
+functionality and power to developers.</p>
+</div>
+<div class="section" id="announcements">
+<h1>Announcements</h1>
+<div class="strip space admonition">
+<p class="first admonition-title">April 12, 2010</p>
+<p class="last"><a class="reference external" href="http://ironruby.codeplex.com">IronRuby 1.0</a> is the first stable release
+of the Ruby programming language implementation for the .NET framework.</p>
+</div>
+<div class="download col container">
+<a class="reference external" href="announcements/">All IronRuby Announcements</a></div>
+</div>
+</div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+      <li id="footer-nav">
+        <a href='./'  class='active' >Overview</a><a href='download/' >Download</a><a href='tools/' >Tools</a><a href='browser/' >Browser</a><a href='documentation/' >Documentation</a><a href='support/' >Support</a>
+      </li>
+      <li class="clear">&nbsp;</li>
+    </ul>
+  </div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16148811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

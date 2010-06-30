@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+  <title>IronPython.net / Getting Started</title>
+  <link rel="stylesheet" href="../../css/rst.css" type="text/css" media="screen"
+            charset="utf-8" />
+  <link rel="stylesheet" href="../../css/master.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/lang.css" type="text/css" media="screen"
+        charset="utf-8" />
+  <link rel="stylesheet" href="../../css/sticky-footer.css" type="text/css" media="screen"
+        charset="utf-8" />
+  
+</head>
+
+<body id="ironpython" class="sub page">
+
+  <div id="wrap">
+    <div id="main" class="clearfix">
+
+      <div id="nav">
+  <div>
+    <a href='../' >Overview</a><a href='../download/' >Download</a><a href='../tools/' >Tools</a><a href='../browser/'  class='active' >Browser</a><a href='../documentation/' >Documentation</a><a href='../support/' >Support</a>
+  </div>
+</div>
+
+<div id="header">
+  <h1><a href="..">IronPython</a></h1>
+
+  <ul id="page-nav">
+
+
+<li><a href="index.html">Python in the browser</a></li>
+
+<li><a href="gettingstarted.html" class="active">Getting started</a></li>
+
+<li><a href="download.html">Downloads</a></li>
+
+<li><a href="examples.html">Examples</a></li>
+
+<li><a href="docs.html">Documentation</a></li>
+
+</ul>
+
+  <h2>
+    Getting Started
+  </h2>
+</div>
+
+<div id="body">
+  <p>Give HTML the ability to be scripted with Python by simply referencing
+a JavaScript file:</p>
+<pre class="literal-block">
+&lt;script src=&quot;http://gestalt.ironpython.net/dlr-latest.js&quot;
+        type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</pre>
+<p>Or, if you want to develop without a network connection, or deploy
+IronPython yourself, simply extract the re-distributable package and
+reference it:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window.DLR = {path: 'path/to/gestalt.latest'}
+&lt;/script&gt;
+&lt;script src=&quot;path/to/gestalt.latest/dlr.js&quot; type=&quot;text/javascript&quot;&gt;
+&lt;/script&gt;
+</pre>
+<p>Note: depending on the <tt class="docutils literal">gestalt.ironpython.net</tt> version is preferred.
+<tt class="docutils literal"><span class="pre">dlr-latest.js</span></tt> will always give you the latest version of IronPython.
+You can also pick a specific version to ensure stability, like <tt class="docutils literal"><span class="pre">dlr-20100305.js</span></tt>.</p>
+<p>And that's it! Now you can place Python script tags on the HTML page to script
+the HTML page. For example, here's handling a button click:</p>
+<pre class="literal-block">
+&lt;input id=&quot;button&quot; type=&quot;button&quot; value=&quot;Say, Hello!&quot; /&gt;
+&lt;script type=&quot;text/python&quot;&gt;
+  def button_onclick(s, e):
+      window.Alert(&quot;Hello from Python!&quot;)
+  document.button.events.onclick += button_onclick
+&lt;/script&gt;
+</pre>
+<p>Vector-graphics can also be used; here's an example which loads a
+vector-graphics markup file in the
+<a class="reference external" href="http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language">XAML</a>
+format and uses Python to start animations defined in the XAML file:</p>
+<pre class="literal-block">
+&lt;script id=&quot;blinking_mushroom&quot; type=&quot;application/xml+xaml&quot; width=&quot;200&quot; height=&quot;230&quot;
+        src=&quot;xaml/blinking_mushroom.xaml&quot;&gt;&lt;/script&gt;
+
+&lt;script class=&quot;blinking_mushroom&quot; type=&quot;text/python&quot;&gt;
+  bm = xaml.blinking_mushroom
+  bm.left_eye_blink.Begin()
+  bm.right_eye_blink.Begin()
+&lt;/script&gt;
+</pre>
+<p>And that's it! Next see some <a class="reference external" href="examples.html">Examples</a>, <a class="reference external" href="download.html">Download</a> things to your local
+machine, and learn more from the <a class="reference external" href="docs.htma">Documentation</a>.</p>
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
+      <li id="footer-nav">
+        <a href='../' >Overview</a><a href='../download/' >Download</a><a href='../tools/' >Tools</a><a href='../browser/'  class='active' >Browser</a><a href='../documentation/' >Documentation</a><a href='../support/' >Support</a>
+      </li>
+      <li class="clear">&nbsp;</li>
+    </ul>
+  </div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16148811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
