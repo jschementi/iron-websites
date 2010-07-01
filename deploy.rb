@@ -45,6 +45,7 @@ class Deploy
       FileUtils.cp_r "#{self.class.content_dir}/.", @dir
       FileUtils.cp_r 'css', @dir
       FileUtils.cp_r 'images', @dir
+      FileUtils.cp 'Web.config', @dir
       Pathname.glob("#{Pathname(@dir) + 'images'}/*").each do |p|
         p.delete if p.basename.to_s =~ /iron/ && p.basename.to_s !~ /#{self.class.content_dir}/
       end

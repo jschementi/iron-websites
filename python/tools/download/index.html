@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>IronPython.net / Tools / Download CTP2</title>
+<title>IronPython.net / Tools / Download CTP3</title>
 </head>
 <BODY>
 
@@ -9,7 +9,9 @@
   <a href="../">&laquo; go back to IronPython tools</a>
 </p>
 
-<h1>Downloading IronPython Tools for Visual Studio (CTP2)</h1>
+<h1>Downloading IronPython Tools for Visual Studio (CTP3)</h1>
+
+<p><i>You can also <a href="versions.html">choose a previous version</a></i></p>
 
 <p>
   <a href="../">IronPython Tools for Visual Studio</a> installs as a Visual Studio extension (VSIX).
@@ -28,36 +30,54 @@
 <ul>
   <li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=8e5aa7b6-8436-43f0-b778-00c3bca733d3" target="_blank">Download the Visual Studio 2010 Integrated Shell</a></li>
   <li><a href="http://msdn.microsoft.com/en-us/vstudio/bb984878.aspx" target="_blank">Visual Studio 2010 trial editions</a>.
-  <li><a href="../IronPython-Tools-for-Visual-Studio-Walkthrough.pdf">Walkthrough of the IronPython Tools CTP2</a></li>
+  <li><a href="../IronPython-Tools-for-Visual-Studio-Walkthrough.pdf">Walkthrough of the IronPython Tools CTP3</a></li>
 </ul>
 
 <br /><br />
 
 <h2>Release Notes</h2>
 
-<p>Hello Python Community,
-</p><p>
-We are happy to announce the first broadly available release of <a href="http://www.ironpython.net/tools/">IronPython Tools for Visual Studio</a>.  IronPython Tools for Visual Studio (IPyTools) is a set of extensions available for Visual Studio 2010 which supports development of IronPython applications.  This release is still an early Community Technical Preview (CTP) and builds upon the preview release that we gave exclusively to attendees of PyCon 2010.  The release has been updated to run on the final version of Visual Studio 2010 and includes many bug fixes, performance improvements, and new features.
-</p><p>
-This release includes support for Intellisense including member completion, signature help, find all references, and goto definition.  It enables quick browsing of your code using the object browser and the editor navigation bar.  It has an interactive (REPL) window that enables the development of applications in an interactive way.  IPyTools supports lightweight development without a project as well as working with project files in the tradition of Visual Studio .  Opening a .py file causes IronPython Tools to model the code in the containing directory as an implicit project for Intellisense features.   There are project templates for console, WPF, WinForms, and Silverlight applications.  WPF applications support drag-and-drop UI development.  Debugging of Python applications works just like you debug other languages in Visual Studio.
-</p><p>
-Changes in this release touch on all the major features of IpyTools.  This includes updates to the interactive window, intellisense, the editor, and solutions and projects.  We’ve also made other small tweaks to improve the development experience.
-</p><p>
-The interactive window is one key focus of IpyTools.  This release continues to flush out the feature set of the interactive window.  We’ve added a new command to send a snippet of code from the editor into the file context containing the module's code.  We’ve added options to control evaluation of partial expressions for live-object intellisense in the REPL.  We’ve updated the key bindings to for explicitly navigating history in addition to the smart behavior of the arrow keys.  Also, the interactive window now supports calls to raw_input() and input().  Finding text in the REPL works now,in addition to a number of other bugs fixed to improve the overall experience.
-</p><p>
-This release also has many updates to intellisense.  We’ve increased the customization options for intellisense so you can now commit completions using enter.    There is an option to show the intersection or union of applicable members when multiple types can flow through the code where you are using completion.  Related to this, None no longer is considered to be in the intersection of members.  We’ve improved the analysis engine so that it now understands generators, yield expressions, calls to send on a generator, improved analysis of generic method calls, improved tracking of types through calls to list.append/pop/extend/insert, added support for * and ** args, improved analysis of imports, and significantly improved the performance of the analysis engine.  We’ve also cleaned up the display of a number of tooltips including more consistent display of signature completion.  We also better track calls on types vs. calls on instances.  Finally reference tracking has been improved to include accessing methods (not just calls), tracking references to built-in functions, and added support for some protocol methods such as __getattr__.  In addition to this a number of bugs have been fixed.
-</p><p>
-We’ve also improved the editing experience in this latest release.  This includes support for new commands such as comment/uncomment selection, goto matching brace, support for auto indentation, and highlighting matching braces based upon the current caret location.   We’ve added finer control over the editor experience, adding support for disabling outlining on file open.  And there are a number of small cleanups such as improving goto definition, making goto definition center the target line on the screen, and fixing method outlining which was improperly collapsing in some cases.
-</p><p>
-Finally we’ve made some small improvements to the solution and project experience.  This includes fixing basic issues such as double clicking on image files now opens them in the VS image editor, project and solutions no longer prompt for saving if they haven’t been modified, and we now properly hide hidden files in the solution explorer.  We’ve also improved the experience when invalid values are entered into project settings.  For the Silverlight templates we’ve fixed the issue where Firefox would be launched when IE was the default browser, and we now search for an empty port when launching Chiron for web projects.
-</p><p>
-Altogether this represents a significant improvement over the PyCon release in quality and functionality.  But this is still an early preview and as such you may run into issues, and we are looking forward to your feedback both on issues you encounter and the overall feature set.  Please see the spec doc for our current and planned features and feel free to comment on any of the contents.
-</p><p>
-We are still working on our final licensing terms for IronPython Tools, and as such this release is licensed under a temporary limited use license.  We hope to have nailed down the final licensing terms for the next CTP release.
-</p><p>
+<p>Hello Python Community,</p>
+ 
+<p>We are happy to announce a minor update to the IronPython Tools for Visual Studio.  IronPython Tools for Visual Studio (IPyTools) is a set of extensions available for Visual Studio 2010 which supports development of IronPython applications.  This release is our 3rd Community Technical Preview (CTP) and builds upon the previous two releases.  The release is a minor update which includes bug fixes and a number of small features.</p>
+
+<p>There is also one major change in that the project system is no longer based upon the files which live on disk.  Instead we now follow the normal VS project model.  This means files must be explicitly added to the project and files which you don’t want in the project won’t automatically show up.  We made this change based upon feedback from people using the tool and think it will make it more familiar for normal Visual Studio users.  Despite this change there is still support for an “implicit” project when working without a project.</p>
+ 
+<p>Like the previous release this release includes support for Intellisense including member completion, signature help, find all references, and goto definition.  It enables quick browsing of your code using the object browser and the editor navigation bar.  It has an interactive (REPL) window that enables the development of applications in an interactive way.  IPyTools supports lightweight development without a project as well as working with project files in the tradition of Visual Studio .  Opening a .py file causes IronPython Tools to model the code in the containing directory as an implicit project for Intellisense features.   There are project templates for console, WPF, WinForms, and Silverlight applications.  WPF applications support drag-and-drop UI development.  Debugging of Python applications works just like you debug other languages in Visual Studio.</p>
+ 
+<p>We are still working on our final licensing terms for IronPython Tools, and as such this release is licensed under a temporary limited use license.  While we weren’t able to finalize this for this release we expect to have this finalized for the next release.</p>
+ 
+<p>The full list of changes includes a number of bug fixes:</p>
+<ul>
+  <li>Interactive window now respects VS color settings</li>
+  <li>Fixed default settings for insert tabs, enter completing options, list of characters to complete to</li>
+  <li> Fixed auto-indent inserting extra tabs on a blank line</li>
+  <li> Enables usage of VS common settings for smart indentation and tabs and respects those options.</li>
+  <li> Escape in REPL cancels both the intellisense session and the current input</li>
+  <li> REPL: When a completion item is focused but not selective enter should not complete it</li>
+  <li> REPL: We should respect the various intellisense completion options</li>
+  <li> REPL: We should be using IronPython’s auto intending</li>
+  <li>Fix repl not respecting smart up/down on startup if the window was set to be open</li>
+  <li>REPL: Don’t allow history if the current command is still running – instead navigate the buffer</li>
+  <li>REPL: Enable syntax highlighting even if a command throws an exception</li>
+  <li>REPL:     Remove trailing new lines from REPL history so we go back to the last line of input</li>
+  <li>REPL: When pasting ensure there’s a new line</li>
+  <li>REPL: Auto indent should delete selected lines when pressing enter</li>
+</ul>
+<p>There are also a few new features:</p>
+<ul>
+                <li>New Fill Comment Paragraph feature</li>
+                <li>Implemented auto-dedent so it will backspace # of tabs</li>
+                <li>Support for disabling intellisense via normal VS mechanism</li>
+                <li>Support for hiding “advanced” members in intellisense (currently defined as __abc__ members)</li>
+                </ul>
+<p>There is one major change:</p>
+<ul>
+                <li>Removes directory based projects in favor of normal VS style projects</li>
+</ul>
+<p>
 - The IronPython Team
 </p>
- 
 
 
 <script type="text/javascript">
@@ -70,9 +90,9 @@ var pageTracker = _gat._getTracker("UA-16148811-1");
 //pageTracker._trackPageview();
 } catch(err) {}</script>
 <script type="text/javascript">
-pageTracker._trackPageview('/download/tools-ctp2');
+pageTracker._trackPageview('/download/tools-ctp3');
 </script>
-<meta http-equiv="REFRESH" content="0;url=IronPythonTools.vsix">
+<meta http-equiv="REFRESH" content="0;url=ctp3/IronPythonTools.vsix">
 <!--<meta http-equiv="REFRESH" content="0;url=http://mschnlnine.vo.llnwd.net/d1/dlr/IronPythonTools.vsix">-->
 </BODY>
 </HTML>
