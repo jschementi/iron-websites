@@ -27,8 +27,7 @@ tracking compatibility with `Python 2.7`_.
 -----------
 Source code
 -----------
-IronPython is an `open source project`_ freely available under the `Microsoft
-Public License`_.
+IronPython is an `open source project`_ freely available under the `Apache License (Version 2)`_.
 
 .. container:: download col
    
@@ -130,7 +129,7 @@ Linux browser apps
 .. _Download IronPython 2.7 Alpha 1: http://ironpython.codeplex.com/releases/view/42434
 .. _All major IronPython releases: http://ironpython.codeplex.com/wikipage?title=SupportedReleaseList
 .. _open source project: http://ironpython.codeplex.com
-.. _Microsoft Public License: http://www.opensource.org/licenses/ms-pl.html
+.. _Apache License (Version 2): http://ironpython.codeplex.com/license
 .. _Download IronPython 2.6.1 Source Code: http://ironpython.codeplex.com/releases/view/36280#DownloadId=116511
 .. _Download IronPython 2.7 Alpha 1 Source Code: http://ironpython.codeplex.com/releases/view/42434#DownloadId=133181
 .. _Download latest (zip): http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx#DownloadLatest

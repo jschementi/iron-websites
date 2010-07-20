@@ -14,8 +14,7 @@ IronRuby maintains compatible versions with `Ruby 1.8.6`_.
 -----------
 Source code
 -----------
-IronRuby is an `open source project`_ freely available under the `Microsoft
-Public License`_.
+IronRuby is an `open source project`_ freely available under the `Apache License (Version 2)`_.
 
 .. container:: download col
    
@@ -111,7 +110,7 @@ Linux browser apps
 .. _IronRuby 1.0:     http://ironpython.codeplex.com
 .. _All major IronRuby releases: http://ironruby.codeplex.com/wikipage?title=SupportedReleaseList
 .. _open source project: http://ironruby.codeplex.com
-.. _Microsoft Public License: http://www.opensource.org/licenses/ms-pl.html
+.. _Apache License (Version 2): http://ironpython.codeplex.com/license
 .. _Download IronRuby 1.0 Source Code: http://ironruby.codeplex.com
 .. _Download latest (zip): http://github.com/ironruby/ironruby
 .. _Browse Online: http://github.com/ironruby/ironruby
