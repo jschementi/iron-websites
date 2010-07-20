@@ -3,14 +3,25 @@ Get IronPython
 ==============
 
 
---------
-Versions
---------
+---------------
+Stable versions
+---------------
 IronPython maintains compatible versions with `Python 2.5`_ and `Python 2.6`_;
 `IronPython 2.0.3`_ and `IronPython 2.6.1`_, respectively. If you're not sure
 which version to use, use `IronPython 2.6.1`_.
 
 `All major IronPython releases`_
+
+
+--------------
+Latest version
+--------------
+The latest version of IronPython is `IronPython 2.7 Alpha 1`_, which is
+tracking compatibility with `Python 2.7`_.
+
+.. container:: download col
+   
+   `Download IronPython 2.7 Alpha 1`_
 
 
 -----------
@@ -20,6 +31,8 @@ IronPython is an `open source project`_ freely available under the `Microsoft
 Public License`_.
 
 .. container:: download col
+   
+   `Download IronPython 2.7 Alpha 1 Source Code`_
    
    `Download IronPython 2.6.1 Source Code`_
 
@@ -53,7 +66,8 @@ Windows desktop & server apps
 
    .. note::
  
-      | IronPython also runs on previous versions of .NET: `3.5 SP1`_, `3.5`_, `3.0`_, and `2.0 SP1`_.
+      | IronPython also runs on .NET: `3.5 SP1`_, but must be compiled from
+      | source.
 
 Windows & Mac OS browser apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,17 +123,22 @@ Linux browser apps
 
 .. _Python 2.5:       http://www.python.org/download/releases/2.5/
 .. _Python 2.6:       http://www.python.org/download/releases/2.6/
+.. _Python 2.7:       http://www.python.org/download/releases/2.7/
 .. _IronPython 2.0.3: http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=30416
 .. _IronPython 2.6.1:   http://ironpython.codeplex.com/releases/view/36280
+.. _IronPython 2.7 Alpha 1:   http://ironpython.codeplex.com/releases/view/42434
+.. _Download IronPython 2.7 Alpha 1: http://ironpython.codeplex.com/releases/view/42434
 .. _All major IronPython releases: http://ironpython.codeplex.com/wikipage?title=SupportedReleaseList
 .. _open source project: http://ironpython.codeplex.com
 .. _Microsoft Public License: http://www.opensource.org/licenses/ms-pl.html
 .. _Download IronPython 2.6.1 Source Code: http://ironpython.codeplex.com/releases/view/36280#DownloadId=116511
+.. _Download IronPython 2.7 Alpha 1 Source Code: http://ironpython.codeplex.com/releases/view/42434#DownloadId=133181
 .. _Download latest (zip): http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx#DownloadLatest
 .. _Browse Online: http://ironpython.codeplex.com/SourceControl/BrowseLatest
 .. _Recent Check-ins: http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx
 .. _Instructions for accessing with SVN or TFS: http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx
-.. _Latest .NET version (4.0): http://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992
+.. _Latest .NET version (4.0): http://bit.ly/iron-dotnet40
+.. _4.0: http://bit.ly/iron-dotnet40
 .. _3.5 SP1: http://bit.ly/iron-dotnet35sp1
 .. _3.5: http://bit.ly/iron-dotnet35
 .. _3.0: http://bit.ly/iron-dotnet3

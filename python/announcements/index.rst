@@ -2,6 +2,13 @@
 Announcements
 =============
 
+.. admonition:: July 16, 2010
+   :class: strip
+
+   `IronPython 2.7 Alpha 1 <http://ironpython.codeplex.com/releases/view/42434>`_
+   was released, supporting Python 2.7 features and now being licensed under
+   the `Apache License (Version 2) <http://ironpython.codeplex.com/license>`_.
+
 .. admonition:: April 12, 2010
    :class: strip
 

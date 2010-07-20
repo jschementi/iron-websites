@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>IronPython.net / Tools / Download CTP3</title>
+<title>IronPython.net / Tools / Download</title>
 </head>
 <BODY>
 
@@ -11,74 +11,9 @@
 
 <h1>Downloading IronPython Tools for Visual Studio (CTP3)</h1>
 
-<p><i>You can also <a href="versions.html">choose a previous version</a></i></p>
-
 <p>
-  <a href="../">IronPython Tools for Visual Studio</a> installs as a Visual Studio extension (VSIX).
-  To use IronPython Tools for Visual Studio you’ll first need to install Visual Studio 2010.
-  IronPython Tools work with either the free integrated shell or with the Professional, Premium, or 
-  Ultimate editions. If you don’t already have Visual Studio 2010 installed you can download the 
-  <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=8e5aa7b6-8436-43f0-b778-00c3bca733d3" target="_blank">integrated shell</a>
-  or <a href="http://msdn.microsoft.com/en-us/vstudio/bb984878.aspx" target="_blank">a free trial edition</a>.
+  <a href="http://ironpython.codeplex.com/releases/view/42434#DownloadId=133184">Click here if your download does not start immediately.</a>
 </p>
-
-<p>
-  Once Visual Studio is installed you can double click IronPythonTools.vsix to install the extension into Visual Studio.
-  You’re now ready to start using IronPython Tools for Visual Studio – <b>just start up Visual Studio and start editing some Python code!</b>
-</p>
-
-<ul>
-  <li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=8e5aa7b6-8436-43f0-b778-00c3bca733d3" target="_blank">Download the Visual Studio 2010 Integrated Shell</a></li>
-  <li><a href="http://msdn.microsoft.com/en-us/vstudio/bb984878.aspx" target="_blank">Visual Studio 2010 trial editions</a>.
-  <li><a href="../IronPython-Tools-for-Visual-Studio-Walkthrough.pdf">Walkthrough of the IronPython Tools CTP3</a></li>
-</ul>
-
-<br /><br />
-
-<h2>Release Notes</h2>
-
-<p>Hello Python Community,</p>
- 
-<p>We are happy to announce a minor update to the IronPython Tools for Visual Studio.  IronPython Tools for Visual Studio (IPyTools) is a set of extensions available for Visual Studio 2010 which supports development of IronPython applications.  This release is our 3rd Community Technical Preview (CTP) and builds upon the previous two releases.  The release is a minor update which includes bug fixes and a number of small features.</p>
-
-<p>There is also one major change in that the project system is no longer based upon the files which live on disk.  Instead we now follow the normal VS project model.  This means files must be explicitly added to the project and files which you don’t want in the project won’t automatically show up.  We made this change based upon feedback from people using the tool and think it will make it more familiar for normal Visual Studio users.  Despite this change there is still support for an “implicit” project when working without a project.</p>
- 
-<p>Like the previous release this release includes support for Intellisense including member completion, signature help, find all references, and goto definition.  It enables quick browsing of your code using the object browser and the editor navigation bar.  It has an interactive (REPL) window that enables the development of applications in an interactive way.  IPyTools supports lightweight development without a project as well as working with project files in the tradition of Visual Studio .  Opening a .py file causes IronPython Tools to model the code in the containing directory as an implicit project for Intellisense features.   There are project templates for console, WPF, WinForms, and Silverlight applications.  WPF applications support drag-and-drop UI development.  Debugging of Python applications works just like you debug other languages in Visual Studio.</p>
- 
-<p>We are still working on our final licensing terms for IronPython Tools, and as such this release is licensed under a temporary limited use license.  While we weren’t able to finalize this for this release we expect to have this finalized for the next release.</p>
- 
-<p>The full list of changes includes a number of bug fixes:</p>
-<ul>
-  <li>Interactive window now respects VS color settings</li>
-  <li>Fixed default settings for insert tabs, enter completing options, list of characters to complete to</li>
-  <li> Fixed auto-indent inserting extra tabs on a blank line</li>
-  <li> Enables usage of VS common settings for smart indentation and tabs and respects those options.</li>
-  <li> Escape in REPL cancels both the intellisense session and the current input</li>
-  <li> REPL: When a completion item is focused but not selective enter should not complete it</li>
-  <li> REPL: We should respect the various intellisense completion options</li>
-  <li> REPL: We should be using IronPython’s auto intending</li>
-  <li>Fix repl not respecting smart up/down on startup if the window was set to be open</li>
-  <li>REPL: Don’t allow history if the current command is still running – instead navigate the buffer</li>
-  <li>REPL: Enable syntax highlighting even if a command throws an exception</li>
-  <li>REPL:     Remove trailing new lines from REPL history so we go back to the last line of input</li>
-  <li>REPL: When pasting ensure there’s a new line</li>
-  <li>REPL: Auto indent should delete selected lines when pressing enter</li>
-</ul>
-<p>There are also a few new features:</p>
-<ul>
-                <li>New Fill Comment Paragraph feature</li>
-                <li>Implemented auto-dedent so it will backspace # of tabs</li>
-                <li>Support for disabling intellisense via normal VS mechanism</li>
-                <li>Support for hiding “advanced” members in intellisense (currently defined as __abc__ members)</li>
-                </ul>
-<p>There is one major change:</p>
-<ul>
-                <li>Removes directory based projects in favor of normal VS style projects</li>
-</ul>
-<p>
-- The IronPython Team
-</p>
-
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -90,9 +25,8 @@ var pageTracker = _gat._getTracker("UA-16148811-1");
 //pageTracker._trackPageview();
 } catch(err) {}</script>
 <script type="text/javascript">
-pageTracker._trackPageview('/download/tools-ctp3');
+pageTracker._trackPageview('/download/tools-ctp4');
 </script>
-<meta http-equiv="REFRESH" content="0;url=ctp3/IronPythonTools.vsix">
-<!--<meta http-equiv="REFRESH" content="0;url=http://mschnlnine.vo.llnwd.net/d1/dlr/IronPythonTools.vsix">-->
+<meta http-equiv="REFRESH" content="0;url=http://ironpython.codeplex.com/releases/view/42434#DownloadId=133184">
 </BODY>
 </HTML>
