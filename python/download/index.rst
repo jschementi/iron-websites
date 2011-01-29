@@ -7,8 +7,8 @@ Get IronPython
 Stable versions
 ---------------
 IronPython maintains compatible versions with `Python 2.5`_ and `Python 2.6`_;
-`IronPython 2.0.3`_ and `IronPython 2.6.1`_, respectively. If you're not sure
-which version to use, use `IronPython 2.6.1`_.
+`IronPython 2.0.3`_ and `IronPython 2.6.2`_, respectively. If you're not sure
+which version to use, use `IronPython 2.6.2`_.
 
 `All major IronPython releases`_
 
@@ -33,7 +33,7 @@ IronPython is an `open source project`_ freely available under the `Apache Licen
    
    `Download IronPython 2.7 Alpha 1 Source Code`_
    
-   `Download IronPython 2.6.1 Source Code`_
+   `Download IronPython 2.6.2 Source Code`_
 
 `Download latest (zip)`_ | `Browse Online`_ | `Recent Check-ins`_
 
@@ -124,13 +124,13 @@ Linux browser apps
 .. _Python 2.6:       http://www.python.org/download/releases/2.6/
 .. _Python 2.7:       http://www.python.org/download/releases/2.7/
 .. _IronPython 2.0.3: http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=30416
-.. _IronPython 2.6.1:   http://ironpython.codeplex.com/releases/view/36280
+.. _IronPython 2.6.2:   http://ironpython.codeplex.com/releases/view/41236
 .. _IronPython 2.7 Alpha 1:   http://ironpython.codeplex.com/releases/view/42434
 .. _Download IronPython 2.7 Alpha 1: http://ironpython.codeplex.com/releases/view/42434
 .. _All major IronPython releases: http://ironpython.codeplex.com/wikipage?title=SupportedReleaseList
 .. _open source project: http://ironpython.codeplex.com
 .. _Apache License (Version 2): http://ironpython.codeplex.com/license
-.. _Download IronPython 2.6.1 Source Code: http://ironpython.codeplex.com/releases/view/36280#DownloadId=116511
+.. _Download IronPython 2.6.2 Source Code: http://ironpython.codeplex.com/releases/view/41236#DownloadId=159516
 .. _Download IronPython 2.7 Alpha 1 Source Code: http://ironpython.codeplex.com/releases/view/42434#DownloadId=133181
 .. _Download latest (zip): http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx#DownloadLatest
 .. _Browse Online: http://ironpython.codeplex.com/SourceControl/BrowseLatest
