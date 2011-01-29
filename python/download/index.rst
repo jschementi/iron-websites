@@ -16,12 +16,12 @@ which version to use, use `IronPython 2.6.2`_.
 --------------
 Latest version
 --------------
-The latest version of IronPython is `IronPython 2.7 Alpha 1`_, which is
+The latest version of IronPython is `IronPython 2.7 Beta 1`_, which is
 tracking compatibility with `Python 2.7`_.
 
 .. container:: download col
    
-   `Download IronPython 2.7 Alpha 1`_
+   `Download IronPython 2.7 Beta 1`_
 
 
 -----------
@@ -31,7 +31,7 @@ IronPython is an `open source project`_ freely available under the `Apache Licen
 
 .. container:: download col
    
-   `Download IronPython 2.7 Alpha 1 Source Code`_
+   `Download IronPython 2.7 Beta 1 Source Code`_
    
    `Download IronPython 2.6.2 Source Code`_
 
@@ -125,13 +125,13 @@ Linux browser apps
 .. _Python 2.7:       http://www.python.org/download/releases/2.7/
 .. _IronPython 2.0.3: http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=30416
 .. _IronPython 2.6.2:   http://ironpython.codeplex.com/releases/view/41236
-.. _IronPython 2.7 Alpha 1:   http://ironpython.codeplex.com/releases/view/42434
-.. _Download IronPython 2.7 Alpha 1: http://ironpython.codeplex.com/releases/view/42434
+.. _IronPython 2.7 Beta 1:   http://ironpython.codeplex.com/releases/view/48818
+.. _Download IronPython 2.7 Beta 1: http://ironpython.codeplex.com/releases/view/48818#DownloadId=159517
 .. _All major IronPython releases: http://ironpython.codeplex.com/wikipage?title=SupportedReleaseList
 .. _open source project: http://ironpython.codeplex.com
 .. _Apache License (Version 2): http://ironpython.codeplex.com/license
 .. _Download IronPython 2.6.2 Source Code: http://ironpython.codeplex.com/releases/view/41236#DownloadId=159516
-.. _Download IronPython 2.7 Alpha 1 Source Code: http://ironpython.codeplex.com/releases/view/42434#DownloadId=133181
+.. _Download IronPython 2.7 Beta 1 Source Code: http://ironpython.codeplex.com/releases/view/48818
 .. _Download latest (zip): http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx#DownloadLatest
 .. _Browse Online: http://ironpython.codeplex.com/SourceControl/BrowseLatest
 .. _Recent Check-ins: http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx
