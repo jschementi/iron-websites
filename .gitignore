@@ -3,7 +3,8 @@ deploy
 *.pyc
 Thumbs.db
 *.swp
-*.csproj.user
+*.user
 *.suo
 obj
 bin
+_ReSharper.iron-websites

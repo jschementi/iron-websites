@@ -184,7 +184,7 @@ def main(argv):
             navpy_path = os.path.join(os.path.dirname(result_file), PAGE_NAV_FILE)
             subpage_nav = None
             if os.path.exists(navpy_path):
-                navpy = eval(open(navpy_path).read())
+                navpy = eval(open(navpy_path).read().replace("\r",''))
                 nav_vars = {
                     'this_page': os.path.relpath(result_file, os.path.dirname(navpy_path)),
                     'nav': navpy,
