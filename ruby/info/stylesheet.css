@@ -1,0 +1,54 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Consolas, "Lucida Console", Arial;
+  font-size: 14px;
+  text-align: center; }
+
+h1 {
+  border-bottom: 2px solid #333; }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+  table thead tr th {
+    font-size: 18px;
+    border-bottom: 2px solid #333;
+    padding: 5px;
+    padding-top: 30px; }
+  table thead tr.sub th {
+    padding: 5px;
+    font-size: 16px;
+    border-bottom: 0;
+    background-color: #222; }
+  table thead tr.right th, table thead tr.right td {
+    text-align: right; }
+  table tbody th {
+    background-color: #111;
+    text-align: left; }
+  table tbody th, table tbody td {
+    padding: 5px; }
+  table tbody td {
+    text-align: right; }
+
+.fail {
+  color: red; }
+
+.pass {
+  color: green; }
+
+div {
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+
+a {
+  color: white;
+  padding: 3px;
+  text-decoration: none; }
+  a:link, a:visited {
+    background-color: #222; }
+  a:hover {
+    background-color: #555; }
