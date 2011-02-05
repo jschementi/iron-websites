@@ -16,6 +16,19 @@ developers an amazing amount of functionality and power.
 Announcements
 -------------
 
+.. admonition:: October 21, 2010
+   :class: strip
+
+   `IronPython 2.7 Beta 1 <http://ironpython.codeplex.com/releases/view/48818>`_
+   was released.
+
+.. admonition:: October 21, 2010
+   :class: strip
+
+   `IronPython 2.6.2  <http://ironpython.codeplex.com/releases/view/41236>`_
+   was released, supporting both .NET 2.0 SP1 and .NET 4. This is a minor 
+   update which fixes the most egregious issues discovered since 2.6.1. 
+
 .. admonition:: July 16, 2010
    :class: strip
 
