@@ -1,15 +1,15 @@
 ====================================
 Write browser applications in Python
 ====================================
-IronPython allows you to use python code in browser applications to script the
-HTML page and vector-graphics; combining the benefits of Python and 
+Iron{{language}} allows you to use {{language}} code in browser applications to script the
+HTML page and vector-graphics; combining the benefits of {{language}} and 
 rich-internet applications, without changing the way web-developers work.
 
-At a very basic level, this lets you write Python code directly in HTML
+At a very basic level, this lets you write {{language}} code directly in HTML
 pages::
 
-    <script type="text/python">
-        window.Alert("Hello from Python")
+    <script type="text/{{language_lower}}">
+        window.Alert("Hello from {{language}}")
     </script>
 
 .. container::
@@ -17,4 +17,4 @@ pages::
    
    - `Getting started <gettingstarted.html>`_
    - `Examples <examples.html>`_
-   - `Spread the word <http://twitter.com/home/?status=RT+Python+and+XAML+in+web+pages+http://ironpython.net/browser+%23ironpython+%23silverlight+%23microsoft>`_
+   - `Spread the word <http://twitter.com/home/?status=RT+{{language}}+and+XAML+in+web+pages+http://iron{{language_lower}}.net/browser+%23iron{{language_lower}}+%23silverlight+%23microsoft>`_

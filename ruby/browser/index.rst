@@ -1,15 +1,15 @@
 ==================================
-Write browser applications in Ruby 
+Write browser applications in Ruby
 ==================================
-IronRuby allows you to use Ruby code in browser applications to script the
-HTML page and vector-graphics; combining the benefits of Ruby and 
+Iron{{language}} allows you to use {{language}} code in browser applications to script the
+HTML page and vector-graphics; combining the benefits of {{language}} and 
 rich-internet applications, without changing the way web-developers work.
 
-At a very basic level, this lets you write Ruby code directly in HTML
+At a very basic level, this lets you write {{language}} code directly in HTML
 pages::
 
-    <script type="text/ruby">
-        window.alert "Hello from Ruby"
+    <script type="text/{{language_lower}}">
+        window.Alert("Hello from {{language}}")
     </script>
 
 .. container::
@@ -17,4 +17,4 @@ pages::
    
    - `Getting started <gettingstarted.html>`_
    - `Examples <examples.html>`_
-   - `Spread the word <http://twitter.com/home/?status=RT+Ruby+and+XAML+in+web+pages+http://ironruby.net/browser+%23ironruby+%23silverlight+%23microsoft>`_
+   - `Spread the word <http://twitter.com/home/?status=RT+{{language}}+and+XAML+in+web+pages+http://iron{{language_lower}}.net/browser+%23iron{{language_lower}}+%23silverlight+%23microsoft>`_

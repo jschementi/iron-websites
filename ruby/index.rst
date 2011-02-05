@@ -1,17 +1,15 @@
 ---------------------
 Why Iron{{language}}?
 ---------------------
-{{language}} is an excellent
-addition to the .NET Framework, providing {{language}} developers with the power
-of the .NET framework. Existing .NET developers can also use Iron{{language}}
-s a fast and expressive scripting language for embedding, testing, or
-writing a new application from scratch.
+Iron{{language}} is an excellent addition to the .NET Framework, providing {{language}}
+developers with the power of the .NET framework. Existing .NET developers can
+also use Iron{{language}} as a fast and expressive scripting language for embedding,
+testing, or writing a new application from scratch.
 
-The CLR is a great platform for creating
-programming languages, and the DLR makes it all the more better for
-dynamic languages. Also, the .NET framework (base class library,
-presentation foundation, Silverlight, etc) give an amazing amount of
-functionality and power to developers.
+The CLR is a great platform for creating programming languages, and the DLR
+makes it all the better for dynamic languages. Also, the .NET framework
+(base class library, presentation foundation, Silverlight, etc.) gives
+developers an amazing amount of functionality and power.
 
 -------------
 Announcements

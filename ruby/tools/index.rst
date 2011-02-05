@@ -1,11 +1,11 @@
 ================================
 IronRuby tools for Visual Studio
 ================================
-`IronRuby tools <download.html>`_ provide a
+`IronRuby tools`_ provide a
 *Ruby code editor*, a 
 *file-based project system*, and an 
 *interactive Ruby interpreter*, 
-all inside `Visual Studio 2010 <http://www.microsoft.com/express/>`_, and 
+all inside `Visual Studio 2010 <http://www.microsoft.com/visualstudio/>`_, and 
 **all for free**.
 
 .. container::
@@ -18,14 +18,17 @@ all inside `Visual Studio 2010 <http://www.microsoft.com/express/>`_, and
    :class: download-link
    
    **Download**
-   `IronRuby Tools 0.1 <download.html>`_
+   `IronRuby Tools`_
 
+*IronRuby Tools are now part of the main IronRuby 1.1+ installer.*
 
 .. container::
    :class: tools-nav
 
    **Resources**
    
-   - `Documentation <examples.html>`_
    - `Spread the word <http://twitter.com/home/?status=RT+IronRuby+tools:+Ruby+IDE+in+Visual+Studio+http://ironruby.net/tools+%23ironruby+%23vs2010>`_
 
+
+
+.. _IronRuby tools:       download/

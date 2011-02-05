@@ -47,10 +47,10 @@ language_info = {
     'language': 'Ruby',
     'language_website': 'http://ruby-lang.org',
     'stable_version': '1.0',
-    'stable_release_url': 'http://ironruby.codeplex.com/',
+    'stable_release_url': 'http://ironruby.codeplex.com/releases/view/25901',
     'stable_release_date': '1.0 released on 2010-04-12',
-    'stable_release_notes': 'http://rubyforge.org/projects/ironruby',
-    'stable_release_source': 'http://github.com/ironruby/ironruby/tags/v1.0/zipball',
+    'stable_release_notes': 'http://rubyforge.org/frs/shownotes.php?group_id=4359&release_id=43292',
+    'stable_release_source': 'http://github.com/IronLanguages/main/zipball/v1.0-rtm',
     'code_snippet_html': """<span class="comment"># namespaces are modules</span>
 <span class="keyword">include</span> <span class="constant">System</span>::<span class="constant">Collections</span>::<span class="constant">Generic</span>
 

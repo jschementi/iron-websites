@@ -94,7 +94,6 @@
     <Content Include="python\try\index.html" />
     <Content Include="python\tutorial\index.html" />
     <Content Include="ruby\browser\new-index.html" />
-    <Content Include="ruby\old.html" />
     <Content Include="ruby\support\articles.html" />
     <Content Include="ruby\try\index.html" />
     <Content Include="ruby\tutorial\index.html" />

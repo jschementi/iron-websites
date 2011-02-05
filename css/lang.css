@@ -187,13 +187,21 @@
   border: 2px solid #555;
 }
 
+#ironpython.home.page #get #tutorial p {
+    top: 0;
+}
 
+
+#ironpython.home.page #get #tutorial {
+    background: none;
+    top: 0;
+}
 
 #ironpython.home.page #get #tutorial #code-snippet code {
     background: none;
     height: 279px;
     padding: 0;
-    top: -173px;
+    top: -190px;
     width: 256px;
     z-index: 10;
 }

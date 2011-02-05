@@ -3,26 +3,41 @@ Get IronRuby
 ============
 
 
---------
-Versions
---------
-IronRuby maintains compatible versions with `Ruby 1.8.6`_.
+---------------
+Stable versions
+---------------
+IronRuby maintains compatible versions with `Ruby 1.8.6`_ and `Ruby 1.9`_;
+`IronRuby 1.0`_ and `IronRuby 1.1.1`_, respectively. If you're not sure
+which version to use, use `IronRuby 1.0`_.
+
 
 `All major IronRuby releases`_
 
 
------------
-Source code
------------
-IronRuby is an `open source project`_ freely available under the `Apache License (Version 2)`_.
+--------------
+Latest version
+--------------
+The latest version of IronPython is `IronRuby 1.1.1`_, which is
+tracking compatibility with `Ruby 1.9.1`_.
 
 .. container:: download col
    
+   `Download IronRuby 1.1.1`_
+
+-----------
+Source code
+-----------
+Iron{{language}} is an `open source project`_ freely available under the `Apache License (Version 2)`_.
+
+.. container:: download col
+   
+   `Download IronRuby 1.1.1 Source Code`_
+
    `Download IronRuby 1.0 Source Code`_
 
 `Download latest (zip)`_ | `Browse Online`_ | `Recent Check-ins`_
 
-`Instructions for accessing with SVN or GIT`_
+`Instructions for accessing with GIT`_
 
 .. container:: divider
 
@@ -31,7 +46,7 @@ IronRuby is an `open source project`_ freely available under the `Apache License
 -------------
 Prerequisites
 -------------
-IronRuby is a cross-platform and cross-browser programming language,
+Iron{{language}} is a cross-platform and cross-browser programming language,
 so prerequisites will vary based on usage.
 
 Here are the recommended runtimes are for each platform:
@@ -42,17 +57,16 @@ Windows desktop & server apps
 .. container:: strip
 
    On Windows for desktop and server usage, the .NET framework is the
-   recommended runtime. Keep in mind the latest version is already installed
-   on all Windows Vista and Windows 7 machines.
+   recommended runtime.
  
    .. container:: download
  
-     `Latest .NET version (3.5 SP1)`_
+     `Latest .NET version (4.0)`_
 
    .. note::
  
-      | IronRuby also runs on `.NET 4.0 RC`_, 
-      | as well as previous versions of .NET: `3.5`_, `3.0`_, and `2.0 SP1`_. 
+      | Iron{{language}} also runs on .NET: `3.5 SP1`_, but must be compiled from
+      | source.
 
 Windows & Mac OS browser apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,14 +77,14 @@ Windows & Mac OS browser apps
 
    .. container:: download
 
-      `Latest Silverlight version (3.0)`_
+      `Latest Silverlight version (4.0)`_
 
-   Silverlight enables you to use Ruby to script HTML pages just as
+   Silverlight enables you to use {{language}} to script HTML pages just as
    you would with JavaScript, and also enables advanced vector graphics
    for rich user-interfaces and video.
     
    |
-   | `Learn more about Ruby in the browser`_
+   | `Learn more about {{language}} in the browser`_
 
 
 Mac OS & Linux desktop & server apps
@@ -83,7 +97,7 @@ Mac OS & Linux desktop & server apps
 
    .. container:: download
 
-      `Latest Mono version (2.4)`_
+      `Latest Mono version (2.6.4)`_
 
 Linux browser apps
 ~~~~~~~~~~~~~~~~~~
@@ -106,24 +120,30 @@ Linux browser apps
 
 
 
-.. _Ruby 1.8.6:       http://ruby-lang.org/download
-.. _IronRuby 1.0:     http://ironpython.codeplex.com
-.. _All major IronRuby releases: http://ironruby.codeplex.com/wikipage?title=SupportedReleaseList
+.. _Ruby 1.8.6:       http://ruby-lang.org/en/downloads/
+.. _Ruby 1.9:       http://ruby-lang.org/en/downloads/
+.. _Ruby 1.9.1:       http://ruby-lang.org/en/downloads/
+.. _IronRuby 1.0:     http://ironruby.codeplex.com/releases/view/25901
+.. _IronRuby 1.1.1:     http://ironruby.codeplex.com/releases/view/49097
+.. _Download IronRuby 1.1.1:     http://ironruby.codeplex.com/releases/view/49097#DownloadId=159561
+.. _All major IronRuby releases: http://ironruby.codeplex.com/releases
 .. _open source project: http://ironruby.codeplex.com
-.. _Apache License (Version 2): http://ironpython.codeplex.com/license
-.. _Download IronRuby 1.0 Source Code: http://ironruby.codeplex.com
-.. _Download latest (zip): http://github.com/ironruby/ironruby
-.. _Browse Online: http://github.com/ironruby/ironruby
-.. _Recent Check-ins: http://github.com/ironruby/ironruby
-.. _Instructions for accessing with SVN or GIT: http://github.com/ironruby/ironruby
-.. _Latest .NET version (3.5 SP1): http://bit.ly/iron-dotnet35sp1
-.. _.NET 4.0 RC: http://www.microsoft.com/downloads/details.aspx?FamilyID=a9ef9a95-58d2-4e51-a4b7-bea3cc6962cb
+.. _Apache License (Version 2): http://ironruby.codeplex.com/license
+.. _Download IronRuby 1.0 Source Code: https://github.com/IronLanguages/main/zipball/v1.0-rtm
+.. _Download IronRuby 1.1.1 Source Code: https://github.com/IronLanguages/main/zipball/v1.1.1
+.. _Download latest (zip): https://github.com/IronLanguages/main/zipball/master
+.. _Browse Online: https://github.com/IronLanguages/main/tree/master/Languages/Ruby
+.. _Recent Check-ins: https://github.com/IronLanguages/main/commits/master
+.. _Instructions for accessing with GIT: https://github.com/IronLanguages/main/wiki/Getting-the-sources
+.. _Latest .NET version (4.0): http://bit.ly/iron-dotnet40
+.. _4.0: http://bit.ly/iron-dotnet40
+.. _3.5 SP1: http://bit.ly/iron-dotnet35sp1
 .. _3.5: http://bit.ly/iron-dotnet35
 .. _3.0: http://bit.ly/iron-dotnet3
 .. _2.0 SP1: http://bit.ly/iron-dotnet20sp1
-.. _Latest Silverlight version (3.0): http://go.microsoft.com/fwlink/?linkid=150228
-.. _Learn more about Ruby in the browser: ../browser/
+.. _Latest Silverlight version (4.0): http://go.microsoft.com/fwlink/?linkid=150228
+.. _Learn more about {{language}} in the browser: ../browser/
 .. _Mono: http://www.mono-project.com
-.. _Latest Mono version (2.4): http://www.go-mono.com/mono-downloads/download.html
+.. _Latest Mono version (2.6.4): http://www.go-mono.com/mono-downloads/download.html
 .. _Moonlight: http://www.mono-project.com/Moonlight
 .. _Latest Moonlight version (2.0): http://go-mono.com/moonlight-beta

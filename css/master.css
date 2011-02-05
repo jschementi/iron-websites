@@ -234,6 +234,7 @@ a.download_link:hover {
 .home.page #get ul {
   width: 780px;
   margin: 0 auto;
+  height: 200px;
 }
 .page #get ul li {
   list-style: none;
@@ -319,26 +320,28 @@ a.download_link:hover {
 /* get tutorial */
 
 .home.page #get #tutorial {
+  background-image: url("../images/code-snippet-bg.png");
   float: left;
-  width: 220px;
+  height: 270px;
   list-style: none;
   margin-left: 10px;
+  position: relative;
+  top: -190px;
+  width: 220px;
 }
 .home.page #get #tutorial #code-snippet code {
-  width: 200px;
-  height: 250px;
-  background-image: url(../images/code-snippet-bg.png);
-  background-color: #484848;
-  background-position: 0 0;
+  background-image : url("../images/code-snippet-bg.png");
+  background-position: right center;
   background-repeat: no-repeat;
+  font-family: consolas,"courier new",monospace;
+  font-size: 13px;
+  height: 250px;
+  letter-spacing: 0;
+  line-height: 110%;
+  overflow: hidden;
   padding: 10px;
   position: absolute;
-  top: -190px;
-  font-family: consolas, "courier new", monospace;
-  font-size: 13px;
-  overflow: hidden;
-  line-height: 110%;
-  letter-spacing: 0px;
+  width: 250px;
 }
 .home.page #get #tutorial #code-snippet code .constant {
   color: #ff0;
@@ -353,11 +356,16 @@ a.download_link:hover {
   color: #0af;
 }
 .home.page #get #tutorial #code-snippet code .comment {
-  color: #f0f;
+  color: #999;
 }
 
 .home.page #get #tutorial p {
-  margin: 105px 5px 5px;
+  font-size: 16px;
+  margin: 105px 0 5px;
+  position: relative;
+  text-align: right;
+  top: 190px;
+  width: 260px;
 }
 
 .home.page #get #tutorial a#tutorial-image,

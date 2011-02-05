@@ -10,7 +10,7 @@ IronPython maintains compatible versions with `Python 2.5`_ and `Python 2.6`_;
 `IronPython 2.0.3`_ and `IronPython 2.6.1`_, respectively. If you're not sure
 which version to use, use `IronPython 2.6.1`_.
 
-`All major IronPython releases`_
+`All major Iron{{language}} releases`_
 
 
 --------------
@@ -37,7 +37,7 @@ IronPython is an `open source project`_ freely available under the `Apache Licen
 
 `Download latest (zip)`_ | `Browse Online`_ | `Recent Check-ins`_
 
-`Instructions for accessing with SVN or TFS`_
+`Instructions for accessing with GIT`_
 
 .. container:: divider
 
@@ -46,7 +46,7 @@ IronPython is an `open source project`_ freely available under the `Apache Licen
 -------------
 Prerequisites
 -------------
-IronPython is a cross-platform and cross-browser programming language,
+Iron{{language}} is a cross-platform and cross-browser programming language,
 so prerequisites will vary based on usage.
 
 Here are the recommended runtimes are for each platform:
@@ -65,7 +65,7 @@ Windows desktop & server apps
 
    .. note::
  
-      | IronPython also runs on .NET: `3.5 SP1`_, but must be compiled from
+      | Iron{{language}} also runs on .NET: `3.5 SP1`_, but must be compiled from
       | source.
 
 Windows & Mac OS browser apps
@@ -79,12 +79,12 @@ Windows & Mac OS browser apps
 
       `Latest Silverlight version (4.0)`_
 
-   Silverlight enables you to use Python to script HTML pages just as
+   Silverlight enables you to use {{language}} to script HTML pages just as
    you would with JavaScript, and also enables advanced vector graphics
    for rich user-interfaces and video.
     
    |
-   | `Learn more about Python in the browser`_
+   | `Learn more about {{language}} in the browser`_
 
 
 Mac OS & Linux desktop & server apps
@@ -127,15 +127,15 @@ Linux browser apps
 .. _IronPython 2.6.1:   http://ironpython.codeplex.com/releases/view/36280
 .. _IronPython 2.7 Alpha 1:   http://ironpython.codeplex.com/releases/view/42434
 .. _Download IronPython 2.7 Alpha 1: http://ironpython.codeplex.com/releases/view/42434
-.. _All major IronPython releases: http://ironpython.codeplex.com/wikipage?title=SupportedReleaseList
-.. _open source project: http://ironpython.codeplex.com
+.. _All major Iron{{language}} releases: http://iron{{language_lower}}.codeplex.com/wikipage?title=SupportedReleaseList
+.. _open source project: http://iron{{language_lower}}.codeplex.com
 .. _Apache License (Version 2): http://ironpython.codeplex.com/license
 .. _Download IronPython 2.6.1 Source Code: http://ironpython.codeplex.com/releases/view/36280#DownloadId=116511
 .. _Download IronPython 2.7 Alpha 1 Source Code: http://ironpython.codeplex.com/releases/view/42434#DownloadId=133181
-.. _Download latest (zip): http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx#DownloadLatest
-.. _Browse Online: http://ironpython.codeplex.com/SourceControl/BrowseLatest
-.. _Recent Check-ins: http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx
-.. _Instructions for accessing with SVN or TFS: http://ironpython.codeplex.com/SourceControl/ListDownloadableCommits.aspx
+.. _Download latest (zip): http://github.com/iron-languages/main
+.. _Browse Online: http://github.com/iron-languages/main
+.. _Recent Check-ins: http://github.com/iron-languages/main
+.. _Instructions for accessing with GIT: http://github.com/iron-languages/main
 .. _Latest .NET version (4.0): http://bit.ly/iron-dotnet40
 .. _4.0: http://bit.ly/iron-dotnet40
 .. _3.5 SP1: http://bit.ly/iron-dotnet35sp1
@@ -143,7 +143,7 @@ Linux browser apps
 .. _3.0: http://bit.ly/iron-dotnet3
 .. _2.0 SP1: http://bit.ly/iron-dotnet20sp1
 .. _Latest Silverlight version (4.0): http://go.microsoft.com/fwlink/?linkid=150228
-.. _Learn more about Python in the browser: ../browser/
+.. _Learn more about {{language}} in the browser: ../browser/
 .. _Mono: http://www.mono-project.com
 .. _Latest Mono version (2.6.4): http://www.go-mono.com/mono-downloads/download.html
 .. _Moonlight: http://www.mono-project.com/Moonlight

@@ -70,7 +70,7 @@ Silverlight applications; using Chiron.exe for development and starting an
 application with an app.* file or the "start" initParam will still work. These
 changes provide a simpler default while preserving the original functionality. 
 
-Note: throughout the document are indicators on the state of the
+NOTE: throughout the document are indicators on the state of the
 implementation in relation to this spec. For example, sections have an
 "Implemented/Not implemented" subtitle, as well as calling out specific
 details which may currently vary between spec and implementation.
@@ -85,11 +85,11 @@ browser/Silverlight-installation detection. ``Silverlight.js`` will be part of
 the default way a Silverlight control for dynamic languages is added to a HTML
 page. However, the DLR integration needs specific features over-and-above what
 ``Silverlight.js`` provides, so those additional features will be merged in
-with ``Silverlight.js`` to form ``dlr.js``.
+with ``Silverlight.js`` to form ``dlr.js`` (working title, might change).
 
 Automatically adding a Silverlight control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By default, `dlr.js` does the necessary work to host Silverlight on a page,
+By default, ``dlr.js`` does the necessary work to host Silverlight on a page,
 just by including the file::
 
     <script type="text/javascript" src="dlr.js" /> 
@@ -101,16 +101,15 @@ later on will show how to use Silverlight graphics.
 
 Customizing default settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-To customize the default settings, you can do so before dlr.js is included.
+To customize the default settings, you can do so before ``dlr.js`` is included.
 Defaults are merged with any custom settings, so just provide the settings you
 want to customize::
 
     <script type="text/javascript"> 
       if (!window.DLR) 
-        window.DLR = {}; 
-      DLR.settings = { width: "100%", height: "100%" }; 
+        window.DLR = {settings: { width: "100%", height: "100%" } };
     </script> 
-    <script type="text/javascript" src="dlr.js" /> 
+    <script type="text/javascript" src="dlr.js" />
  
 By default the Silverlight control will be created with these settings, which
 are split between DLR-specific settings and settings passed along to 
@@ -143,13 +142,17 @@ There are also settings that can be set directly on the DLR object:
   whether or not to auto-add a Silverlight control. Set this to false if you
   need finer control over when and where the control gets created.
 
-- ``DLR.path``: **""** - Base path where the XAP file is located. By
-  default it will be in the same location as the HTML file.
+- ``DLR.path``: **"<location varies>"** - Base path where the XAP file is
+  located. The default value will vary; when using ``dlr.js`` hosted on
+  ironpython.net, for example, it should be the full URI of where dlr.xap
+  is located. In IronPython releases, this value will be ``""``, as it's
+  assumed that ``dlr.js`` and ``dlr.xap`` will be in the same location.
 
 `Documentation on Silverlight-specific settings <http://msdn.microsoft.com/en-us/library/cc838217(VS.95).aspx>`_
 
 Here are the remaining DLR-specific settings (when omitted, the **bold** value
-is default). They are all passed along to Silverlight.js as ``initParams``:
+is default). They are all passed along to Silverlight.js as ``initParams``, and
+``Microsoft.Scripting.Silverligh.dll`` is responcible for determining their effect:
  
 - ``reportErrors``: **errorLocation** - DLR-specific setting that provides the
   DOM-id to inject a pretty error window if an syntax or compile error occurs.
@@ -157,12 +160,16 @@ is default). They are all passed along to Silverlight.js as ``initParams``:
 - ``debug``: ( **true** | ``false`` ) - indicates whether the DLR should
   produce debug-able code. This makes stack-traces accurate, and allows the
   Visual Studio debugger to be attached to the Silverlight process to debug 
-  the script-code (place break points, step, etc).
+  the script-code (place break points, step, etc). However, debug-able code
+  is significantly slower optimized code, so this option should only be used
+  during development.
 
-- console: ( ``true`` | **false** ) - indicates whether the DLR should display
+- ``console``: ( ``true`` | **false** ) - indicates whether the DLR should display
   a HTML-based console window, allowing you to switch between all available
   languages. stdout and stderr are redirected to this console so common
-  printing operations work.
+  printing operations work. IMPLEMENTATION BUG: the implementation does not fully support this yet;
+  only the main language's console is shown, and stdout/stderr redirection is
+  not done automatically; you must do it yourself.
 
 - start: **"app.\*"** - entry-point script; executed after inline 
   script-tags. File must be present in the application’s XAP file. Not
@@ -182,14 +189,13 @@ disable the autoAdd setting::
 
     <script type="text/javascript"> 
       if (!window.DLR) 
-        window.DLR = {}; 
-      DLR.autoAdd: false; 
+        window.DLR = { autoAdd: false };
     </script> 
     <script type="text/javascript" src="dlr.js" />
 
 When you want to add the Silverlight control::
 
-      DLR.createObject(); 
+      DLR.createObject();
 
 The DLR.createObject method can be used regardless of autoAdd's value; it
 simply adds a Silverlight control to the HTML page. By default it uses
@@ -213,7 +219,8 @@ placed in script tags, either inline or as an external file::
     </script> 
  
 This implementation aims to be compliant with the HTML4 specification for
-scripting in HTML pages: <http://www.w3.org/TR/html4/interact/scripts.html>
+scripting in HTML pages: <http://www.w3.org/TR/html4/interact/scripts.html>.
+Any inconsistencies are called out below.
 
 Inline scripts
 ~~~~~~~~~~~~~~
@@ -230,10 +237,40 @@ will be passed to the DLR hosting API, so the above example could have used
 For languages that depend on spacing as part of the syntax, like Python,
 the first non-blank line's indent should be considered the baseline for
 indentation (i.e. no indentation). If a line's indent is smaller than the first 
-line's indent, it should be assumed to have no indent as well.
+line's indent, it should be assumed to have no indent as well. Here are some
+examples of valid indentiation, using underscores to indicate what whitespace
+is to be ignored::
+
+    <!-- valid, mimics exactly what Python's syntax requires -->
+    <script type="application/python">def foo():
+      return "In Foo"
+    </script>
+
+	<!-- valid, everything is left-justified -->
+	<script type="application/python">
+	def foo():
+      return "In Foo"
+    </script>
+
+    <!-- valid, treated as no indentation -->
+        <script type="application/python">
+    ______def foo():
+    ______  return "In Foo"
+    ____</script> 
+
+	<!-- valid, treated as no indentation -->
+	<script type="application/python">____def foo(): return "In Foo"</script>
+
+	<!-- invalid, as the first-line's indent isn't the MIN indentation -->
+	  <script type="application/python">
+	____  def foo(): 
+	____    return "In Foo"
+    ____  
+	____foo()
+	__</script>
 
 The inline code will be executed in the order they are defined, but before the
-"start" script is executed (if one is provided). All inline code is to be
+``start`` script is executed (if one is provided). All inline code is to be
 executed in the same scope, which will allow methods defined in one scope to
 be called from another::
 
@@ -245,18 +282,29 @@ be called from another::
     <script type="application/python"> 
       window.Alert(foo()) 
     </script> 
-  
-If the defer attribute on the script tag is not present, its value is false.
-Otherwise, the value is true (even if it's explicitly set to defer="false";
-this is how all modern browsers behave). If set to true the code is not run;
-but it can be used to evaluate later::
 
-    <script type="application/ruby" defer="true" id="for_later"> 
+If the defer attribute on the script tag is not present, its value is false.
+Otherwise, the value is true (``defer="defer"`` or any other value will cause
+``defer`` to be true). If provided the code is not run; but it can be used to
+evaluate later::
+
+    <script type="application/ruby" defer="defer" id="for_later"> 
       2 + 2 
     </script> 
     <script type="application/ruby"> 
       puts eval(document.for_later.innerHTML) 
     </script>
+
+NOTE: Though the ``defer`` attribute is valid HTML 4.0, it's meaning is different
+than described above; in HTML it means defer execution until the HTML has
+finished parsing. However, since the Silverlight control is given control only
+after the page has finished parsing, this meaning is impossible to achieve, so
+the interpretation has been changed to not run at all.
+
+EXAMPLE BUG: Most examples use ``defer='true'``, which is misleading because that
+suggests that ``defer='false'`` does something different, which it doesn't. Need to
+also make sure the implementation is getting this as a boolean from the HtmlBridge,
+rather than checking for the true or false string.
 
 External scripts
 ~~~~~~~~~~~~~~~~
@@ -271,14 +319,14 @@ tag is downloaded and cached in memory, building a virtual file-system of
 external script code, replacing the role of the XAP file in the previous
 application-model. The external code is run in its own DLR ``ScriptScope``,
 allowing proper isolation between scripts. To just download and cache the file
-but not run it, set ``defer="true"``. This allows another script to "include"
+but not run it, set ``defer="defer"``. This allows another script to "include"
 it (for example, Python's ``import`` statement or Ruby's ``require`` method).
 The language will load the cached contents of the requested script and run the
 script as the language sees fit.
 ::
 
-    <script type="application/ruby" src="foo.rb" defer="true"></script> 
-    <script type="application/ruby">require 'foo'</script> 
+    <script type="application/ruby" src="foo.rb" defer="defer"></script>
+    <script type="application/ruby">require 'foo'</script>
 
 XAML
 ~~~~
@@ -286,12 +334,11 @@ XAML
 
 For applications that want to use Silverlight graphics, XAML content can also
 be embedded into a script- tag, either inline or as an external file. The type
-attribute should be set to ``application/xaml+xml``. Just like DLR-language
+attribute should be set to either ``application/xaml+xml`` or ``application/xml+xaml``. Just like DLR-language
 script-tags, XAML script-tags are executed as they are encountered; can be
-only downloaded ahead-of-time by setting ``defer="true"``. If ``defer`` is
+only downloaded ahead-of-time by setting ``defer="defer"``. If ``defer`` is
 omitted, a XAML script tag creates a totally new Silverlight control just for
-the XAML content, and sets the ``RootVisual`` to the inline XAML (note: you
-must set width and height to see the XAML contents)::
+the XAML content, and sets the ``RootVisual`` to the inline XAML.::
 
     <script type="application/xaml+xml" id="xamlContent" width="100" height="100">
       <?xml version="1.0"?>
@@ -300,14 +347,18 @@ must set width and height to see the XAML contents)::
       </Canvas>
     </script>
  
-Setting ``defer="true"`` will require you to set the RootVisual yourself; you
-can do so by setting the root_visual to the script-tag element containing
+NOTE: you must set width and height to see the XAML contents. width and height are
+not valid script-tag attributes. If you are concerned with your HTML validating,
+you can use JavaScript to set the width and height of the generated Silverlight
+control.
+
+Setting ``defer="defer"`` will require you to set the RootVisual yourself; you
+can do so by setting the ``RootVisual`` to the script-tag element containing
 XAML::
 
-    root_visual = document.xamlContent
+    from System.Windows.Application import RootVisual
+	RootVisual(document.xamlContent)
     
-Note: root visual's setter is not implemented yet.
-
 This is the similar way that Silverlight 1.0 allowed XAML to
 be embedded: http://msdn.microsoft.com/en-us/library/cc189016(VS.95).aspx
 
@@ -317,8 +368,8 @@ Zip files
 
 The external file can be a ``*.zip`` file; this is useful for larger libraries
 where it may be cumbersome to list all the script files out as script-tags.
-The type attribute must be set to ``application/x-zip-compressed``. The value of
-the src attribute will be placed on the language’s path, and basically treated
+The type attribute can be set to ``application/x-zip-compressed`` or ``application/zip``. 
+The value of the src attribute will be placed on the language's path, and basically treated
 as a folder. When a script file is requested from any other script, the
 language will try to find it by using its path and checking for the existence
 of the file. If the path contains a ``*.zip`` portion of the path, it will
@@ -329,9 +380,9 @@ continue to look inside the zip file::
       require 'stringio'
     </script>
 
-The `defer` attribute toggles whether the zip file is placed on the path: it
+The ``defer`` attribute toggles whether the zip file is placed on the path: it
 defaults to false which adds it to the path, and true will not add it to the
-path. When ``defer="true"`` you can always programmatically add it to the path
+path. When ``defer="defer"`` you can always programmatically add it to the path
 using the language's path mechanisms::
 
     <script type="application/x-zip-compressed" src="ruby-stdlib.zip" defer="true"> 
@@ -347,8 +398,10 @@ using the language's path mechanisms::
       sys.path.append "python-stdlib.zip" 
     </script>
 
-Note: "added the zip file to the path" is not implemented at the moment, so
-it will always behave as ``defer="true"``.
+IMPLEMENTATION BUG: "added the zip file to the path" is not implemented at the moment, so
+it will always behave as ``defer="defer"``. Also, currently the filename
+**without** extension is what's exposed to the filesystem, so the above examples
+need to omit the ".zip" to work.
 
 Since zip files are treated just like a folder, you can put anything inside
 the ZIP file; DLLs, XAML files, text files, images, etc, and use them just
@@ -365,9 +418,6 @@ it will look there for Foo.dll. When accessing other files with
 relative/absolute paths, you can use the zip filename in the path to get to
 files inside the zip file.
 
-Note: Today only the zip file's filename (without the .zip extension) is
-required to access it (example: ``open('my-archive/foo.txt')``), though that's
-a bug in the implementation, not the spec.
 
 Multiple Silverlight controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -387,7 +437,7 @@ every Silverlight would run run every script-tag. Consider the following::
       root_visual = UserControl.new
     </script>
 
-Both Silverlight controls will get their `root_visual` set, since the Ruby
+Both Silverlight controls will get their ``RootVisual`` set, since the Ruby
 script-tag is executed twice, once for each Silverlight control. To avoid
 this, script-tags must be scoped to a specific Silverlight control. ``dlr.js``
 instructs ``dlr.xap`` to only run un-scoped script-tags on the first control
@@ -498,10 +548,6 @@ XAML accessors
 ~~~~~~~~~~~~~~
 *Implemented!*
 
-Note: the "root_visual" shorthand is not implemented yet, though the "me" and
-"xaml" shorthands are available. So, for now, everywhere you see
-"root_visual", substitute it with either "me" or "xaml".
-
 ``root_visual`` maps to ``System.Windows.Application.Current.RootVisual``, having a
 base-type of ``FrameworkElement``. When a method is called that does not exist on
 ``root_visual``, then ``FindName(methodName)`` is called. This allows access to any
@@ -509,10 +555,10 @@ XAML elements with an ``x:Name`` value to be accessed by the ``x:Name`` value as
 method call::
 
     root_visual.Message.Text = "New Message" 
- 
-Note: ``load_root_visual`` is not implemented yet. Use
-``DynamicApplication#LoadRootVisual`` directly if you need to, though XAML
-script-tags are recommended.
+
+IMPLEMENTATION BUG: the ``root_visual`` shorthand is not implemented yet, though the ``me`` and
+``xaml`` shorthands are available. So, for now, everywhere you see
+``root_visual``, substitute it with either ``me`` or ``xaml``.
 
 ``load_root_visual`` is a method used to set the value of ``root_visual`` when it is
 not auto-set. It is a light wrapper around ``DynamicApplication#LoadRootVisual``.
@@ -529,6 +575,11 @@ It takes the following parameters:
 
 - ``element``\: Optional. Type is FrameworkElement. Only used when the xaml 
   argument is a String.
+
+IMPLEMENTATION BUG: the ``load_root_visual`` wrapper is not implemented yet. Use
+``DynamicApplication#LoadRootVisual`` directly if you need to, though XAML
+script-tags are recommended.
+
 
 Defaults to ``UserControl`` when not provided.
 ::
@@ -594,17 +645,17 @@ You can hook events on it just from Ruby::
 
     <script type="application/ruby"> 
       # either hook with a block 
-      document.cm.onclick do |link| 
+      document.cm.events.onclick do |link, args| 
         link.innerHTML = "Clicked!" 
-      end 
+      end
  
       # or a method 
-      def do_c(link) 
+      def do_c(link, args) 
         link.innerHTML = "Clicked!" 
       end 
-      document.cm.onclick.add method(:do_c) 
+      document.cm.events.onclick.add method(:do_c) 
     </script> 
- 
+
 Or Python::
 
     <script type="application/python"> 
@@ -612,7 +663,12 @@ Or Python::
         link.innerHTML = "Clicked!" 
       document.cm.events.onclick += do_c 
     </script> 
- 
+
+IMPLEMENTATION BUG: currently the "events" method doesn't exist in Ruby, though events can
+be directly hooked on HTML elements: ``document.cm.onclick{|s,e| }``. This presents some
+issues, as attributes that don't exist turn into event hooks. This is implemented correctly
+for Python.
+
 Or any other scripting language based on the DLR. Hooking XAML events also
 works::
 
@@ -778,3 +834,4 @@ Can I write offline Silverlight applications with this?
     browser and on the desktop, you'll need to keep everything in the XAP file and
     use the "start" script as the application's entry-point. Silverlight 4
     supports HTML hosting, so future work may include a way to do this seamlessly.
+

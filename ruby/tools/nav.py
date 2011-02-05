@@ -1,5 +1,4 @@
 [
     ("IronRuby Tools",  "index.html"),
-    ("Download",        'download.html'),
-    ("Documentation",   'documentation.html'),
+    ("Download",        'download/'),
 ]

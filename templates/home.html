@@ -14,27 +14,25 @@
   </h2>
 </div>
 
-{% if language == "Python" %}
 <div style="border-top: 2px solid #ccc; border-bottom: 2px solid #ccc;">
   <div style="width: 800px; margin: 0pt auto; position: relative; height: 330px;">
     <a href="tools/">
       <span style="letter-spacing: -0.04em; font-size: 4.4em; font-family: gill sans,gill sans mt,Calibri,arial,helvetica,sans-serif; margin: 80px 0pt 0pt 440px; float: right; text-align: left;">
-        IronPython Tools <span style="display: block; font-size: 0.5em; font-style: italic; text-align: center;">for</span>Visual Studio 2010
+        Iron{{language}} Tools <span style="display: block; font-size: 0.5em; font-style: italic; text-align: center;">for</span>Visual Studio 2010
       </span>
-      <img width="450" src="../images/ironpython-vstools-450.png" alt="IronPython Tools for Visual Studio 2010" style="position: absolute; left: -10px; top: 10px; border: 0pt none;">
+      <img width="450" height="309" src="../images/iron{{language_lower}}-vstools-450.png" alt="Iron{{language}} Tools for Visual Studio 2010" style="position: absolute; left: -10px; top: 10px; border: 0pt none;">
     </a>
   </div>
   <div class="clear"></div>
 </div>
-{% endif %}
 
 <div id="what-is">
   <p>
     Iron{{language}} is an <a target='_blank' href="http://www.opensource.org/licenses/apache2.0.php">open-source</a> implementation of the {{language}}
     programming language which is tightly integrated with the
     .NET Framework. Iron{{language}} can use the .NET Framework and
-    Python libraries, and other .NET languages can use
-    Python code just as easily.
+    {{language}} libraries, and other .NET languages can use
+    {{language}} code just as easily.
   </p>
 </div>
 
@@ -60,7 +58,7 @@
     <li id="tutorial">
       <pre id="code-snippet"><code>{{code_snippet_html}}</code></pre>
       <p>
-        Yes, that's IntelliSense for Python and .NET modules. Experience a more interactive .NET and Python development experience with <a href="tools/">IronPython Tools for Visual Studio 2010</a>.
+        Experience a more interactive .NET and {{language}} development experience with <a href="tools/">{{language}} Tools for Visual Studio 2010</a>.
       </p>
     </li>
     <li class='clear'>&nbsp;</li>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>photoviewer</title>
+
+    <script type="text/javascript" src="lightbox/js/prototype.js"></script>
+    <script type="text/javascript" src="lightbox/js/scriptaculous.js?load=effects"></script>
+    <script type="text/javascript" src="lightbox/js/lightbox.js"></script>
+    <link rel="stylesheet" href="lightbox/css/lightbox.css" type="text/css" media="screen" />
+
+    <link type="text/css" rel="stylesheet" href="assets/screen.css" />
+
+    <script src="http://gestalt.ironruby.net/dlr-latest.js" type="text/javascript"></script>
+    <script src="../repl.rb" type="text/ruby"></script>
+</head>
+
+<body>
+  <script src="lib.zip" type="application/x-zip-compressed"></script>
+  <div class="search">
+      <form id="search" action="javascript:void(0)"> 
+          <input type="text" id="keyword" />
+          <input type="submit" id="submit_search" value="search" />
+          <img src="assets/loading.gif" id="images_loading" alt="Loading ..." />
+      </form>
+      <div id="search_results">
+          <div id="search_images"></div>
+          <div id="search_links"></div>
+      </div>
+  </div>
+  <div class="clear"></div>
+  
+  <script type="text/ruby" src="pages.erb" defer='true'></script>
+  <script type="text/ruby" src="images.erb" defer='true'></script>
+
+  <script type="text/ruby" src="view.rb" defer='true'></script>
+  <script type="text/ruby" src="app.rb"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16148811-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

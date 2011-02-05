@@ -3,6 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iron-websites", "iron-websites.csproj", "{8125A0FD-84E7-42C9-9629-EBC3824B1407}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86A95B0D-207C-44FB-94D2-62F7F075B7CF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		clean.bat = clean.bat
+		clean.py = clean.py
+		deploy.rb = deploy.rb
+		generate.bat = generate.bat
+		generate.py = generate.py
+		NEWRELEASE.rst = NEWRELEASE.rst
+		README.rst = README.rst
+		TODO.txt = TODO.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
