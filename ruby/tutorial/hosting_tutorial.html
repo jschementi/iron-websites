@@ -1,0 +1,981 @@
+
+      <head>
+        <title>IronRuby Hosting tutorial</title>
+        <style type="text/css">
+        p.Normal, li.Normal
+	{margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	}
+h2
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.Toc1
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:14.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+p.Toc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.Toc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	}
+a:visited
+	{color:purple;
+	text-decoration:underline;
+	}
+p.Body
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.TypedExample
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.ContentsHeading
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.Step
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.1in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+p.StepNote
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold
+	}
+p.Code-Background
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Title1
+	{margin-bottom:.0001pt;
+	font-size:36.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.Title2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:28.0pt;
+	font-family:Verdana;
+	}
+p.CopyrightText
+	{margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.ExerciseList
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.LabSummary
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	font-weight:bold;
+	}
+p.Code-Highlighted
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	background:#E6E6E6;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Stepnonumbering
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.5in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+ul
+	{margin-bottom:0in;}
+        </style>
+      </head>
+      
+      <body>
+        <h1>IronRuby Hosting tutorial</h1>
+        <p class="Body">
+          <p class="Body">
+One of the top DLR features is common hosting support for all languages
+implemented on the DLR. The primary goal is supporting .NET applications
+hosting the DLR languages for scripting support so that users can extend
+the basic functionality of the host application using any (DLR) language of
+their choice, irrespective of the programming language used to implement
+the host appplication.
+</p>
+
+        </p>
+        
+        <h2>Table of Contents</h2>
+          <ul>
+          
+            <li>
+            Hosting
+            <ul>
+            
+              <li>Getting started</li>
+            
+              <li>Global variables</li>
+            
+              <li>Scopes</li>
+            
+              <li>Per-scopes variables</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Hello IronPython!
+            <ul>
+            
+              <li>Hello IronPython!</li>
+                        
+            </ul>
+            </li>
+          
+          </ul>
+              
+        
+          <h2>Hosting</h2>
+          <p class="Body"><p class="Body">
+A quick survey of functionality includes:
+</p>
+<ul>
+<li>Create ScriptRuntimes locally or in remote app domains.
+
+</li>
+<li>Execute snippets of code.
+
+</li>
+<li>Execute files of code in their own execution context (ScriptScope).
+
+</li>
+<li>Explicitly choose language engines to use or just execute files to let the
+DLR find the right engine.
+
+</li>
+<li>Create scopes privately or publicly for executing code in.
+
+</li>
+<li>Create scopes, set variables in the scope to provide host object models,
+and publish the scopes for dynamic languages to import, require, etc.
+
+</li>
+<li>Create scopes, set variables to provide object models, and execute code
+within the scopes.
+
+</li>
+<li>Fetch dynamic objects and functions from scopes bound to names or execute
+expressions that return objects.
+
+</li>
+<li>Call dynamic functions as host command implementations or event handlers.
+
+</li>
+<li>Get reflection information for object members, parameter information, and
+documentation.
+
+</li>
+<li>Control how files are resolved when dynamic languages import other files of
+code.
+
+</li>
+</ul>
+<p class="Body">
+Hosts always start by calling statically on the ScriptRuntime to create a
+ScriptRuntime. In the simplest case, the host can set globals and execute
+files that access the globals. In more advanced scenarios, hosts can fully
+control language engines, get services from them, work with compiled code,
+explicitly execute code in specific scopes, interact in rich ways with
+dynamic objects from the ScriptRuntime, and so on.
+</p>
+<p class="Body">
+A detailed specification of the hosting APIs is available at <a
+href="http://www.codeplex.com/dlr/Wiki/View.aspx?title=Docs%20and%20specs">www.codeplex.com/dlr/Wiki/View.aspx?title=Docs%20and%20specs</a>.
+</p>
+</p>
+          
+            <h3>Getting started</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We first need to create a language &quot;engine&quot; using the
+<tt>IronRuby.create_engine</tt> method. This name is available only when
+doing hosting from IronRuby <em>itself</em>. If you are using a different
+language to implement the host, the method name would be
+<tt>IronRuby.Ruby.CreateEngine</tt>. You will also have to make sure to add
+a reference to IronRuby.dll. This is done using the <tt>/r</tt>
+command-line compiler option for C# and VB.Net, or using the
+<tt>clr.AddReference</tt> method from IronPython.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine = IronRuby.create_engine
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.Hosting.ScriptEngine<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now let&#8217;s execute some code.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine.execute '$x = 100'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 100<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+What did that do? Let&#8217;s read back the value of <tt>$x</tt> to make
+sure it is set as expected.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine.execute '$x'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 100<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can verify that the code ran in a separate context by checking if
+<tt>$x</tt> exists in the current context.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> puts $x
+                </b>
+                <br>
+                  
+                  nil<br><br>
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Since typing <tt>engine.execute&#8230;</tt> gets verbose, let&#8217;s
+define a method called <tt>script</tt> to encapsulate it. The name also
+represents the fact that the String parameter it expects is conceptually
+arbitrary script code that the user can type.
+</p>
+<p class="Body">
+Since Ruby methods cannot access outer local variables, we will need to
+store <tt>engine</tt> as a global variable first.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> $engine = engine
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.Hosting.ScriptEngine<br>
+                  <br>                
+                
+                  <b>
+                  >>> def script(script_code) $engine.execute(script_code) end
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We will use <tt>script</tt> throughout the rest of the tutorial.
+Let&#8217;s try it now to print the value of +$x+.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> script 'puts $x'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can also get the value of a global constant like <tt>Object</tt>. This
+will be displayed as <tt>Object#2</tt> to indicate that it belongs to a
+different ScriptEngine.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> script 'Object'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Object@2<br>
+              
+              </p>
+            
+          
+            <h3>Global variables</h3>
+            <p class="Body"><p class="Body">
+Running user script code gets more interesting if the host application can
+set variables that the user code can use. The variables will typically be
+set to the object model of the host application. The tutorial application
+you are using stores the tutorials as <tt>Tutorial::Tutorial.all</tt>. We
+will use this object model in this chapter.
+</p>
+</p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s set a Ruby global variable called <tt>Tutorials</tt>. The name
+should be a valid constant name (ie. it should begin with an upper case
+letter)
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine.runtime.globals.set_variable 'Tutorials', ::Tutorial.all
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now the user&#8217;s script code has access to it! Let&#8217;s have the
+user check how many tutorials there are.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> script 'Tutorials.size'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 3<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+This works in the reverse direction too. The script code can set global
+variables that the host application can read back out.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> script 'ThisIsScriptCode = 200'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 200<br>
+                  <br>                
+                
+                  <b>
+                  >>> engine.runtime.globals.get_variable('ThisIsScriptCode')
+                  </b>
+                  <br>
+                  
+                  
+                  #<System::MissingMemberException: unknown member: ThisIsScriptCode><br>
+                  
+                  <br>                
+                
+              
+              </p>
+            
+          
+            <h3>Scopes</h3>
+            <p class="Body"><p class="Body">
+Creating a ScriptEngine provides isolation of the host application and user
+script code. However, it is often useful to have isolation within the
+ScriptEngine. For example, multiple scripts might happen to use the same
+variable name. Normally, local variables defined in different .rb files are
+isolated from each other. The same effect can be achieved by creating
+multiple instances of <tt>ScriptScope</tt>, which more or less corresponds
+to a .rb file.
+</p>
+</p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+A scope is created using the <tt>create_scope</tt> method.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> scope1 = engine.create_scope
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.ScopeStorage<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can execute code in the scope by using an overload of the
+<tt>execute</tt> method that accepts a scope.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine.execute '2+2', scope1
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 4<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now that we know how to create a scope, let&#8217;s create a second one. We
+will also set local variables with the same name in each of the scope, but
+initialize them to different values.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> scope2 = engine.create_scope
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.ScopeStorage<br>
+                  <br>                
+                
+                  <b>
+                  >>> engine.execute 'x = 101', scope1
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 101<br>
+                  <br>                
+                
+                  <b>
+                  >>> engine.execute 'x = 102', scope2
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 102<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can now verify that the two scopes are independent by inspecting the
+local variable in each of them.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> engine.execute 'x', scope1
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 101<br>
+                  <br>                
+                
+                  <b>
+                  >>> engine.execute 'x', scope2
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 102<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+As a final step, we will make sure that the two scopes do share the same
+set of global constants.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> engine.execute('Object', scope1) == engine.execute('Object', scope2)
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+          
+            <h3>Per-scopes variables</h3>
+            <p class="Body"><p class="Body">
+Now that we know how to create multiple scopes, we can use per-scope local
+variables, instead of global variables, for values that are specific to
+each scope. For example, for a tutorial defined in
+<tt>name_tutorial.rb</tt>, you might want to load files in a folder called
+<tt>name_scripts</tt>, and set <tt>tutorial</tt> to point to the tutorial
+created by <tt>name_tutorial.rb</tt>.
+</p>
+</p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s create two scopes
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> scope1 = $engine.create_scope
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.ScopeStorage<br>
+                  <br>                
+                
+                  <b>
+                  >>> scope2 = $engine.create_scope
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.ScopeStorage<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now we will set a variable named <tt>tutorial</tt> in each of the scopes.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> scope1.set_variable 'tutorial', ::Tutorial.all.values[0]
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+                  <b>
+                  >>> scope2.set_variable 'tutorial', ::Tutorial.all.values[1]
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now we can execute the same script code in the two scopes.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> $engine.execute 'tutorial.name', scope1
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => "IronRuby Hosting tutorial"<br>
+                  <br>                
+                
+                  <b>
+                  >>> $engine.execute 'tutorial.name', scope2
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => "IronRuby tutorial"<br>
+                  <br>                
+                
+              
+              </p>
+            
+          
+        
+          <h2>Hello IronPython!</h2>
+          <p class="Body"><p class="Body">
+So far, we have hosted IronRuby within IronRuby. Now we will host
+IronPython from IronRuby to show that it really is easy to host multiple
+languages, and the host application does not have to change much to
+accomodate multiple languages.
+</p>
+</p>
+          
+            <h3>Hello IronPython!</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You will first need to make sure that you have IronPython installed. Note
+that you have to use the specific release of IronPython that matches the
+version of IronRuby you are using. If you use unmatched versions, then you
+will not be able to host IronPython. The hosting APIs are defined in
+Microsoft.Scripting.dll, and all language you try to host have to use the
+exact same version of the assembly.
+</p>
+<p class="Body">
+Let&#8217;s first confirm that you can atleast load IronPython.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> load_assembly 'IronPython'
+                </b>
+                <br>
+                  
+                  
+                  #<LoadError: Assembly 'IronPython' not found><br>
+                  
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now let&#8217;s include the Hosting namespace.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> load_assembly 'Microsoft.Scripting'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+                  <b>
+                  >>> include Microsoft::Scripting::Hosting
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Object<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+To be able to host a language, you need to have a config file. This
+tutorial runs using ir.exe, which normally includes a config file
+ir.exe.config with a section like this (taken from the IronRuby 0.6
+release).
+</p>
+<pre>
+  &lt;microsoft.scripting&gt;
+    &lt;languages&gt;
+      &lt;language names=&quot;IronPython;Python;py&quot; extensions=&quot;.py&quot; displayName=&quot;IronPython 2.6 Alpha&quot; type=&quot;IronPython.Runtime.PythonContext, IronPython, Version=2.6.0.10, Culture=neutral, PublicKeyToken=null&quot; /&gt;
+      &lt;language names=&quot;IronRuby;Ruby;rb&quot; extensions=&quot;.rb&quot; displayName=&quot;IronRuby&quot; type=&quot;IronRuby.Runtime.RubyContext, IronRuby, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null&quot; /&gt;
+    &lt;/languages&gt;
+
+    &lt;options&gt;
+      &lt;set language=&quot;Ruby&quot; option=&quot;LibraryPaths&quot; value=&quot;....LanguagesRubylibs;......External.LCA_RESTRICTEDLanguagesRubyedist-libsuby ite_ruby.8;......External.LCA_RESTRICTEDLanguagesRubyedist-libsuby.8&quot; /&gt;
+    &lt;/options&gt;
+  &lt;/microsoft.scripting&gt;
+</pre>
+<p class="Body">
+If you do hosting from another application, you will need to use a similar
+config file.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> setup = ScriptRuntimeSetup.read_configuration
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.Hosting.ScriptRuntimeSetup<br>
+                  <br>                
+                
+                  <b>
+                  >>> runtime = ScriptRuntime.new setup
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft.Scripting.Hosting.ScriptRuntime<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now create the Python engine. This step will fail if you are using a
+mismatched version of IronPython.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> python = runtime.get_engine 'Python'
+                </b>
+                <br>
+                  
+                  
+                  #<Errno::ENOENT: Could not load file or assembly 'IronPython, Version=2.6.10920.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.><br>
+                  
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now you can run Python code! We will call the builtin function <tt>dir</tt>
+to get the list of all methods of the <tt>str</tt> type.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> python.execute 'dir(str)'
+                </b>
+                <br>
+                  
+                  
+                  #<NoMethodError: undefined method `python' for main (tutorial):Object><br>
+                  
+              
+              </p>
+            
+          
+        
+      </body>
+    

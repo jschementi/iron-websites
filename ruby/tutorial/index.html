@@ -1,53 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
-  <title>IronRuby.net / Interactive Tutorial</title>
-  <link rel="stylesheet" href="../../css/master.css" type="text/css" media="screen"
-        charset="utf-8" />
-  <link rel="stylesheet" href="../../css/lang.css" type="text/css" media="screen"
-        charset="utf-8" />
-  <link rel="stylesheet" href="../../css/sticky-footer.css" type="text/css" media="screen"
-        charset="utf-8" />
+  <title>IronRuby tutorial</title>
+
+  <style type="text/css">
+    html, body {
+      height: 99%;
+      overflow: auto;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    #silverlightControlHost {
+      height: 100%;
+    }
+    #errorLocation {
+      font-size: small;
+      color: Gray;
+    }
+  </style>
+
+  <script type="text/javascript">
+    window.DLR = { settings: {
+      width: "100%", height: "100%", source: 'app.xap',
+      background: 'white', windowless: 'true' //, reportErrors: 'false'
+    }}
+  </script>
+  <script type="text/javascript" src="dlr.js"></script>
+
+  <!-- Force Python to be registered so it can be used in the tutorial -->
+  <script type="text/python"></script>
 </head>
 
-<body id="ironruby" class="page">
+<body>
 
-  <div id="wrap">
-    <div id="main" class="clearfix">
+  <!-- needed for testing -->
+  <script type='text/ruby' src='test/silverlight.rb' defer='true'></script>
+  <script type='text/ruby' src='test/test_console.rb' defer='true'></script>
+  <script type='text/ruby' src='console_tutorial.rb' defer='true'></script>
 
-      <div id="nav">
-        <div>
-          <a href='..'>Overview</a><a href='../download/'>Download</a><a href='../documentation/'>Documentation</a><a href='../support/'>Support</a>
-        </div>
-      </div>
+  <!-- start script -->
+  <script type='text/ruby' src='app/app.rb'></script>
 
-      <div id="header">
-        <h1 style='z-index: 10'><a href="..">IronRuby</a></h1>
-      </div>
-
-      <div style="position: absolute; top: 48px; bottom: 53px; right: 0; left: 0;">
-      <iframe src="http://ironruby.com/tutorial/" width="100%" height="100%" style="border: 0">
-        <a href="http://ironruby.com/tutorial" target="_blank">IronRuby Tutorial</a>
-      </iframe>
-    </div>
-
-    </div>
-
-  </div>
-
-  <div id="footer">
-    <ul>
-      <li>&copy; <a href='http://microsoft.com'>Microsoft Corporation</a></li>
-      <li id="footer-nav">
-        <a href='..'>Overview</a>|<a href='../download/'>Download</a>|<a href='../documentation/'>Documentation</a>|<a href='../support/'>Support</a>
-      </li>
-      <li class="clear">&nbsp;</li>
-    </ul>
-  </div>
+  <script type="text/ruby"> 
+    if document.query_string.keys.include?('test')
+      $repl = Repl.show('ruby')
+      $stdout = $repl.output_buffer
+      $stderr = $repl.output_buffer
+      require "test/silverlight"
+    end
+  </script>
 
 </body>
 </html>

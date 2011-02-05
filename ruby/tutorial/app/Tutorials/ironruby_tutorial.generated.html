@@ -1,0 +1,2212 @@
+
+      <head>
+        <title>IronRuby tutorial</title>
+        <style type="text/css">
+        p.Normal, li.Normal
+	{margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	}
+h2
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.Toc1
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:14.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+p.Toc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.Toc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	}
+a:visited
+	{color:purple;
+	text-decoration:underline;
+	}
+p.Body
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.TypedExample
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.ContentsHeading
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.Step
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.1in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+p.StepNote
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold
+	}
+p.Code-Background
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Title1
+	{margin-bottom:.0001pt;
+	font-size:36.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.Title2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:28.0pt;
+	font-family:Verdana;
+	}
+p.CopyrightText
+	{margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.ExerciseList
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.LabSummary
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	font-weight:bold;
+	}
+p.Code-Highlighted
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	background:#E6E6E6;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Stepnonumbering
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.5in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+ul
+	{margin-bottom:0in;}
+        </style>
+      </head>
+      
+      <body>
+        <h1>IronRuby tutorial</h1>
+        <p class="Body">
+          <p class="Body">
+IronRuby is the .<a
+href="http://www.ecma-international.org/publications/standards/Ecma-335.htm">NET</a>
+implementation of the <a href="http://www.ruby-lang.org/">Ruby programming
+language</a>. It&#8217;s a dynamically typed language with support for many
+programming paradigms such as object-oriented programming, and also allows
+you to seamlessly use CLI code.
+</p>
+<p class="Body">
+The goal of this tutorial is to quickly familiarize you with using IronRuby
+interactively, and to show you how to make use of the extensive .NET
+libraries available. This tutorial also shows you how to get started in
+more specialized areas such as interoperating with COM.
+</p>
+<p class="Body">
+You can find more resources about IronRuby at <a
+href="http://ironruby.net">ironruby.net</a>.
+</p>
+
+        </p>
+        
+        <h2>Table of Contents</h2>
+          <ul>
+          
+            <li>
+            Basic IronRuby - Introduction to the IronRuby interactive window
+            <ul>
+            
+              <li>The interactive REPL window</li>
+            
+              <li>Built-in modules and interactive exploration</li>
+            
+              <li>User-defined modules</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Basic IronRuby - Using the standard .NET libraries
+            <ul>
+            
+              <li>Basic .NET library use</li>
+            
+              <li>Working with .NET classes</li>
+            
+              <li>Generics</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Basic IronRuby - Loading .NET libraries
+            <ul>
+            
+              <li>Using System.Xml - load_assembly</li>
+            
+              <li>Loading .NET libraries from a given path</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Advanced IronRuby - Events and delegates
+            <ul>
+            
+              <li>File System watcher</li>
+            
+              <li>Improving the event handler</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Advanced IronRuby - Windows Forms
+            <ul>
+            
+              <li>Creating a simple Form</li>
+            
+              <li>Adding event handlers to the Form</li>
+                        
+            </ul>
+            </li>
+          
+            <li>
+            Advanced IronRuby - Windows Presentation Foundation
+            <ul>
+            
+              <li>Simple WPF application</li>
+            
+              <li>WPF calculator</li>
+                        
+            </ul>
+            </li>
+          
+          </ul>
+              
+        
+          <h2>Basic IronRuby - Introduction to the IronRuby interactive window</h2>
+          <p class="Body"><p class="Body">
+The objective of this tutorial is to launch the IronRuby interpreter,
+explore the environment of the interactive console and use IronRuby to
+interact with .NET libraries.
+</p>
+</p>
+          
+            <h3>The interactive REPL window</h3>
+            <p class="Body"><p class="Body">
+This chapter explains the basic usage of a REPL window. REPL is an acronym
+for <b>R</b>ead, <b>E</b>val, <b>P</b>rint, <b>L</b>oop. One of the big
+advantages of dynamic languages is the ability to do interactive exporation
+of new APIs and libraries from a REPL window. You can enter expressions
+using the API you are exploring, and the results are immediately displayed.
+Depending on the result, you can chose to try different expressions. You
+can thus build programs in this fashion while avoiding a compile step after
+every operation.
+</p>
+</p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s start with a simple expression to add two numbers. Enter the
+expression below, followed by the <tt>Enter</tt> key. The expression and
+its result will be shown in the output window below the text-box where you
+enter the expression.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 2 + 2
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 4<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now let&#8217;s do some printing. This is done with the puts function.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> puts 'Hello world'
+                </b>
+                <br>
+                  
+                  Hello world<br><br>
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s use a local variable.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> x = 1
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 1<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+And then print the local variable.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> puts x
+                </b>
+                <br>
+                  
+                  1<br><br>
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Entering multiple lines in an interactive console can be a bit tricky as it
+is not an editor. You cannot go back and change a prior line. If you
+realized you mis-typed something, you need to enter all the lines again.
+</p>
+<p class="Body">
+After you enter the first line, the prompt characters shown at the start of
+the input textbox change from &quot;&gt;&gt;&gt;&quot; to
+&quot;&#8230;&quot; to indicate to the user that more lines are expected
+before the input will be evaluated.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 
+if 2 < 3
+  puts "Ofcourse"
+else
+  puts "No way!"
+end
+                </b>
+                <br>
+                  
+                  Ofcourse<br><br>
+                  
+                  => nil<br>
+              
+              </p>
+            
+          
+            <h3>Built-in modules and interactive exploration</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can ask any object for the list of methods it supports. To see all the
+methods available on a string, try this.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 'Hello'.methods.sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["%", "*", "+", "<", "<<", "<=", "<=>", "==", "===", "=~", ">", ">=", "Append", "AppendFormat", "AppendMultiple", "AppendRemaining", "AppendRepresentation", "Capacity", "Capacity=", "ChangeEncoding", "CheckEncoding", "Clear", "Clone", "CompareTo", "Concat", "ConvertToBytes", "ConvertToString", "CreateInstance", "Duplicate", "Encoding", "EndsWith", "EnsureCapacity", "Equals", "Finalize", "Freeze", "GetBinarySlice", "GetByte", "GetByteCount", "GetBytes", "GetChar", "GetCharCount", "GetCharacters", "GetFirstChar", "GetHashCode", "GetLastChar", "GetLength", "GetSlice", "GetStringSlice", "GetType", "HasByteCharacters", "HasChanged", "IndexOf", "Insert", "IsAscii", "IsBinary", "IsBinaryEncoded", "IsEmpty", "IsFrozen", "IsTainted", "IsTainted=", "KnowsAscii", "KnowsHashCode", "LastIndexOf", "Length", "MemberwiseClone", "PrepareForCharacterRead", "PrepareForCharacterWrite", "Remove", "Replace", "RequireCompatibleEncoding", "RequireNotFrozen", "Reverse", "SetByte", "SetByteCount", "SetChar", "SetCharCount", "SetLength", "Split", "StartsWith", "SwitchToBytes", "SwitchToCharacters", "TaintBy", "ToAsciiString", "ToByteArray", "ToString", "ToStringWithEscapedInvalidCharacters", "TrackChanges", "Trim", "TrimExcess", "Write", "WriteBytes", "[]", "[]=", "__id__", "__send__", "all?", "any?", "between?", "capitalize", "capitalize!", "casecmp", "center", "chapter", "chomp", "chomp!", "chop", "chop!", "class", "clone", "clr_member", "collect", "concat", "count", "delete", "delete!", "detect", "display", "downcase", "downcase!", "dump", "dup", "each", "each_byte", "each_line", "each_with_index", "empty?", "end_with?", "entries", "eql?", "equal?", "extend", "find", "find_all", "freeze", "frozen?", "grep", "gsub", "gsub!", "hash", "hex", "id", "include?", "index", "inject", "insert", "inspect", "instance_eval", "instance_exec", "instance_of?", "instance_variable_defined?", "instance_variable_get", "instance_variable_set", "instance_variables", "intern", "introduction", "is_a?", "kind_of?", "legal", "length", "ljust", "lstrip", "lstrip!", "map", "match", "max", "member?", "method", "methods", "min", "next", "next!", "nil?", "object_id", "oct", "partition", "private_methods", "protected_methods", "public_methods", "reject", "replace", "respond_to?", "reverse", "reverse!", "rindex", "rjust", "rstrip", "rstrip!", "scan", "section", "select", "send", "silverlight", "singleton_methods", "size", "slice", "slice!", "sort", "sort_by", "split", "squeeze", "squeeze!", "start_with?", "strip", "strip!", "strip_margin", "sub", "sub!", "succ", "succ!", "sum", "summary", "swapcase", "swapcase!", "taint", "tainted?", "tap", "task", "to_a", "to_clr_string", "to_f", "to_i", "to_s", "to_str", "to_sym", "tr", "tr!", "tr_s", "tr_s!", "tutorial", "type", "unpack", "untaint", "upcase", "upcase!", "upto", "zip"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can also ask the object for its class and then use the
+<tt>instance_methods</tt> method. Both of the following statements are
+equivalent.
+</p>
+<pre>
+  'Hello'.class.instance_methods
+  String.instance_methods
+</pre>
+<p class="Body">
+The advantage of using <tt>instance_methods</tt> is that you can pass an
+argument to indicate whether to include methods defined by superclasses,
+for example, to narrow down the results of
+<tt>&#8216;Hello&#8217;.methods.sort</tt> to only those methods that are
+unique to Strings.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 'Hello'.class.instance_methods(false).sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["%", "*", "+", "<<", "<=>", "==", "===", "=~", "Append", "AppendFormat", "AppendMultiple", "AppendRemaining", "AppendRepresentation", "Capacity", "Capacity=", "ChangeEncoding", "CheckEncoding", "Clear", "Clone", "CompareTo", "Concat", "ConvertToBytes", "ConvertToString", "CreateInstance", "Duplicate", "Encoding", "EndsWith", "EnsureCapacity", "Equals", "Freeze", "GetBinarySlice", "GetByte", "GetByteCount", "GetBytes", "GetChar", "GetCharCount", "GetCharacters", "GetFirstChar", "GetHashCode", "GetLastChar", "GetLength", "GetSlice", "GetStringSlice", "HasByteCharacters", "HasChanged", "IndexOf", "Insert", "IsAscii", "IsBinary", "IsBinaryEncoded", "IsEmpty", "IsFrozen", "IsTainted", "IsTainted=", "KnowsAscii", "KnowsHashCode", "LastIndexOf", "Length", "PrepareForCharacterRead", "PrepareForCharacterWrite", "Remove", "Replace", "RequireCompatibleEncoding", "RequireNotFrozen", "Reverse", "SetByte", "SetByteCount", "SetChar", "SetCharCount", "SetLength", "Split", "StartsWith", "SwitchToBytes", "SwitchToCharacters", "TaintBy", "ToAsciiString", "ToByteArray", "ToString", "ToStringWithEscapedInvalidCharacters", "TrackChanges", "Trim", "TrimExcess", "Write", "WriteBytes", "[]", "[]=", "capitalize", "capitalize!", "casecmp", "center", "chomp", "chomp!", "chop", "chop!", "concat", "count", "delete", "delete!", "downcase", "downcase!", "dump", "each", "each_byte", "each_line", "empty?", "end_with?", "eql?", "gsub", "gsub!", "hex", "include?", "index", "insert", "inspect", "intern", "length", "ljust", "lstrip", "lstrip!", "match", "next", "next!", "oct", "replace", "reverse", "reverse!", "rindex", "rjust", "rstrip", "rstrip!", "scan", "size", "slice", "slice!", "split", "squeeze", "squeeze!", "start_with?", "strip", "strip!", "strip_margin", "sub", "sub!", "succ", "succ!", "sum", "swapcase", "swapcase!", "to_clr_string", "to_f", "to_i", "to_s", "to_str", "to_sym", "tr", "tr!", "tr_s", "tr_s!", "unpack", "upcase", "upcase!", "upto"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+All loaded classes are exposed as constants in the <tt>Object</tt> class.
+Let&#8217;s take a look at all the classes currently loaded.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Object.constants.sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["ARGF", "ARGV", "ArgumentError", "Array", "Bignum", "Binding", "CGI", "Class", "Comparable", "CompiledCode", "Configuration", "Delegater", "Delegator", "Dir", "DocumentationOperations", "ENV", "EOFError", "ERB", "EncodingError", "Enumerable", "Errno", "ErrorListener", "ErrorSinkProxyListener", "Exception", "ExceptionOperations", "FALSE", "FalseClass", "File", "FileTest", "Fixnum", "Float", "FloatDomainError", "GC", "Hash", "HostingTutorial", "HtmlTutorial", "IO", "IOError", "IRONRUBY_VERSION", "IndexError", "Integer", "Interrupt", "IronRuby", "IronRubyTutorial", "Kernel", "LanguageSetup", "LoadError", "LocalJumpError", "Marshal", "MatchData", "Math", "MemberDoc", "MemberKind", "Method", "Microsoft", "Module", "NIL", "NameError", "NilClass", "NoMemoryError", "NoMethodError", "NotImplementedError", "Numeric", "Object", "ObjectOperations", "ObjectSpace", "OverloadDoc", "PLATFORM", "ParameterDoc", "ParameterFlags", "Pathname", "Precision", "Proc", "Process", "Providers", "RELEASE_DATE", "RUBY_ENGINE", "RUBY_PATCHLEVEL", "RUBY_PLATFORM", "RUBY_RELEASE_DATE", "RUBY_VERSION", "Range", "RangeError", "Regexp", "RegexpError", "RuntimeError", "SILVERLIGHT", "SM", "STDERR", "STDIN", "STDOUT", "ScriptEngine", "ScriptError", "ScriptHost", "ScriptIO", "ScriptRuntime", "ScriptRuntimeSetup", "ScriptScope", "ScriptSource", "SecurityError", "Signal", "SignalException", "SimpleDelegater", "SimpleDelegator", "StandardError", "String", "StringIO", "StringScanner", "Struct", "Symbol", "SyntaxError", "System", "SystemCallError", "SystemExit", "SystemStackError", "TOPLEVEL_BINDING", "TRUE", "Thread", "ThreadError", "ThreadGroup", "Time", "ToStyledHtml", "TokenCategorizer", "TrueClass", "Tutorial", "TypeError", "UnboundMethod", "VERSION", "ZeroDivisionError"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+IronRuby comes with several built-in modules. Some are loaded when IronRuby
+starts up as you saw above. Some need to be explicitly loaded. This is done
+with the the <tt>require</tt> function. Let&#8217;s load the
+<tt>bigdecimal</tt> module.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> require 'bigdecimal'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now let&#8217;s see which new classes were loaded. Can you spot the new
+classes using <tt>Object.constants.sort</tt> again? <tt>Mutex</tt> is one
+of them. There are three others.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Object.constants.sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["ARGF", "ARGV", "ArgumentError", "Array", "BigDecimal", "Bignum", "Binding", "CGI", "Class", "Comparable", "CompiledCode", "Configuration", "Delegater", "Delegator", "Dir", "DocumentationOperations", "ENV", "EOFError", "ERB", "EncodingError", "Enumerable", "Errno", "ErrorListener", "ErrorSinkProxyListener", "Exception", "ExceptionOperations", "FALSE", "FalseClass", "File", "FileTest", "Fixnum", "Float", "FloatDomainError", "GC", "Hash", "HostingTutorial", "HtmlTutorial", "IO", "IOError", "IRONRUBY_VERSION", "IndexError", "Integer", "Interrupt", "IronRuby", "IronRubyTutorial", "Kernel", "LanguageSetup", "LoadError", "LocalJumpError", "Marshal", "MatchData", "Math", "MemberDoc", "MemberKind", "Method", "Microsoft", "Module", "NIL", "NameError", "NilClass", "NoMemoryError", "NoMethodError", "NotImplementedError", "Numeric", "Object", "ObjectOperations", "ObjectSpace", "OverloadDoc", "PLATFORM", "ParameterDoc", "ParameterFlags", "Pathname", "Precision", "Proc", "Process", "Providers", "RELEASE_DATE", "RUBY_ENGINE", "RUBY_PATCHLEVEL", "RUBY_PLATFORM", "RUBY_RELEASE_DATE", "RUBY_VERSION", "Range", "RangeError", "Regexp", "RegexpError", "RuntimeError", "SILVERLIGHT", "SM", "STDERR", "STDIN", "STDOUT", "ScriptEngine", "ScriptError", "ScriptHost", "ScriptIO", "ScriptRuntime", "ScriptRuntimeSetup", "ScriptScope", "ScriptSource", "SecurityError", "Signal", "SignalException", "SimpleDelegater", "SimpleDelegator", "StandardError", "String", "StringIO", "StringScanner", "Struct", "Symbol", "SyntaxError", "System", "SystemCallError", "SystemExit", "SystemStackError", "TOPLEVEL_BINDING", "TRUE", "Thread", "ThreadError", "ThreadGroup", "Time", "ToStyledHtml", "TokenCategorizer", "TrueClass", "Tutorial", "TypeError", "UnboundMethod", "VERSION", "ZeroDivisionError"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can see the methods of a class using methods like
+<tt>public_methods</tt>.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Object.public_methods.sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["<", "<=", "<=>", "==", "===", "=~", ">", ">=", "Equals", "Finalize", "GetHashCode", "GetType", "MemberwiseClone", "ReferenceEquals", "ToString", "[]", "__id__", "__send__", "allocate", "ancestors", "autoload", "autoload?", "chapter", "class", "class_eval", "class_exec", "class_variable_defined?", "class_variables", "clone", "clr_constructor", "clr_ctor", "clr_member", "clr_new", "const_defined?", "const_get", "const_missing", "const_set", "constants", "display", "dup", "eql?", "equal?", "extend", "freeze", "frozen?", "hash", "id", "include?", "included_modules", "inspect", "instance_eval", "instance_exec", "instance_method", "instance_methods", "instance_of?", "instance_variable_defined?", "instance_variable_get", "instance_variable_set", "instance_variables", "introduction", "is_a?", "kind_of?", "legal", "method", "method_defined?", "methods", "module_eval", "module_exec", "name", "new", "nil?", "object_id", "of", "private_class_method", "private_instance_methods", "private_method_defined?", "private_methods", "protected_instance_methods", "protected_method_defined?", "protected_methods", "public_class_method", "public_instance_methods", "public_method_defined?", "public_methods", "respond_to?", "section", "send", "silverlight", "singleton_methods", "summary", "superclass", "taint", "tainted?", "tap", "task", "to_a", "to_clr_ref", "to_clr_type", "to_s", "tutorial", "type", "untaint"]<br>
+              
+              </p>
+            
+          
+            <h3>User-defined modules</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+This chapter uses the file <tt>primes.rb</tt>. Let&#8217;s load it using
+the <tt>require</tt> function. The <tt>require</tt> function accepts
+relative as well as absolute paths. A file extension can be specified, or
+it can be left out. All of the following statements are equivalent.
+</p>
+<pre>
+  require 'primes'
+  require 'primes.rb'
+  require './primes.rb'
+</pre>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> require 'primes.rb'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We know that the file defines a module called <tt>Primes</tt>. Let&#8217;s
+explore the methods defined in the module using the <tt>method</tt>
+function. By default, this method shows all the methods available on the
+class, including those defined by <tt>Object</tt>. Since we are not
+interested in the methods defined by <tt>Object</tt>, we pass an argument
+of <tt>false</tt> to exclude methods defined by superclasses.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Primes.methods(false)
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["is_prime", "is_factor"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now let&#8217;s call the <tt>is_prime</tt> method.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Primes.is_prime(10)
+                </b>
+                <br>
+                  
+                  
+                  
+                  => false<br>
+              
+              </p>
+            
+          
+        
+          <h2>Basic IronRuby - Using the standard .NET libraries</h2>
+          <p class="Body"><p class="Body">
+The power of IronRuby lies within the ability to seamlessly access the
+wealth of .NET libraries. This exercise will demonstrate how the .NET
+libraries can be used from IronRuby .
+</p>
+</p>
+          
+            <h3>Basic .NET library use</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+IronRuby automatically loads mscorlib.dll, the core .NET library where many
+of the basic types are defined. .NET namespaces behave like Ruby modules.
+Let&#8217;s look at all the types and sub-namespaces defined in the
+<tt>System</tt> namespace.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> System.constants
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ["Collections", "Configuration", "Deployment", "Diagnostics", "Globalization", "IO", "Reflection", "Resources", "Runtime", "Security", "Text", "Threading", "CodeDom", "ComponentModel", "Media", "Net", "Timers", "Web", "AccessViolationException", "ActivationContext", "Activator", "AppDomain", "AppDomainInitializer", "AppDomainManager", "AppDomainManagerInitializationOptions", "AppDomainSetup", "AppDomainUnloadedException", "ApplicationException", "ApplicationId", "ApplicationIdentity", "ArgIterator", "ArgumentException", "ArgumentNullException", "ArgumentOutOfRangeException", "ArithmeticException", "Array", "ArrayTypeMismatchException", "AssemblyLoadEventArgs", "AssemblyLoadEventHandler", "AsyncCallback", "Attribute", "AttributeTargets", "AttributeUsageAttribute", "BadImageFormatException", "Base64FormattingOptions", "BitConverter", "Boolean", "Buffer", "Byte", "CLSCompliantAttribute", "CannotUnloadAppDomainException", "Char", "CharEnumerator", "Console", "ConsoleCancelEventArgs", "ConsoleCancelEventHandler", "ConsoleColor", "ConsoleKey", "ConsoleKeyInfo", "ConsoleModifiers", "ConsoleSpecialKey", "ContextBoundObject", "ContextMarshalException", "ContextStaticAttribute", "Convert", "CrossAppDomainDelegate", "DBNull", "DataMisalignedException", "DateTime", "DateTimeKind", "DateTimeOffset", "DayOfWeek", "Decimal", "Delegate", "DivideByZeroException", "DllNotFoundException", "Double", "DuplicateWaitObjectException", "EntryPointNotFoundException", "Enum", "Environment", "EnvironmentVariableTarget", "EventArgs", "EventHandler", "Exception", "ExecutionEngineException", "FieldAccessException", "FlagsAttribute", "FormatException", "GC", "GCCollectionMode", "GCNotificationStatus", "Guid", "IAppDomainSetup", "IAsyncResult", "ICloneable", "IComparable", "IConvertible", "ICustomFormatter", "IDisposable", "IFormatProvider", "IFormattable", "IServiceProvider", "IndexOutOfRangeException", "InsufficientMemoryException", "Int16", "Int32", "Int64", "IntPtr", "InvalidCastException", "InvalidOperationException", "InvalidProgramException", "LoaderOptimization", "LoaderOptimizationAttribute", "LocalDataStoreSlot", "MTAThreadAttribute", "MarshalByRefObject", "Math", "MemberAccessException", "MethodAccessException", "MidpointRounding", "MissingFieldException", "MissingMemberException", "MissingMethodException", "ModuleHandle", "MulticastDelegate", "MulticastNotSupportedException", "NonSerializedAttribute", "NotFiniteNumberException", "NotImplementedException", "NotSupportedException", "NullReferenceException", "Nullable", "Object", "ObjectDisposedException", "ObsoleteAttribute", "OperatingSystem", "OperationCanceledException", "OutOfMemoryException", "OverflowException", "ParamArrayAttribute", "PlatformID", "PlatformNotSupportedException", "Random", "RankException", "ResolveEventArgs", "ResolveEventHandler", "RuntimeArgumentHandle", "RuntimeFieldHandle", "RuntimeMethodHandle", "RuntimeTypeHandle", "SByte", "STAThreadAttribute", "SerializableAttribute", "Single", "StackOverflowException", "String", "StringComparer", "StringComparison", "StringSplitOptions", "SystemException", "ThreadStaticAttribute", "TimeSpan", "TimeZone", "TimeoutException", "Type", "TypeCode", "TypeInitializationException", "TypeLoadException", "TypeUnloadedException", "TypedReference", "UInt16", "UInt32", "UInt64", "UIntPtr", "UnauthorizedAccessException", "UnhandledExceptionEventArgs", "UnhandledExceptionEventHandler", "ValueType", "Version", "Void", "WeakReference", "Action", "ArraySegment", "Comparison", "Converter", "IEquatable", "Predicate", "FileStyleUriParser", "FtpStyleUriParser", "GenericUriParser", "GenericUriParserOptions", "GopherStyleUriParser", "HttpStyleUriParser", "LdapStyleUriParser", "NetPipeStyleUriParser", "NetTcpStyleUriParser", "NewsStyleUriParser", "Uri", "UriBuilder", "UriComponents", "UriFormat", "UriFormatException", "UriHostNameType", "UriIdnScope", "UriKind", "UriParser", "UriPartial", "UriTypeConverter"]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Explore the <tt>System.Environment</tt> class.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> System::Environment.methods(false).sort
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ['command_line', 'current_directory', 'current_directory=', 'exit', 'exit_code', 'exit_code=', 'expand_environment_variables', 'fail_fast', 'get_command_line_args', 'get_environment_variable', 'get_environment_variables', 'get_folder_path', 'get_logical_drives', 'has_shutdown_started', 'machine_name', 'new_line', 'os_version', 'processor_count', 'set_environment_variable', 'stack_trace', 'system_directory', 'tick_count', 'user_domain_name', 'user_interactive', 'user_name', 'version', 'working_set']<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s call the <tt>OSVersion</tt> property.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> System::Environment.OSVersion
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Microsoft Windows NT 6.1.7600.0<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can assign the class names to local constants for easier access. Here
+is how you can use just <tt>E.OSVersion</tt> instead of having to say
+<tt>System::Environment.OSVersion</tt>
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> E = System::Environment
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System::Environment<br>
+                  <br>                
+                
+                  <b>
+                  >>> E.OSVersion
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft Windows NT 6.1.7600.0<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can also use the <tt>include</tt> method to import contents of a class
+or namespace. This will allow direct access to all the classes and
+sub-namespaces under <tt>System</tt>. For example,
+<tt>System::Environment</tt> is now directly accessible.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> include System
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Object<br>
+                  <br>                
+                
+                  <b>
+                  >>> Environment.OSVersion
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Microsoft Windows NT 6.1.7600.0<br>
+                  <br>                
+                
+              
+              </p>
+            
+          
+            <h3>Working with .NET classes</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Import the contents of the <tt>System::Collections</tt> namespace into the
+global namespace.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> include System::Collections
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Object<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Create instance of the <tt>BitArray</tt> class and explore the instance
+using <tt>instance_methods</tt>.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> ba = BitArray.new(8)
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Collections.BitArray<br>
+                  <br>                
+                
+                  <b>
+                  >>> ba.class.instance_methods
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => ['item', '[]', 'item=', '[]=', 'get', 'set', 'set_all', 'and', 'or', 'xor', 'not', 'length', 'length=', 'copy_to', 'count', "Clone", 'sync_root', 'is_read_only', 'is_synchronized', 'get_enumerator', "all?", "any?", "collect", "detect", "each_with_index", "entries", "find", "find_all", "grep", "include?", "inject", "map", "max", "member?", "min", "partition", "reject", "select", "sort", "sort_by", "to_a", "zip", "tutorial", "introduction", "legal", "summary", "section", "silverlight", "chapter", "task", "GetType", "GetHashCode", "ToString", "Equals", "Finalize", "MemberwiseClone", "__id__", "__send__", "=~", "==", "===", "class", "clone", "clr_member", "display", "dup", "eql?", "equal?", "extend", "freeze", "frozen?", "hash", "id", "inspect", "instance_eval", "instance_exec", "instance_of?", "instance_variable_defined?", "instance_variable_get", "instance_variable_set", "instance_variables", "is_a?", "kind_of?", "method", "methods", "nil?", "object_id", "private_methods", "protected_methods", "public_methods", "respond_to?", "send", "singleton_methods", "taint", "tainted?", "tap", "to_s", "type", "untaint"]<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Set a few elements into the bit array. IronRuby supports the C# - style
+syntax for accessing the array elements. The same syntax applies to any
+indexable object (.NET arrays, System::Collections::Generics::List, etc).
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> ba[1] = true
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+                  <b>
+                  >>> ba[4] = true
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now we can read from the bit array, again using the indexing syntax.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> ba[1]
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Enumerate the contents of the bit array using the
+<tt>Enumerable#each_with_index</tt> method. <tt>BitArray</tt> implements
+the <tt>System::Collections::IEnumerable</tt> interface, and IronRuby makes
+such objects accessible using the methods of the <tt>Enumerable</tt> Ruby
+module.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> ba.each_with_index { |elem, idx| puts "#{idx}:#{elem}" }
+                </b>
+                <br>
+                  
+                  0:false<br>1:true<br>2:false<br>3:false<br>4:true<br>5:false<br>6:false<br>7:false<br><br>
+                  
+                  => System.Collections.BitArray<br>
+              
+              </p>
+            
+          
+            <h3>Generics</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Import the Generic collections from the
+<tt>System::Collections::Generic</tt> namespace.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> include System::Collections::Generic
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Object<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><pre>
+ To instantiate a generic class, the generic type arguments must be specified. IronRuby
+ uses the following syntax to specify the type arguments
+
+   generic_type[type_argument, ...]
+</pre>
+<p class="Body">
+Create an instance of a generic dictionary mapping Strings to Fixnums
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> d = Dictionary[String, Fixnum].new
+                </b>
+                <br>
+                  
+                  
+                  
+                  => System.Collections.Generic.Dictionary`2[IronRuby.Builtins.MutableString,System.Int32]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Add string values into the list. Since we created a list of string, adding
+strings is possible.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> d['Hello'] = 1
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 1<br>
+                  <br>                
+                
+                  <b>
+                  >>> d['Hi'] = 2
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 2<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Try adding objects of types other than string. It will fail with a
+TypeError
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> d[3] = 3
+                </b>
+                <br>
+                  
+                  
+                  #<TypeError: can't convert Fixnum into String><br>
+                  
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Enumerate the generic collection
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> d.each { |kvp| puts kvp }
+                </b>
+                <br>
+                  
+                  [Hello, 1]<br>[Hi, 2]<br><br>
+                  
+                  => System.Collections.Generic.Dictionary`2[IronRuby.Builtins.MutableString,System.Int32]<br>
+              
+              </p>
+            
+          
+        
+          <h2>Basic IronRuby - Loading .NET libraries</h2>
+          <p class="Body"><p class="Body">
+IronRuby can import .NET libraries using either the <tt>require</tt>
+standard Ruby method, or the IronRuby-specific <tt>load_assembly</tt>
+method.
+</p>
+</p>
+          
+            <h3>Using System.Xml - load_assembly</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><pre>
+ To use the &lt;tt&gt;System::Xml&lt;/tt&gt; namespace, the System.Xml.dll assembly must first be
+ loaded by IronRuby engine. Note that it is not sufficient for the assembly to have been
+ loaded by .NET into the AppDomain with methods like &lt;tt&gt;System.AppDomain.LoadAssembly&lt;/tt&gt;.
+
+ Note that the load_assembly method accepts either a full assembly name or a partial assembly
+ name (or even a file name - more on that later). It is strongly recommended using the full
+ assembly name in your Ruby script files as using the partial assembly name can cause
+ problems. However, for interactive exploration, using the partial assembly name is much
+ more easier. To use the full assembly name, you can also do:
+
+   load_assembly 'System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+</pre>
+<p class="Body">
+However, since the full name is harder to remember and type, we will use
+the simple name here.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> load_assembly 'System.Xml'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+                  <b>
+                  >>> include System::Xml
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Object<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now load the XML file &#8216;load.xml&#8217; by creating an instance of
+<tt>XmlDocument</tt>.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> d = XmlDocument.new
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Xml.XmlDocument<br>
+                  <br>                
+                
+                  <b>
+                  >>> d.load 'app/Tutorials/ironruby_files/load.xml'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can now query the document. Use the statements below to get output like:
+</p>
+<pre>
+    Seattle (default game)
+    New York
+    World
+    North America
+</pre>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> n = d.select_nodes '//Puzzle/SavedGames/Game/@caption'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Xml.XPathNodeList<br>
+                  <br>                
+                
+                  <b>
+                  >>> n.each { |e| puts e.value }
+                  </b>
+                  <br>
+                  
+                  Seattle (default game)<br>New York<br>World<br>North America<br><br>
+                  
+                  => System.Xml.XPathNodeList<br>
+                  <br>                
+                
+              
+              </p>
+            
+          
+            <h3>Loading .NET libraries from a given path</h3>
+            <p class="Body"><p class="Body">
+Loading .NET libraries from a given path
+</p>
+</p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+We can load .net libraries from a given path into the IronRuby Engine. Here
+we will load in a custom class library into IronRuby, to help us determine
+if a given number is a prime number or not.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> require 'app/Tutorials/ironruby_files/TutorialSamples.dll'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+                  <b>
+                  >>> include TutorialSamples
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Object<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now with the loaded assmebly, we can now create an instance of Prime, and
+call the methods in Ruby code.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> Prime.IsPrime 13
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+                  <b>
+                  >>> Prime.IsPrime 40
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => false<br>
+                  <br>                
+                
+              
+              </p>
+            
+          
+        
+          <h2>Advanced IronRuby - Events and delegates</h2>
+          <p class="Body"><p class="Body">
+The large part of the beauty of IronRuby lies within the dynamic-style
+development - modifying the live application by adding functioning elements
+to it. With Windows applications, this often requires delegates and event
+handling (iar.e., adding a button to an existing form and adding
+functionality to the button to handle the user pressing the button).
+</p>
+<p class="Body">
+This tutorial will focus on creating delegates, handling events in
+IronPython, and creating Windows applications using Windows Forms and the
+new Windows Presentation Foundation.
+</p>
+</p>
+          
+            <h3>File System watcher</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Import the contents of <tt>System::IO</tt> into the global namespace, and
+create an instance of the <tt>FileSystemWatcher</tt> class.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> include System::IO
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => Object<br>
+                  <br>                
+                
+                  <b>
+                  >>> w = FileSystemWatcher.new
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.IO.FileSystemWatcher<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Inspect the methods available on the instance, and then set the
+<tt>path</tt> property to watch over the current directory.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w.class.instance_methods false
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => ['notify_filter', 'enable_raising_events', 'filter', 'include_subdirectories', 'include_subdirectories=', 'internal_buffer_size', 'internal_buffer_size=', 'path', 'site', 'site=', 'synchronizing_object', 'synchronizing_object=', 'begin_init', 'dispose', 'end_init', 'on_changed', 'on_created', 'on_deleted', 'on_error', 'on_renamed', 'wait_for_changed', 'notify_filter=', 'enable_raising_events=', 'filter=', 'path=', 'changed', 'created', 'deleted', 'error', 'renamed']<br>
+                  <br>                
+                
+                  <b>
+                  >>> w.path = '.'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => "."<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Register a block as an event handler for the <tt>changed</tt>,
+<tt>created</tt>, and <tt>deleted</tt> events. Because we don&#8217;t know
+yet what arguments the block will have, let&#8217;s accept any number of
+arguments (the <tt>*a</tt> notation).
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w.changed { |*a| puts a.inspect }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => #<Proc:0x0000a00@(eval):1><br>
+                  <br>                
+                
+                  <b>
+                  >>> w.created { |*a| puts a.inspect }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => #<Proc:0x0000a04@(eval):1><br>
+                  <br>                
+                
+                  <b>
+                  >>> w.deleted { |*a| puts a.inspect }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Enable the watcher to raise events.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.enable_raising_events = true
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now open the Tutorial folder and create a file. An easy way to create the
+file is to right-click with the mouse and select &quot;NewText
+Document&quot;. The file watcher will raise the <tt>created</tt> event. You
+can then open the file in Notepad, type in any text, and save the file.
+This raises the <tt>changed</tt> event. Then finish by deleting the file to
+see the <tt>deleted</tt> event get raised.
+</p>
+<p class="Body">
+At the end of this step, the output in the command window will be similar
+to the following:
+</p>
+<pre>
+    [System.IO.FileSystemWatcher, System.IO.FileSystemEventArgs]
+    [System.IO.FileSystemWatcher, System.IO.FileSystemEventArgs]
+    [System.IO.FileSystemWatcher, System.IO.FileSystemEventArgs]
+    [System.IO.FileSystemWatcher, System.IO.FileSystemEventArgs]
+</pre>
+<p class="Body">
+Finally disable the watcher.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.enable_raising_events = false
+                </b>
+                <br>
+                  
+                  
+                  
+                  => false<br>
+              
+              </p>
+            
+          
+            <h3>Improving the event handler</h3>
+            <p class="Body"></p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+In the previous task, we can see that the types of the parameters passed to
+all three events were the same:
+</p>
+<ul>
+<li><tt>FileSystemWatcher</tt> : the instance of the object that raised the
+event
+
+</li>
+<li><tt>FileSystemEventArgs</tt> : the information about the event raised
+
+</li>
+</ul>
+<p class="Body">
+Use <tt>instance_methods</tt> to explore the event arguments class to find
+what information the event contains.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> FileSystemEventArgs.instance_methods(false)
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ['change_type', 'full_path', 'name']<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now with more knowledge of the event argument properties, we can create a
+better event handler that will print <tt>change_type</tt> and
+<tt>full_path</tt> properties of the event argument object.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w.changed { |w1,a| puts a.change_type, a.full_path }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => #<Proc:0x0000ab0@(eval):1><br>
+                  <br>                
+                
+                  <b>
+                  >>> w.created { |w1,a| puts a.change_type, a.full_path }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => #<Proc:0x0000ab4@(eval):1><br>
+                  <br>                
+                
+                  <b>
+                  >>> w.deleted { |w1,a| puts a.change_type, a.full_path }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => true<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Make sure the raising of the events is enabled:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.enable_raising_events = true
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Finally disable the watcher.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.enable_raising_events = false
+                </b>
+                <br>
+                  
+                  
+                  
+                  => false<br>
+              
+              </p>
+            
+          
+        
+          <h2>Advanced IronRuby - Windows Forms</h2>
+          <p class="Body"><p class="Body">
+Note that if you develop Windows applications interactively using
+<tt>ir.exe</tt> or <tt>iirb</tt> from the <b>Command Prompt</b> console,
+IronRuby must be initialized specially for that purpose. <tt>ir.exe</tt>
+blocks the main thread so that it can read user input. While this thread
+awaits text input, the Windows application being dynamically created from
+the console needs to run on a separate thread so that it can process
+Windows messages. Further, WPF requires that all commands that interact
+with UI controls need to be executed on the message pump thread.
+<tt>wpf.rb</tt> includes a helper method to deal with this. If you are
+using a <em>console</em> interactive session, do the following:
+</p>
+<pre>
+    require &quot;wpf.rb&quot;
+    Wpf.interact
+</pre>
+</p>
+          
+            <h3>Creating a simple Form</h3>
+            <p class="Body"><p class="Body">
+In this exercise, you will create simple Windows Forms applications
+dynamically.
+</p>
+</p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+First, we need to load <tt>System.Windows.Forms.dll</tt>. Note that it is
+recommended to use the full assembly name in larger programs as such:
+</p>
+<pre>
+    load_assembly &quot;System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;
+</pre>
+<p class="Body">
+However, for interactive use, we will use the short form.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> load_assembly 'System.Windows.Forms'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Import the contents of the <tt>System::Windows::Forms</tt> namespaces into
+the global namespace.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> include System::Windows::Forms
+                </b>
+                <br>
+                  
+                  
+                  
+                  => Object<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Create an instance of the Form class and display it.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> f = Form.new
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Windows.Forms.Form, Text: <br>
+                  <br>                
+                
+                  <b>
+                  >>> f.show
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You may need to alt-tab or look for the running application since it may
+not have popped to the top level on your desktop.
+</p>
+<p class="Body">
+Now set the form Text property.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> f.text = 'Hello'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => "Hello"<br>
+              
+              </p>
+            
+          
+            <h3>Adding event handlers to the Form</h3>
+            <p class="Body"></p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+To bring the application alive, let&#8217;s focus on the <tt>click</tt>
+event of the form. Create an event handler for the <tt>click</tt> event and
+click on the form to receive the event.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> f.click { |*args| puts args }
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now click the form. You should see output printed in the REPL window,
+looking something like this:
+</p>
+<pre>
+  System.Windows.Forms.Form, Text: Hello
+  System.Windows.Forms.MouseEventArgs
+</pre>
+<p class="Body">
+You can inspect <tt>MouseEventArgs</tt> using the <tt>instance_methods</tt>
+method.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> MouseEventArgs.instance_methods(false)
+                </b>
+                <br>
+                  
+                  
+                  
+                  => ['button', 'clicks', 'x', 'y', 'delta', 'location']<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Knowing the contents of the MouseEventArgs, create an improved event
+handler for the <tt>click</tt> event using the <tt>location</tt> property.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 
+def on_click(f, a)
+    l = Label.new
+    l.text = 'Hello'
+    l.location = a.location
+    f.controls.add l
+end
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now add the method as a <tt>click</tt> handler
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> f.click { |f, a| on_click(f, a) }
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now clicking on the form with the mouse will add &#8216;Hello&#8217;
+labels. We can also access the controls we just added via mouse clicks and
+change them
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> f.controls.each { |iar| iar.Text = 'Hi' }
+                </b>
+                <br>
+                  
+                  
+                  
+                  => []<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+After a few moments of clicking, the form will get quite crowded, so we can
+clear it out. Also, don&#8217;t forget to close the form.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> f.controls.clear
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+                  <b>
+                  >>> f.close
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+          
+        
+          <h2>Advanced IronRuby - Windows Presentation Foundation</h2>
+          <p class="Body"><p class="Body">
+Windows Presentation Foundation is a new UI framework with rich support for
+media (3D, video, etc) data-binding, and customization.
+</p>
+</p>
+          
+            <h3>Simple WPF application</h3>
+            <p class="Body"><p class="Body">
+In this exercise, you will interactively create simple interactive Windows
+Presentation Foundation application
+</p>
+</p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+It is useful to have common initialization code while using Windows
+Presentation Foundation in interactive development. This is available in
+the <tt>Wpf</tt> module in the <tt>wpf.rb</tt> file.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> require 'wpf.rb'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => true<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+To make all the WPF class names directly available, you could do:
+</p>
+<pre>
+    include Wpf
+</pre>
+<p class="Body">
+However, this adds a lot of classes to the global namespace which can cause
+conflicts. For example, <tt>System::Collections::Generic::List</tt> and
+<tt>System::Windows::Documents::List</tt>. For this reason, it is
+preferable to use scope access like <tt>Wpf::List</tt> instead of doing
+<tt>include Wpf</tt>.
+</p>
+<p class="Body">
+Now let&#8217;s create a window.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w = Wpf::Window.new
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Windows.Window<br>
+                  <br>                
+                
+                  <b>
+                  >>> w.show
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => nil<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You may need to alt-tab or look for the running application since it may
+not have popped to the top level on your desktop.
+</p>
+<p class="Body">
+Now, let&#8217;s do more. We will set the window property to &quot;size to
+content&quot;, which should cause the window to shrink. We can also set the
+title.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w.size_to_content = Wpf::SizeToContent.width_and_height
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => WidthAndHeight<br>
+                  <br>                
+                
+                  <b>
+                  >>> w.title = 'Hello'
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => "Hello"<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s add the content now
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> w.content = Wpf::TextBlock.new
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => System.Windows.Controls.TextBlock<br>
+                  <br>                
+                
+                  <b>
+                  >>> w.content.text = "Hello IronRuby!"
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => "Hello IronRuby!"<br>
+                  <br>                
+                
+                  <b>
+                  >>> w.content.font_size = 50
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => 50<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can close the window like this&quot;
+</p>
+<pre>
+    w.close
+</pre>
+<p class="Body">
+However, we will just clear out the content so that we can use the same
+window in the next chapter.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.content = nil
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+          
+            <h3>WPF calculator</h3>
+            <p class="Body"></p>
+            
+              
+              
+              
+              <p class="Body"><p class="Body">
+Windows Presentation Foundation uses the XAML format to describe the
+graphical layout and basic behaviors of UI. Load the &quot;calc.xaml&quot;
+file and display the resulting content.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.content = Wpf.load_xaml_file 'app/Tutorials/ironruby_files/calc.xaml'
+                </b>
+                <br>
+                  
+                  
+                  
+                  => System.Windows.Controls.Canvas<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s walk the calculator&#8217;s object model using the
+<tt>walk</tt> method defined in the &quot;wpf.rb&quot; file.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> Wpf.walk(w) { |c| puts c }
+                </b>
+                <br>
+                  
+                  System.Windows.Window<br>System.Windows.Controls.Canvas<br>System.Windows.Controls.Canvas<br>System.Windows.Shapes.Rectangle<br>System.Windows.Controls.Canvas<br>System.Windows.Controls.TextBox<br>System.Windows.Controls.RichTextBox<br>System.Windows.Controls.Button: 1<br>1<br>System.Windows.Controls.Button: 9<br>9<br>System.Windows.Controls.Button: 8<br>8<br>System.Windows.Controls.Button: 5<br>5<br>System.Windows.Controls.Button: 4<br>4<br>System.Windows.Controls.Button: 2<br>2<br>System.Windows.Controls.Button: 3<br>3<br>System.Windows.Controls.Button: 6<br>6<br>System.Windows.Controls.Button: *<br>*<br>System.Windows.Controls.Button: 7<br>7<br>System.Windows.Controls.Button: -<br>-<br>System.Windows.Controls.Button: 0<br>0<br>System.Windows.Controls.Button: .<br>.<br>System.Windows.Controls.Button: =<br>=<br>System.Windows.Controls.Button: +<br>+<br>System.Windows.Controls.Button: /<br>/<br>System.Windows.Controls.Button: C<br>C<br><br>
+                  
+                  => [System.Windows.Controls.Canvas, System.Windows.Controls.Canvas]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s filter the results to button only
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> buttons = Wpf.walk(w).select { |c| c.kind_of? Wpf::Button }
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [System.Windows.Controls.Button: 1, System.Windows.Controls.Button: 9, System.Windows.Controls.Button: 8, System.Windows.Controls.Button: 5, System.Windows.Controls.Button: 4, System.Windows.Controls.Button: 2, System.Windows.Controls.Button: 3, System.Windows.Controls.Button: 6, System.Windows.Controls.Button: *, System.Windows.Controls.Button: 7, System.Windows.Controls.Button: -, System.Windows.Controls.Button: 0, System.Windows.Controls.Button: ., System.Windows.Controls.Button: =, System.Windows.Controls.Button: +, System.Windows.Controls.Button: /, System.Windows.Controls.Button: C]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+At this point we can make changes to all the buttons, for example, change
+the colors and fonts
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                
+                  <b>
+                  >>> buttons.each { |b| b.font_size *= 2 }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => [System.Windows.Controls.Button: 1, System.Windows.Controls.Button: 9, System.Windows.Controls.Button: 8, System.Windows.Controls.Button: 5, System.Windows.Controls.Button: 4, System.Windows.Controls.Button: 2, System.Windows.Controls.Button: 3, System.Windows.Controls.Button: 6, System.Windows.Controls.Button: *, System.Windows.Controls.Button: 7, System.Windows.Controls.Button: -, System.Windows.Controls.Button: 0, System.Windows.Controls.Button: ., System.Windows.Controls.Button: =, System.Windows.Controls.Button: +, System.Windows.Controls.Button: /, System.Windows.Controls.Button: C]<br>
+                  <br>                
+                
+                  <b>
+                  >>> buttons.each { |b| b.foreground = Wpf::SolidColorBrush.new(Wpf::Colors.blue) }
+                  </b>
+                  <br>
+                  
+                  
+                  
+                  => [System.Windows.Controls.Button: 1, System.Windows.Controls.Button: 9, System.Windows.Controls.Button: 8, System.Windows.Controls.Button: 5, System.Windows.Controls.Button: 4, System.Windows.Controls.Button: 2, System.Windows.Controls.Button: 3, System.Windows.Controls.Button: 6, System.Windows.Controls.Button: *, System.Windows.Controls.Button: 7, System.Windows.Controls.Button: -, System.Windows.Controls.Button: 0, System.Windows.Controls.Button: ., System.Windows.Controls.Button: =, System.Windows.Controls.Button: +, System.Windows.Controls.Button: /, System.Windows.Controls.Button: C]<br>
+                  <br>                
+                
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+If you use &quot;wpf.rb&quot;, you can also access the controls by the name
+specified in the XAML file. However, this works only when you use the
+object created by <tt>load_xaml_file</tt>. So <tt>w.Result</tt> will not
+work, but <tt>w.content.Result</tt> will
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.content.Result
+                </b>
+                <br>
+                  
+                  
+                  
+                  => System.Windows.Controls.TextBox<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s define an event handler for the buttons.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 
+def on_click(c, text)
+    if text == 'C' then 
+        c.Result.text = ""
+    elsif text == '='
+        c.Result.text = eval(c.Result.text.to_s).to_s rescue "(error)"
+    else 
+        c.Result.text = c.Result.text + text
+    end
+end
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Let&#8217;s hook up the event handler
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> buttons.each { |b| b.click { on_click w.content, b.content } }
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [System.Windows.Controls.Button: 1, System.Windows.Controls.Button: 9, System.Windows.Controls.Button: 8, System.Windows.Controls.Button: 5, System.Windows.Controls.Button: 4, System.Windows.Controls.Button: 2, System.Windows.Controls.Button: 3, System.Windows.Controls.Button: 6, System.Windows.Controls.Button: *, System.Windows.Controls.Button: 7, System.Windows.Controls.Button: -, System.Windows.Controls.Button: 0, System.Windows.Controls.Button: ., System.Windows.Controls.Button: =, System.Windows.Controls.Button: +, System.Windows.Controls.Button: /, System.Windows.Controls.Button: C]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now you should be able to use the calculator!
+</p>
+<p class="Body">
+When you are done, close the calculator window.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> w.close
+                </b>
+                <br>
+                  
+                  
+                  
+                  => nil<br>
+              
+              </p>
+            
+          
+        
+      </body>
+    

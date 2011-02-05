@@ -1,0 +1,563 @@
+
+      <head>
+        <title>Try Ruby tutorial</title>
+        <style type="text/css">
+        p.Normal, li.Normal
+	{margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	}
+h2
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.Toc1
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:14.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+p.Toc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.Toc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	}
+a:visited
+	{color:purple;
+	text-decoration:underline;
+	}
+p.Body
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.TypedExample
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.ContentsHeading
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+p.Step
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.1in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+p.StepNote
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	line-height:150%;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold
+	}
+p.Code-Background
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Title1
+	{margin-bottom:.0001pt;
+	font-size:36.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.Title2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:28.0pt;
+	font-family:Verdana;
+	}
+p.CopyrightText
+	{margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.ExerciseList
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:-116%;
+	font-size:11.0pt;
+	font-family:Verdana;
+	}
+p.LabSummary
+	{margin-top:14.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	font-weight:bold;
+	}
+p.Code-Highlighted
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:0;
+	background:#E6E6E6;
+	font-size:10.0pt;
+	font-family:"Courier New"
+	}
+p.Stepnonumbering
+	{margin-top:0;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0.5in;
+	font-size:11.0pt;
+	font-family:Verdana
+	}
+ul
+	{margin-bottom:0in;}
+        </style>
+      </head>
+      
+      <body>
+        <h1>Try Ruby tutorial</h1>
+        <p class="Body">
+          <p class="Body">
+Got 15 minutes? Give Ruby a shot right now! Ruby is a programming language
+from Japan (available at ruby-lang.org) which is revolutionizing the web.
+The beauty of Ruby is found in its balance between simplicity and power.
+</p>
+
+        </p>
+        
+        <h2>Table of Contents</h2>
+          <ul>
+          
+            <li>
+            Chapter 1
+            <ul>
+            
+              <li>Section 1 - The Basics</li>
+            
+              <li>Section 2 - Errors and Arrays</li>
+                        
+            </ul>
+            </li>
+          
+          </ul>
+              
+        
+          <h2>Chapter 1</h2>
+          <p class="Body"></p>
+          
+            <h3>Section 1 - The Basics</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+The grey window below is a Ruby prompt. Type a line of Ruby code, hit Enter
+and watch it run!
+</p>
+<p class="Body">
+For example, try typing some math. Like:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 2 + 6
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 8<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Good! You did a bit of math. See how the answer popped out?
+</p>
+<p class="Body">
+Ruby recognizes numbers and mathematic symbols. You could try some other
+math like:
+</p>
+<p class="Body">
+4 * 10
+</p>
+<p class="Body">
+5 - 12
+</p>
+<p class="Body">
+40 / 4
+</p>
+<p class="Body">
+Sure, computers are handy and fast for math. Let&#8217;s move on. Want to
+see your name reversed? Type your first name in quotes like this:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> "Jimmy"
+                </b>
+                <br>
+                  
+                  
+                  
+                  => "Jimmy"<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Perfect, you&#8217;ve formed a string from the letters of your name. A
+string is a set of characters the computer can process.
+</p>
+<p class="Body">
+Imagine the letters are on a string of laundry line and the quotes are
+clothespins holding the ends. The quotes mark the beginning and end.
+</p>
+<p class="Body">
+To reverse your name, type: (Don&#8217;t forget the dot!)
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> "Jimmy".reverse
+                </b>
+                <br>
+                  
+                  
+                  
+                  => "ymmiJ"<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You have used the reverse method on your name! By enclosing your name in
+quotes, you made a string. Then you called the reverse method, which works
+on strings to flip all the letters backwards.
+</p>
+<p class="Body">
+Now, let&#8217;s see how many letters are in your name:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> "Jimmy".length
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 5<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now, I&#8217;m sure by now you&#8217;re wondering what any of this is good
+for. Well, I&#8217;m sure you&#8217;ve been to a website that screamed,
+Hey, your password is too short! See, some programs use this simple code.
+</p>
+<p class="Body">
+Watch this. Let&#8217;s multiply your name by 5.
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> "Jimmy" * 5
+                </b>
+                <br>
+                  
+                  
+                  
+                  => "JimmyJimmyJimmyJimmyJimmy"<br>
+              
+              </p>
+            
+          
+            <h3>Section 2 - Errors and Arrays</h3>
+            <p class="Body"></p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Okay, let&#8217;s do something uncomfortable. Try reversing a number:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 40.reverse
+                </b>
+                <br>
+                  
+                  
+                  #<NoMethodError: undefined method `reverse' for 40:Fixnum><br>
+                  
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+You can&#8217;t reverse the number forty. I guess you can hold your monitor
+up to the mirror, but reversing a number just doesn&#8217;t make sense.
+Ruby has tossed an error message. Ruby is telling you there is no method
+reverse for numbers.
+</p>
+<p class="Body">
+Maybe if you turn it into a string:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> 40.to_s.reverse
+                </b>
+                <br>
+                  
+                  
+                  
+                  => "04"<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+And numbers are different from strings. While you can use methods on any
+object in Ruby, some methods only work on certain types of things. But you
+can always convert between different types using Ruby&#8217;s
+&quot;to&quot; methods.
+</p>
+<p class="Body">
+to_s converts things to strings.
+</p>
+<p class="Body">
+to_i converts things to integers (numbers.)
+</p>
+<p class="Body">
+to_a converts things to arrays.
+</p>
+<p class="Body">
+What are arrays?! They are lists. Type in a pair of brackets:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> []
+                </b>
+                <br>
+                  
+                  
+                  
+                  => []<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Great, that&#8217;s an empty list. Lists store things in order. Like
+standing in line for popcorn. You are behind someone and you wouldn&#8217;t
+dream of pushing them aside, right? And the guy behind you, you&#8217;ve
+got a close eye on him, right?
+</p>
+<p class="Body">
+Here&#8217;s a list for you. Lottery numbers:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> [12, 47, 35]
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [12, 47, 35]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+A list of lottery numbers. Which one is the highest?
+</p>
+<p class="Body">
+Try:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> [12, 47, 35].max
+                </b>
+                <br>
+                  
+                  
+                  
+                  => 47<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Good, good. But it&#8217;s annoying to have to retype that list,
+isn&#8217;t it?
+</p>
+<p class="Body">
+Let&#8217;s save our numbers inside a ticket like so
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> ticket = [12, 47, 35]
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [12, 47, 35]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Now, type:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> ticket
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [12, 47, 35]<br>
+              
+              </p>
+            
+              
+              
+              <p class="Body"><p class="Body">
+Fantastic! You&#8217;ve hung on to your lotto numbers, tucking them away
+inside a variable called ticket.
+</p>
+<p class="Body">
+Let&#8217;s put your lotto numbers in order, how about? Use:
+</p>
+</p>
+              <p class="Code-Highlighted">
+              
+                <b>
+                >>> ticket.sort!
+                </b>
+                <br>
+                  
+                  
+                  
+                  => [12, 35, 47]<br>
+              
+              </p>
+            
+          
+        
+      </body>
+    
