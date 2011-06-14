@@ -16,6 +16,30 @@ developers an amazing amount of functionality and power.
 Announcements
 -------------
 
+.. admonition:: March 12, 2011
+   :class: strip
+
+   `IronPython 2.7 Final <http://ironpython.codeplex.com/releases/view/54498>`_
+   was released.
+
+.. admonition:: March 6, 2011
+   :class: strip
+   
+   `IronPython 2.7 RC2 <http://ironpython.codeplex.com/releases/view/62114>`_
+   was released.
+
+.. admonition:: February, 21 2011
+   :class: strip
+   
+   `IronPython 2.7 RC1 <http://ironpython.codeplex.com/releases/view/61395>`_
+   was released.
+
+.. admonition:: February 6, 2011
+   :class: strip
+   
+   `IronPython 2.7 Beta 2 <http://ironpython.codeplex.com/releases/view/60193>`_
+   was released.
+
 .. admonition:: October 21, 2010
    :class: strip
 
@@ -47,33 +71,6 @@ Announcements
    
    `IronPython 2.6 Final <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=12482>`_
    our latest the first *stable release* of IronPython 2.6, was released.
-
-.. admonition:: November 18, 2009
-   :class: strip 
-
-   See `Dino Viehland's <http://blogs.msdn.com/dinoviehland>`_
-   talk at PDC 2009 on utilizing Python from statically typed .NET languages such as 
-   C# `here <http://microsoftpdc.com/Sessions/FT30>`_
-
-.. admonition:: October 21, 2009
-   :class: strip 
-
-   `IronPython 2.6 for .NET 4.0 Beta <http://ironpython.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=28125>`_, 
-   an IronPython 2.6 offshoot designed to run under the `DLR <http://dlr.codeplex.com>`_ distributed with .NET 4.0 Beta 2, was released.
-
-.. admonition:: August 2009
-   :class: strip 
-
-   Want to see IronPython support in a future version of Visual Studio?
-   Please submit your valuable `feedback <https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=475830>`_.
-              
-.. admonition:: March 26, 2009
-   :class: strip 
-
-   We gave two talks at `PyCon 2009 <http://us.pycon.org/2009/about/>`_:
-   
-   | `Dino Viehland's talk on the internals of IronPython <http://blip.tv/file/1949619>`_
-   | `Jim Hugunin's talk on future directions of IronPython <http://blip.tv/file/1947387>`_
 
 
 .. container:: download col

@@ -2,6 +2,30 @@
 Announcements
 =============
 
+.. admonition:: March 12, 2011
+   :class: strip
+
+   `IronPython 2.7 Final <http://ironpython.codeplex.com/releases/view/54498>`_
+   was released.
+
+.. admonition:: March 6, 2011
+   :class: strip
+   
+   `IronPython 2.7 RC2 <http://ironpython.codeplex.com/releases/view/62114>`_
+   was released.
+
+.. admonition:: February, 21 2011
+   :class: strip
+   
+   `IronPython 2.7 RC1 <http://ironpython.codeplex.com/releases/view/61395>`_
+   was released.
+
+.. admonition:: February 6, 2011
+   :class: strip
+   
+   `IronPython 2.7 Beta 2 <http://ironpython.codeplex.com/releases/view/60193>`_
+   was released.
+
 .. admonition:: October 21, 2010
    :class: strip
 

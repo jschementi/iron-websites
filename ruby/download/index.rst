@@ -7,9 +7,13 @@ Get IronRuby
 Stable versions
 ---------------
 IronRuby maintains compatible versions with `Ruby 1.8.6`_ and `Ruby 1.9`_;
-`IronRuby 1.0`_ and `IronRuby 1.1.1`_, respectively. If you're not sure
-which version to use, use `IronRuby 1.0`_.
+`IronRuby 1.0`_ and `IronRuby 1.1.3`_, respectively. If you're not sure
+which version to use, use `IronRuby 1.1.3`_, but only if you do not need
+`Ruby 1.8.6`_ compatibility.
 
+.. container:: download col
+   
+   `Download IronRuby 1.0`_
 
 `All major IronRuby releases`_
 
@@ -17,12 +21,12 @@ which version to use, use `IronRuby 1.0`_.
 --------------
 Latest version
 --------------
-The latest version of IronPython is `IronRuby 1.1.1`_, which is
-tracking compatibility with `Ruby 1.9.1`_.
+The latest version of IronRuby is `IronRuby 1.1.3`_, which is
+tracking compatibility with `Ruby 1.9.2`_.
 
 .. container:: download col
    
-   `Download IronRuby 1.1.1`_
+   `Download IronRuby 1.1.3`_
 
 -----------
 Source code
@@ -31,7 +35,7 @@ Iron{{language}} is an `open source project`_ freely available under the `Apache
 
 .. container:: download col
    
-   `Download IronRuby 1.1.1 Source Code`_
+   `Download IronRuby 1.1.3 Source Code`_
 
    `Download IronRuby 1.0 Source Code`_
 
@@ -122,15 +126,16 @@ Linux browser apps
 
 .. _Ruby 1.8.6:       http://ruby-lang.org/en/downloads/
 .. _Ruby 1.9:       http://ruby-lang.org/en/downloads/
-.. _Ruby 1.9.1:       http://ruby-lang.org/en/downloads/
+.. _Ruby 1.9.2:       http://ruby-lang.org/en/downloads/
 .. _IronRuby 1.0:     http://ironruby.codeplex.com/releases/view/25901
-.. _IronRuby 1.1.1:     http://ironruby.codeplex.com/releases/view/49097
-.. _Download IronRuby 1.1.1:     http://ironruby.codeplex.com/releases/view/49097#DownloadId=159561
+.. _IronRuby 1.1.3:     http://ironruby.codeplex.com/releases/view/60511
+.. _Download IronRuby 1.0:     http://ironruby.codeplex.com/releases/view/25901#DownloadId=116524
+.. _Download IronRuby 1.1.3:     http://ironruby.codeplex.com/releases/view/60511#DownloadId=217152
 .. _All major IronRuby releases: http://ironruby.codeplex.com/releases
 .. _open source project: http://ironruby.codeplex.com
 .. _Apache License (Version 2): http://ironruby.codeplex.com/license
 .. _Download IronRuby 1.0 Source Code: https://github.com/IronLanguages/main/zipball/v1.0-rtm
-.. _Download IronRuby 1.1.1 Source Code: https://github.com/IronLanguages/main/zipball/v1.1.1
+.. _Download IronRuby 1.1.3 Source Code: https://github.com/IronLanguages/main/zipball/v1.1.3
 .. _Download latest (zip): https://github.com/IronLanguages/main/zipball/master
 .. _Browse Online: https://github.com/IronLanguages/main/tree/master/Languages/Ruby
 .. _Recent Check-ins: https://github.com/IronLanguages/main/commits/master

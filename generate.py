@@ -46,11 +46,11 @@ language_info = {
   'ironruby': {
     'language': 'Ruby',
     'language_website': 'http://ruby-lang.org',
-    'stable_version': '1.0',
-    'stable_release_url': 'http://ironruby.codeplex.com/releases/view/25901',
-    'stable_release_date': '1.0 released on 2010-04-12',
-    'stable_release_notes': 'http://rubyforge.org/frs/shownotes.php?group_id=4359&release_id=43292',
-    'stable_release_source': 'http://github.com/IronLanguages/main/zipball/v1.0-rtm',
+    'stable_version': '1.1',
+    'stable_release_url': 'http://ironruby.codeplex.com/releases/view/60511#DownloadId=217152',
+    'stable_release_date': '1.1.3 released on 2011-3-13',
+    'stable_release_notes': 'http://ironruby.codeplex.com/releases/view/60511',
+    'stable_release_source': 'http://github.com/IronLanguages/main/zipball/v1.1.3',
     'code_snippet_html': """<span class="comment"># namespaces are modules</span>
 <span class="keyword">include</span> <span class="constant">System</span>::<span class="constant">Collections</span>::<span class="constant">Generic</span>
 
@@ -70,11 +70,11 @@ d.each{|kvp| <span class="keyword">puts</span> kvp}""",
   'ironpython': {
     'language': 'Python',
     'language_website': 'http://python.org',
-    'stable_version': '2.6.2',
-    'stable_release_url': 'http://ironpython.codeplex.com/releases/view/41236#DownloadId=159515',
-    'stable_release_date': '2.6.2 released on 2010-10-21',
-    'stable_release_notes': 'http://ironpython.codeplex.com/releases/view/41236',
-    'stable_release_source': 'http://ironpython.codeplex.com/releases/view/41236#DownloadId=159516',
+    'stable_version': '2.7',
+    'stable_release_url': 'http://ironpython.codeplex.com/releases/view/54498#DownloadId=216704',
+    'stable_release_date': '2.7 released on 2011-3-12',
+    'stable_release_notes': 'http://ironpython.codeplex.com/releases/view/54498',
+    'stable_release_source': 'https://github.com/IronLanguages/main/zipball/ipy-2.7',
     'code_snippet_html': """<img src="../images/ironpython-interactive.png" height="279" alt="IronPython Interactive in Visual Studio 2010" />""",
     'old_code_snippet_html': """<span class="comment"># namespaces are modules</span>
 <span class="keyword">from</span> <span class="constant">System</span>.<span class="constant">Collections</span>.<span class="constant">Generic</span> import <span class="constant">Dictionary</span>

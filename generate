@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+include FileUtils
+
+cd(File.dirname(__FILE__)) do
+  `python generate.py -python`
+  `python generate.py -ruby`
+  `ruby deploy.rb`
+end
