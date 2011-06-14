@@ -7,7 +7,7 @@ Get IronPython
 Stable versions
 ---------------
 The latest stable version of IronPython is `IronPython 2.7`_, which is
-compatibility with `Python 2.7`_.
+compatible with `Python 2.7`_.
 
 .. container:: download col
    

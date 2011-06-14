@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+include FileUtils
+
+cd File.dirname(__FILE__) do
+  `python clean.py -python`
+  `python clean.py -ruby`
+  `ruby deploy.rb -clean`
+end
